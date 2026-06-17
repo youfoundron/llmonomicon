@@ -3,13 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      // Apply a saved theme before first paint to avoid a flash.
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+        } catch (e) {}
+      })();
+    </script>
     <title>{{documentTitle}}</title>
     <meta name="description" content="{{description}}" />
     <link rel="icon" href="{{assetBase}}/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="{{assetBase}}/css/water.css" />
     <link rel="stylesheet" href="{{assetBase}}/css/grimoire.css" />
   </head>
-  <body>
+  <body class="{{pageClass}}">
     <header class="masthead">
       <a class="site-title" href="{{homeUrl}}">{{siteName}}</a>
       <p class="tagline">{{tagline}}</p>
@@ -25,14 +34,59 @@
     </main>
 
     <footer class="site-footer">
+      <p class="provenance">
+        Much of this grimoire is compiled with help from large language models, so
+        <strong>every article must cite sources</strong> and all entries are open to
+        correction. See the <a href="{{aboutUrl}}">colophon</a>.
+      </p>
       <p>
-        <strong>{{siteName}}</strong> is a community grimoire. Content is licensed
-        <a href="{{repoUrl}}/blob/main/LICENSE-CONTENT">CC BY-SA 4.0</a>; code is
+        <strong>{{siteName}}</strong> — content licensed
+        <a href="{{repoUrl}}/blob/main/LICENSE-CONTENT">CC BY-SA 4.0</a>; code
         <a href="{{repoUrl}}/blob/main/LICENSE">MIT</a>.
         <a href="{{repoUrl}}">Source on GitHub ↗</a>
       </p>
-      <p class="copyright">© {{buildYear}} the contributors</p>
+      <p class="footer-meta">
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Cycle color theme">
+          ◐ Theme: <span class="theme-label">Auto</span>
+        </button>
+        <span class="copyright">© {{buildYear}} the contributors</span>
+      </p>
     </footer>
+
+    <script>
+      // Footer theme toggle: cycles Auto → Light → Dark → Auto, stored in localStorage.
+      (function () {
+        var btn = document.getElementById("theme-toggle");
+        if (!btn) return;
+        var label = btn.querySelector(".theme-label");
+        function read() {
+          try {
+            return localStorage.getItem("theme");
+          } catch (e) {
+            return null;
+          }
+        }
+        function paint() {
+          var t = read();
+          label.textContent = t ? t.charAt(0).toUpperCase() + t.slice(1) : "Auto";
+        }
+        btn.addEventListener("click", function () {
+          var t = read();
+          var next = t === "light" ? "dark" : t === "dark" ? null : "light";
+          try {
+            if (next) {
+              localStorage.setItem("theme", next);
+              document.documentElement.dataset.theme = next;
+            } else {
+              localStorage.removeItem("theme");
+              delete document.documentElement.dataset.theme;
+            }
+          } catch (e) {}
+          paint();
+        });
+        paint();
+      })();
+    </script>
     {{devReloadScript}}
   </body>
 </html>

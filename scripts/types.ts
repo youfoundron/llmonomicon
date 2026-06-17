@@ -1,17 +1,38 @@
-// Shared type definitions for the llmonomicon build. Type-only module:
-// everything here is erased by Node's type-stripping, so import with `import type`.
+// Shared type definitions for the llmonomicon build.
 
-/** The five content categories. The empty string denotes top-level pages (e.g. the homepage). */
-export type Category = "concepts" | "events" | "people" | "tools" | "projects";
+import { humanize } from "./slug.ts";
 
-/** The known category folders, in display order. */
-export const CATEGORIES: readonly Category[] = [
-  "concepts",
-  "events",
-  "people",
-  "tools",
-  "projects",
-];
+/** The content categories. The empty string denotes top-level pages (home, about). */
+export type Category = "concepts" | "events" | "people" | "software";
+
+/** The category folders, in nav display order. */
+export const CATEGORIES: readonly Category[] = ["concepts", "events", "people", "software"];
+
+/** Display labels for categories. The folder/slug stays short; the label can be richer. */
+export const CATEGORY_LABELS: Record<Category, string> = {
+  concepts: "Concepts",
+  events: "Events",
+  people: "People & Organizations",
+  software: "Software",
+};
+
+/** Human-facing label for a category slug, falling back to a humanized slug. */
+export function categoryLabel(category: string): string {
+  return (CATEGORY_LABELS as Record<string, string>)[category] ?? humanize(category);
+}
+
+/** A single bibliographic source for an article. Title is required; URL is strongly encouraged. */
+export interface Source {
+  /** Stable id used to cite this source inline via `[^id]`. */
+  id?: string;
+  title: string;
+  url?: string;
+  author?: string;
+  year?: string;
+  publisher?: string;
+  /** ISO date the source was last accessed. */
+  accessed?: string;
+}
 
 /** Parsed, normalized front-matter for a single article. */
 export interface FrontMatter {
@@ -23,15 +44,16 @@ export interface FrontMatter {
   date?: string;
   updated?: string;
   draft: boolean;
+  sources: Source[];
 }
 
 /** A fully-resolved content page, produced by the discover pass. */
 export interface Page {
   /** Repo-root-relative POSIX path, e.g. `content/concepts/attention.md`. */
   contentPath: string;
-  /** Category folder, or "" for top-level pages like the homepage. */
+  /** Category folder, or "" for top-level pages like the homepage or /about/. */
   category: string;
-  /** URL slug, e.g. `attention`. Empty for the homepage. */
+  /** URL slug, e.g. `attention`. */
   slug: string;
   /** Site-absolute URL (basePath-joined), e.g. `/llmonomicon/concepts/attention/`. */
   url: string;
@@ -39,6 +61,7 @@ export interface Page {
   description: string;
   tags: string[];
   aliases: string[];
+  sources: Source[];
   data: FrontMatter;
   /** Markdown body with front-matter stripped. */
   body: string;

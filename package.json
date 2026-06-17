@@ -16,7 +16,7 @@
     "lint": "biome lint .",
     "format": "biome format --write .",
     "test": "node --test",
-    "check": "npm run typecheck && biome check . && npm test"
+    "check": "npm run typecheck && biome check . && npm test && node scripts/build.ts --dry"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

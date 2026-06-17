@@ -1,9 +1,9 @@
 # llmonomicon
 
 A **digital grimoire of large language models** — a markdown-first,
-community-edited wiki covering the history, concepts, tools, people, and
-projects behind LLMs. Static, dependency-light, and built to deploy on GitHub
-Pages.
+community-edited wiki covering the history, concepts, software, people, and
+organizations behind LLMs. Static, dependency-light, and built to deploy on
+GitHub Pages.
 
 ## Philosophy
 
@@ -15,6 +15,10 @@ Pages.
 - **No backend.** Contributions happen statelessly through GitHub: a **Suggest
   an edit** link opens a prefilled issue, and **Edit on GitHub** opens the web
   editor for a pull request.
+- **Sourced and honest.** Much of the grimoire is compiled with the help of
+  LLMs, so **every article must cite at least one source** — the build refuses
+  to publish a page that doesn't. Inline `[^id]` markers tie specific claims to
+  specific sources. See the colophon (`/about/`) and [CLAUDE.md](CLAUDE.md).
 
 ## Requirements
 
@@ -60,7 +64,7 @@ GitHub Pages.
 ## Project layout
 
 ```
-content/      Markdown articles, by category (concepts, events, people, tools, projects)
+content/      Markdown articles, by category (concepts, events, people, software)
 templates/    The single {{token}} HTML layout
 assets/       Vendored water.css base + the grimoire theme + favicon
 scripts/      The TypeScript build, dev server, and helpers

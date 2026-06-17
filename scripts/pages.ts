@@ -28,9 +28,11 @@ export function categoryIndexHtml(category: string, pages: Page[]): string {
   return `<ul class="page-list">${articles.map(listItem).join("")}</ul>`;
 }
 
-/** A–Z index of every article, grouped by first letter. */
+/** A–Z index of every encyclopedic article, grouped by first letter. */
 export function allPagesIndexHtml(pages: Page[]): string {
-  const articles = pages.filter((page) => !page.isHome && !page.isCategoryIndex).sort(byTitle);
+  const articles = pages
+    .filter((page) => page.category !== "" && !page.isCategoryIndex && !page.isHome)
+    .sort(byTitle);
   if (articles.length === 0) return '<p class="empty">No articles yet.</p>';
 
   const groups = new Map<string, Page[]>();

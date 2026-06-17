@@ -4,6 +4,24 @@ description: The mechanism that lets a model weigh the relevance of every token 
 tags: [architecture, mechanism]
 aliases: [Self-Attention, Scaled Dot-Product Attention]
 updated: 2026-06-17
+sources:
+  - id: vaswani2017
+    title: "Attention Is All You Need"
+    url: https://arxiv.org/abs/1706.03762
+    author: Vaswani et al.
+    publisher: arXiv
+    year: 2017
+  - id: bahdanau2014
+    title: "Neural Machine Translation by Jointly Learning to Align and Translate"
+    url: https://arxiv.org/abs/1409.0473
+    author: Bahdanau, Cho & Bengio
+    publisher: arXiv
+    year: 2014
+  - id: illustrated-transformer
+    title: "The Illustrated Transformer"
+    url: https://jalammar.github.io/illustrated-transformer/
+    author: Jay Alammar
+    year: 2018
 ---
 
 # Attention
@@ -11,31 +29,35 @@ updated: 2026-06-17
 **Attention** is the mechanism that lets a neural network decide, for each
 element of a sequence, which other elements matter most. Rather than compressing
 a whole input into a single fixed vector, attention computes a weighted sum over
-all positions, where the weights are learned and content-dependent. It is the
-core building block of the [[Transformer]].
+all positions, where the weights are learned and content-dependent. The idea was
+introduced for neural machine translation as a way to let a model "align" to
+relevant source words while decoding,[^bahdanau2014] and it later became the core
+building block of the [[Transformer]].[^vaswani2017]
 
 ## Scaled dot-product attention
 
 Each token is projected into three vectors: a **query** (Q), a **key** (K), and
 a **value** (V). The relevance of one token to another is the dot product of the
 query with the key; these scores are scaled, normalized with a softmax, and used
-to take a weighted average of the values:
+to take a weighted average of the values.[^vaswani2017]
 
-| Symbol | Name  | Role                                            |
-| ------ | ----- | ----------------------------------------------- |
-| Q      | Query | What the current token is "looking for"         |
-| K      | Key   | What each token "offers" as a match             |
+| Symbol | Name  | Role                                             |
+| ------ | ----- | ------------------------------------------------ |
+| Q      | Query | What the current token is "looking for"          |
+| K      | Key   | What each token "offers" as a match              |
 | V      | Value | The information passed along when a match occurs |
 
 The scaling factor (dividing by the square root of the key dimension) keeps the
-dot products from growing too large and saturating the softmax.
+dot products from growing too large and saturating the softmax.[^vaswani2017]
 
 ## Multi-head attention
 
 A single attention computation captures one kind of relationship. **Multi-head
 attention** runs several attention operations in parallel — each with its own
 learned projections — and concatenates the results, letting the model attend to
-different patterns (syntax, coreference, position) at once.
+different patterns (syntax, coreference, position) at once.[^vaswani2017] For an
+accessible visual walkthrough of these mechanics, see Alammar's *Illustrated
+Transformer*.[^illustrated-transformer]
 
 ## Why it mattered
 

@@ -1,9 +1,10 @@
-// Markdown rendering via marked: GitHub-style heading anchors, a custom
-// `[[wiki-link]]` inline extension (with Wikipedia-style red links for missing
-// pages), GFM, and a table-of-contents builder. All marked-specific knowledge
-// lives here so a marked upgrade only touches this file.
+// Markdown rendering via marked: GitHub-style heading anchors, a `[[wiki-link]]`
+// inline extension (with red links for missing pages), inline `[^id]` citation
+// markers, and GFM. All marked-specific knowledge lives here so a marked upgrade
+// only touches this file.
 
 import { lexer, Marked, type RendererThis, type Tokens } from "marked";
+import { buildCitationContext, type CitationContext } from "./citations.ts";
 import { createRegistry, type Registry } from "./registry.ts";
 import type { SiteConfig } from "./site.config.ts";
 import { escapeAttr, escapeHtml } from "./template.ts";
@@ -23,18 +24,28 @@ interface WikiLinkToken extends Tokens.Generic {
   label: string;
 }
 
+/** A `[^id]` inline citation token. */
+interface CitationToken extends Tokens.Generic {
+  type: "citation";
+  raw: string;
+  id: string;
+}
+
 const WIKILINK_RE = /^\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/;
+const CITATION_RE = /^\[\^([A-Za-z0-9_-]+)\]/;
 
 /**
- * Render a markdown body to HTML, resolving `[[wiki-links]]` against the
- * registry and collecting headings for the TOC. `slugFn` is a per-page slugger
- * so heading ids are unique within the page and match the TOC.
+ * Render a markdown body to HTML: resolves `[[wiki-links]]` against the registry,
+ * renders `[^id]` citation markers against the citation context (recording which
+ * ids are used), and collects headings for the TOC. `slugFn` is a per-page
+ * slugger so heading ids are unique within the page.
  */
 export function renderMarkdown(
   body: string,
   registry: Registry,
   config: SiteConfig,
   slugFn: (text: string) => string,
+  citations: CitationContext = buildCitationContext([]),
 ): RenderResult {
   const headings: Heading[] = [];
   const marked = new Marked({ gfm: true });
@@ -63,6 +74,33 @@ export function renderMarkdown(
           }
           const createHref = escapeAttr(createPageUrl(link.target, config));
           return `<a class="wikilink wikilink--red" href="${createHref}" title="This page does not exist yet — propose it">${escapeHtml(link.label)}</a>`;
+        },
+      },
+      {
+        name: "citation",
+        level: "inline",
+        start(src: string) {
+          return src.indexOf("[^");
+        },
+        tokenizer(src: string) {
+          const match = CITATION_RE.exec(src);
+          if (!match) return undefined;
+          const token: CitationToken = { type: "citation", raw: match[0], id: match[1] ?? "" };
+          return token;
+        },
+        renderer(token) {
+          const { id } = token as CitationToken;
+          citations.used.add(id);
+          const num = citations.byId.get(id);
+          if (num === undefined) {
+            return `<sup class="cite cite--missing" title="Unknown source id: ${escapeHtml(id)}">[?]</sup>`;
+          }
+          let anchor = "";
+          if (!citations.anchored.has(id)) {
+            citations.anchored.add(id);
+            anchor = ` id="cite-${escapeAttr(id)}"`;
+          }
+          return `<sup class="cite"${anchor}><a href="#ref-${escapeAttr(id)}">[${num}]</a></sup>`;
         },
       },
     ],

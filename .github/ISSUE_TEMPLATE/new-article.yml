@@ -22,9 +22,8 @@ body:
       options:
         - concepts
         - events
-        - people
-        - tools
-        - projects
+        - people (people & organizations)
+        - software (models, libraries, products)
     validations:
       required: true
   - type: textarea
@@ -37,10 +36,10 @@ body:
   - type: textarea
     id: sources
     attributes:
-      label: Sources (optional)
-      description: Links or citations a writer can start from.
+      label: Sources
+      description: At least one citation (links strongly preferred). Every article must cite sources — the build rejects pages that don't.
     validations:
-      required: false
+      required: true
   - type: checkboxes
     id: agreement
     attributes:

@@ -2,20 +2,28 @@
  * grimoire.css — the llmonomicon theme.
  *
  * Loaded after water.css. It re-skins water's CSS custom properties (so all
- * markdown content — tables, code, blockquotes — inherits the palette for free)
- * and adds the small amount of "chrome" water doesn't cover: masthead, nav,
- * breadcrumb, table of contents, wiki-links, contribution footer, and page
- * indexes. System serif fonts only — no web-font downloads.
+ * markdown content inherits the palette for free) and adds the chrome water
+ * doesn't cover: masthead, nav, breadcrumb, TOC, wiki-links, citations &
+ * references, the contribution footer, and the theme toggle. System serif
+ * fonts only — no web-font downloads.
+ *
+ * Theme selection:
+ *   - default: follow the OS via prefers-color-scheme
+ *   - [data-theme="dark"] / [data-theme="light"]: explicit user choice (footer toggle)
  */
 
-/* ---- Palette: light = aged parchment ------------------------------------ */
+/* ---- Structural (theme-independent) variables --------------------------- */
 :root {
   --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
   --font-body: Charter, "Iowan Old Style", Georgia, Cambria, "Times New Roman", serif;
-  --accent: #8a6d1f; /* tarnished gold */
-  --accent-strong: #6f3410; /* oxblood */
   --rule: 1px solid var(--border);
+}
 
+/* ---- Palette: light = aged parchment ------------------------------------ */
+:root {
+  --accent: #8a6d1f;
+  --accent-strong: #6f3410;
+  --redlink: #9a2f12;
   --background-body: #f4ecd8;
   --background: #e7dabc;
   --background-alt: #efe5cd;
@@ -37,11 +45,12 @@
 }
 
 /* ---- Palette: dark = candlelit tome ------------------------------------- */
+/* System preference (unless the reader has explicitly chosen light). */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --accent: #d9a441; /* warm gold */
+  :root:not([data-theme="light"]) {
+    --accent: #d9a441;
     --accent-strong: #e0b85f;
-
+    --redlink: #e0896f;
     --background-body: #15131c;
     --background: #1e1a28;
     --background-alt: #221d30;
@@ -61,6 +70,31 @@
     --variable: #e0b85f;
     --highlight: #2d2740;
   }
+}
+
+/* Explicit dark choice, regardless of OS setting. */
+:root[data-theme="dark"] {
+  --accent: #d9a441;
+  --accent-strong: #e0b85f;
+  --redlink: #e0896f;
+  --background-body: #15131c;
+  --background: #1e1a28;
+  --background-alt: #221d30;
+  --selection: #3c3357;
+  --text-main: #e6ddc9;
+  --text-bright: #f6efda;
+  --text-muted: #a89b81;
+  --links: #d9a441;
+  --focus: #d9a44166;
+  --border: #3a3450;
+  --code: #e0b85f;
+  --button-base: #221d30;
+  --button-hover: #2d2740;
+  --scrollbar-thumb: #3a3450;
+  --scrollbar-thumb-hover: #4a4366;
+  --form-placeholder: #7c7160;
+  --variable: #e0b85f;
+  --highlight: #2d2740;
 }
 
 /* ---- Base typography ----------------------------------------------------- */
@@ -108,7 +142,7 @@ blockquote {
   font-style: italic;
 }
 
-/* ---- Masthead ------------------------------------------------------------ */
+/* ---- Masthead (home: full) ---------------------------------------------- */
 .masthead {
   text-align: center;
   padding: 2rem 0 1rem;
@@ -151,6 +185,34 @@ blockquote {
 
 .site-nav a:hover {
   color: var(--links);
+}
+
+/* ---- Condensed header (articles & other inner pages) -------------------- */
+.page-article .masthead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  text-align: left;
+  padding: 0.85rem 0 0.6rem;
+  margin-bottom: 0.25rem;
+  border-bottom: var(--rule);
+}
+
+.page-article .site-title {
+  font-size: 1.3rem;
+  letter-spacing: 0.02em;
+}
+
+.page-article .tagline {
+  display: none;
+}
+
+.page-article .site-nav {
+  margin: 0;
+  font-size: 0.82rem;
+  gap: 0.3rem 0.85rem;
 }
 
 /* ---- Breadcrumb ---------------------------------------------------------- */
@@ -222,15 +284,55 @@ h4:hover .anchor {
 }
 
 .wikilink--red {
-  color: var(--accent-strong);
-  text-decoration-style: dotted;
+  color: var(--redlink);
   text-decoration-line: underline;
+  text-decoration-style: dotted;
 }
 
-@media (prefers-color-scheme: dark) {
-  .wikilink--red {
-    color: #e08a6f;
-  }
+/* ---- Inline citations & references -------------------------------------- */
+.cite {
+  font-size: 0.72em;
+  line-height: 0;
+}
+
+.cite a {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.cite--missing {
+  color: #c0392b;
+  cursor: help;
+}
+
+.references {
+  margin-top: 2.5rem;
+  border-top: var(--rule);
+  padding-top: 0.5rem;
+}
+
+.references h2 {
+  font-size: 1.2rem;
+  border: none;
+  margin-top: 1rem;
+}
+
+.ref-list {
+  font-size: 0.92rem;
+}
+
+.ref-list li {
+  margin: 0.4rem 0;
+}
+
+.ref-list cite {
+  font-style: italic;
+}
+
+.ref-back {
+  margin-left: 0.3rem;
+  text-decoration: none;
+  color: var(--accent);
 }
 
 /* ---- Page lists / A–Z index --------------------------------------------- */
@@ -319,6 +421,32 @@ h4:hover .anchor {
   text-align: center;
 }
 
-.site-footer .copyright {
-  margin-top: 0.3rem;
+.provenance {
+  font-style: italic;
+}
+
+.footer-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.theme-toggle {
+  font: inherit;
+  font-size: 0.82rem;
+  background: var(--background-alt);
+  color: var(--text-muted);
+  border: var(--rule);
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+  width: auto;
+}
+
+.theme-toggle:hover {
+  color: var(--links);
+  border-color: var(--accent);
 }

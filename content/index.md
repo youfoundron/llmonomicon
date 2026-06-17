@@ -1,6 +1,6 @@
 ---
 title: llmonomicon
-description: A markdown-first, community-edited grimoire of large language models — their history, concepts, tools, people, and projects.
+description: A markdown-first, community-edited grimoire of large language models — their history, concepts, software, people, and organizations.
 ---
 
 # The llmonomicon
@@ -17,10 +17,17 @@ GitHub* link that opens a pull request.
   [[Tokenization]].
 - **Events** — the turning points: [[Attention Is All You Need]] (2017) and the
   [[ChatGPT launch]] (2022).
-- **People** — the minds behind the work, such as [[Geoffrey Hinton]].
-- **Tools** — what practitioners actually run, like [[llama.cpp]] and the
-  [[Hugging Face Transformers]] library.
-- **Projects** — the landmark models: [[GPT-3]] and [[BERT]].
+- **People & Organizations** — the minds and institutions, such as
+  [[Geoffrey Hinton]] and [[OpenAI]].
+- **Software** — the models, libraries, and products: [[GPT-3]], [[BERT]],
+  [[Hugging Face Transformers]], and [[llama.cpp]].
+
+## A note on sources
+
+Much of this grimoire is **compiled with the help of large language models** —
+which makes verifiable sourcing non-negotiable. **Every article must cite at
+least one source**, the build refuses to publish a page that doesn't, and all
+entries are open to human correction. See the [[Colophon]] for details.
 
 ## How to contribute
 

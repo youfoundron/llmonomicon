@@ -3,7 +3,7 @@
 // first-party content at build time, never untrusted runtime input.
 
 import matter from "gray-matter";
-import type { FrontMatter } from "./types.ts";
+import type { FrontMatter, Source } from "./types.ts";
 
 export interface ParsedDoc {
   data: FrontMatter;
@@ -33,6 +33,28 @@ function toStringList(value: unknown): string[] {
   return [];
 }
 
+/** Normalize the `sources` front-matter list into typed Source objects. */
+function toSources(value: unknown): Source[] {
+  if (!Array.isArray(value)) return [];
+  return value.map((raw) => {
+    const entry = (raw ?? {}) as Record<string, unknown>;
+    const source: Source = { title: String(entry.title ?? "").trim() };
+    const id = toOptionalString(entry.id);
+    const url = toOptionalString(entry.url);
+    const author = toOptionalString(entry.author);
+    const year = toOptionalString(entry.year);
+    const publisher = toOptionalString(entry.publisher);
+    const accessed = toOptionalString(entry.accessed);
+    if (id) source.id = id;
+    if (url) source.url = url;
+    if (author) source.author = author;
+    if (year) source.year = year;
+    if (publisher) source.publisher = publisher;
+    if (accessed) source.accessed = accessed;
+    return source;
+  });
+}
+
 /** Parse and normalize the front-matter and body of a markdown document. */
 export function parseFrontMatter(raw: string): ParsedDoc {
   const parsed = matter(raw);
@@ -45,6 +67,7 @@ export function parseFrontMatter(raw: string): ParsedDoc {
     date: toOptionalString(d.date),
     updated: toOptionalString(d.updated),
     draft: d.draft === true,
+    sources: toSources(d.sources),
   };
   return { data, body: parsed.content };
 }

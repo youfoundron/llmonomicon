@@ -1,0 +1,324 @@
+/*
+ * grimoire.css — the llmonomicon theme.
+ *
+ * Loaded after water.css. It re-skins water's CSS custom properties (so all
+ * markdown content — tables, code, blockquotes — inherits the palette for free)
+ * and adds the small amount of "chrome" water doesn't cover: masthead, nav,
+ * breadcrumb, table of contents, wiki-links, contribution footer, and page
+ * indexes. System serif fonts only — no web-font downloads.
+ */
+
+/* ---- Palette: light = aged parchment ------------------------------------ */
+:root {
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --font-body: Charter, "Iowan Old Style", Georgia, Cambria, "Times New Roman", serif;
+  --accent: #8a6d1f; /* tarnished gold */
+  --accent-strong: #6f3410; /* oxblood */
+  --rule: 1px solid var(--border);
+
+  --background-body: #f4ecd8;
+  --background: #e7dabc;
+  --background-alt: #efe5cd;
+  --selection: #d9c79a;
+  --text-main: #2c2419;
+  --text-bright: #14100a;
+  --text-muted: #6d5d44;
+  --links: #7b2d10;
+  --focus: #8a6d1f80;
+  --border: #cabd96;
+  --code: #6f3410;
+  --button-base: #e2d4b0;
+  --button-hover: #d6c399;
+  --scrollbar-thumb: #cabd96;
+  --scrollbar-thumb-hover: #b8a877;
+  --form-placeholder: #9b8a6c;
+  --variable: #6f3410;
+  --highlight: #f3e0a6;
+}
+
+/* ---- Palette: dark = candlelit tome ------------------------------------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #d9a441; /* warm gold */
+    --accent-strong: #e0b85f;
+
+    --background-body: #15131c;
+    --background: #1e1a28;
+    --background-alt: #221d30;
+    --selection: #3c3357;
+    --text-main: #e6ddc9;
+    --text-bright: #f6efda;
+    --text-muted: #a89b81;
+    --links: #d9a441;
+    --focus: #d9a44166;
+    --border: #3a3450;
+    --code: #e0b85f;
+    --button-base: #221d30;
+    --button-hover: #2d2740;
+    --scrollbar-thumb: #3a3450;
+    --scrollbar-thumb-hover: #4a4366;
+    --form-placeholder: #7c7160;
+    --variable: #e0b85f;
+    --highlight: #2d2740;
+  }
+}
+
+/* ---- Base typography ----------------------------------------------------- */
+body {
+  font-family: var(--font-body);
+  font-size: 1.06rem;
+  line-height: 1.72;
+  max-width: 50rem;
+  padding: 0 1.25rem 4rem;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text-bright);
+}
+
+h1 {
+  font-size: 2.1rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.3rem;
+  margin-top: 1.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 2.2rem;
+  border-bottom: var(--rule);
+  padding-bottom: 0.2rem;
+}
+
+a {
+  text-underline-offset: 2px;
+}
+
+blockquote {
+  border-left: 3px solid var(--accent);
+  font-style: italic;
+}
+
+/* ---- Masthead ------------------------------------------------------------ */
+.masthead {
+  text-align: center;
+  padding: 2rem 0 1rem;
+  margin-bottom: 0.5rem;
+  border-bottom: double 4px var(--border);
+}
+
+.site-title {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text-bright);
+  text-decoration: none;
+}
+
+.site-title:hover {
+  color: var(--accent-strong);
+}
+
+.tagline {
+  font-style: italic;
+  color: var(--text-muted);
+  margin: 0.1rem 0 0.9rem;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 1.1rem;
+  font-variant: small-caps;
+  letter-spacing: 0.03em;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--text-muted);
+}
+
+.site-nav a:hover {
+  color: var(--links);
+}
+
+/* ---- Breadcrumb ---------------------------------------------------------- */
+.breadcrumb {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0.75rem 0 1.25rem;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+}
+
+.breadcrumb .here {
+  color: var(--text-main);
+}
+
+/* ---- Table of contents --------------------------------------------------- */
+.toc {
+  background: var(--background-alt);
+  border: var(--rule);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  margin: 0 0 1.75rem;
+  font-size: 0.92rem;
+}
+
+.toc-title {
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin: 0.25rem 0;
+}
+
+.toc ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.25rem 0;
+}
+
+.toc li {
+  margin: 0.15rem 0;
+}
+
+.toc-h3 {
+  padding-left: 1.25rem;
+}
+
+/* ---- Heading anchors ----------------------------------------------------- */
+.anchor {
+  margin-left: 0.4rem;
+  color: var(--accent);
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.12s ease-in-out;
+}
+
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor {
+  opacity: 0.8;
+}
+
+/* ---- Wiki-links ---------------------------------------------------------- */
+.wikilink {
+  font-weight: 600;
+}
+
+.wikilink--red {
+  color: var(--accent-strong);
+  text-decoration-style: dotted;
+  text-decoration-line: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+  .wikilink--red {
+    color: #e08a6f;
+  }
+}
+
+/* ---- Page lists / A–Z index --------------------------------------------- */
+.page-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.page-list li {
+  padding: 0.2rem 0;
+  border-bottom: 1px dotted var(--border);
+}
+
+.page-desc {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.az-group h2 {
+  font-size: 1.2rem;
+  color: var(--accent);
+  border: none;
+}
+
+.empty {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ---- Contribution footer ------------------------------------------------- */
+.contribute {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: double 4px var(--border);
+}
+
+.contribute-note {
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 0.6rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  margin: 0 0.4rem 0.4rem 0;
+  border: var(--rule);
+  border-radius: 4px;
+  background: var(--background-alt);
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 0.92rem;
+}
+
+.btn:hover {
+  background: var(--button-hover);
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #15131c;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
+  color: #fff;
+}
+
+.updated {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* ---- Site footer --------------------------------------------------------- */
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: var(--rule);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.site-footer .copyright {
+  margin-top: 0.3rem;
+}

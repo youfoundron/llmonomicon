@@ -1,0 +1,30 @@
+{
+  "name": "llmonomicon",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A markdown-first wiki and digital grimoire for the history, concepts, tools, people, and projects of large language models.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24.16.0"
+  },
+  "scripts": {
+    "build": "node scripts/build.ts",
+    "dev": "node --watch scripts/serve.ts",
+    "serve": "node scripts/serve.ts --no-build",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "test": "node --test",
+    "check": "npm run typecheck && biome check . && npm test"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "marked": "^18.0.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.0",
+    "@types/node": "^25.9.3",
+    "typescript": "^6.0.3"
+  }
+}

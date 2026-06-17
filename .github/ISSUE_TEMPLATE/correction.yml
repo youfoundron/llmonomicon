@@ -1,0 +1,44 @@
+name: Report an error
+description: Flag a factual error, broken link, or other problem on a page.
+title: "Correction: "
+labels: ["correction", "content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Found something wrong? Tell us where and what, so it can be fixed quickly.
+  - type: input
+    id: page-path
+    attributes:
+      label: Page path
+      placeholder: content/projects/gpt-3.md
+    validations:
+      required: false
+  - type: input
+    id: page-url
+    attributes:
+      label: Page URL
+      placeholder: https://youfoundron.github.io/llmonomicon/projects/gpt-3/
+    validations:
+      required: false
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's wrong?
+      description: Quote the incorrect text and explain the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Suggested correction (optional)
+      description: How should it read instead? Include sources if you have them.
+    validations:
+      required: false
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for this problem.
+          required: true

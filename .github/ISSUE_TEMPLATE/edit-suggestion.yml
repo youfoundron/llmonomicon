@@ -1,0 +1,63 @@
+name: Suggest an edit
+description: Propose an improvement or fix to an existing article.
+title: "Edit suggestion: "
+labels: ["edit", "content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the **llmonomicon**! Describe what should change and why.
+        Prefer to edit directly? Use the **Edit on GitHub** link on the article to open a pull request instead.
+  - type: input
+    id: page-path
+    attributes:
+      label: Page path
+      description: The source file this edit applies to (prefilled when you arrive from an article).
+      placeholder: content/concepts/attention.md
+    validations:
+      required: true
+  - type: input
+    id: page-url
+    attributes:
+      label: Page URL
+      description: Link to the live page (prefilled automatically).
+      placeholder: https://youfoundron.github.io/llmonomicon/concepts/attention/
+    validations:
+      required: false
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type of change
+      options:
+        - Typo or grammar
+        - Factual correction
+        - Outdated information
+        - Missing or incomplete content
+        - Clarity or wording
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Your suggestion
+      description: What should change? Include the current wording and your proposed text where you can.
+      placeholder: "In the section on multi-head attention, the description of ..."
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources (optional)
+      description: Links or citations that support the change.
+    validations:
+      required: false
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for a similar suggestion.
+          required: true
+        - label: I agree to license my contribution under CC BY-SA 4.0.
+          required: true

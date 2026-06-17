@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{documentTitle}}</title>
+    <meta name="description" content="{{description}}" />
+    <link rel="icon" href="{{assetBase}}/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="{{assetBase}}/css/water.css" />
+    <link rel="stylesheet" href="{{assetBase}}/css/grimoire.css" />
+  </head>
+  <body>
+    <header class="masthead">
+      <a class="site-title" href="{{homeUrl}}">{{siteName}}</a>
+      <p class="tagline">{{tagline}}</p>
+      <nav class="site-nav">{{nav}}<a href="{{allUrl}}">All</a></nav>
+    </header>
+
+    {{breadcrumb}}
+
+    <main>
+      {{toc}}
+      <article class="content">{{content}}</article>
+      {{contributionFooter}}
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        <strong>{{siteName}}</strong> is a community grimoire. Content is licensed
+        <a href="{{repoUrl}}/blob/main/LICENSE-CONTENT">CC BY-SA 4.0</a>; code is
+        <a href="{{repoUrl}}/blob/main/LICENSE">MIT</a>.
+        <a href="{{repoUrl}}">Source on GitHub ↗</a>
+      </p>
+      <p class="copyright">© {{buildYear}} the contributors</p>
+    </footer>
+    {{devReloadScript}}
+  </body>
+</html>

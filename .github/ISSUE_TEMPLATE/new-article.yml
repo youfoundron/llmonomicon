@@ -1,0 +1,52 @@
+name: Propose a new article
+description: Suggest a page that doesn't exist yet. (Red links on the site land here.)
+title: "New article: "
+labels: ["new-article", "content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Propose a new entry for the grimoire. The more structure you can give, the faster it can be written.
+  - type: input
+    id: article-title
+    attributes:
+      label: Article title
+      description: Prefilled automatically when you follow a red link.
+      placeholder: Mixture of Experts
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - concepts
+        - events
+        - people
+        - tools
+        - projects
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: What should it cover?
+      description: A short outline — the key points, why it matters, and how it connects to existing pages.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources (optional)
+      description: Links or citations a writer can start from.
+    validations:
+      required: false
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and articles to avoid duplicates.
+          required: true
+        - label: I agree to license my contribution under CC BY-SA 4.0.
+          required: true

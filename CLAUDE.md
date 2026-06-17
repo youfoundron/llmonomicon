@@ -74,7 +74,7 @@ Articles live at `content/<category>/<slug>.md`. Categories (folder = slug):
 | `concepts`  | Concepts                 | ideas & mechanisms                         |
 | `events`    | Events                   | dated moments: papers, launches            |
 | `people`    | People & Organizations   | individuals **and** labs/companies         |
-| `software`  | Software                 | models, libraries, products                |
+| `software`  | Research & Software      | research, models, libraries, products      |
 
 (Display labels live in `CATEGORY_LABELS` in `scripts/types.ts`; the folder name
 stays a short slug.) `content/index.md` is the home page; top-level pages like

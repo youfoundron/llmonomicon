@@ -19,8 +19,8 @@ GitHub* link that opens a pull request.
   [[ChatGPT launch]] (2022).
 - **People & Organizations** — the minds and institutions, such as
   [[Geoffrey Hinton]] and [[OpenAI]].
-- **Software** — the models, libraries, and products: [[GPT-3]], [[BERT]],
-  [[Hugging Face Transformers]], and [[llama.cpp]].
+- **Research & Software** — the models, libraries, and products: [[GPT-3]],
+  [[BERT]], [[Hugging Face Transformers]], and [[llama.cpp]].
 
 ## A note on sources
 

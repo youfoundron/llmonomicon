@@ -21,7 +21,7 @@ For local work, clone the repo and run `npm install && npm run dev`.
 
 Articles are markdown files under `content/<category>/`, where `<category>` is
 one of: `concepts`, `events`, `people` (people **and** organizations), or
-`software` (models, libraries, and products).
+`software` (research, models, libraries, and products).
 
 - **Filename → URL.** `content/concepts/attention.md` is served at
   `/concepts/attention/`. Use lowercase, hyphenated filenames.

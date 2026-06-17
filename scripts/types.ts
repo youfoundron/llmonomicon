@@ -13,7 +13,7 @@ export const CATEGORY_LABELS: Record<Category, string> = {
   concepts: "Concepts",
   events: "Events",
   people: "People & Organizations",
-  software: "Software",
+  software: "Research & Software",
 };
 
 /** Human-facing label for a category slug, falling back to a humanized slug. */

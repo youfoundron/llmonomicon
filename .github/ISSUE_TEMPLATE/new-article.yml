@@ -23,7 +23,7 @@ body:
         - concepts
         - events
         - people (people & organizations)
-        - software (models, libraries, products)
+        - software (research, models, libraries, products)
     validations:
       required: true
   - type: textarea

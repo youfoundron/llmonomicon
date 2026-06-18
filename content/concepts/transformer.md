@@ -23,6 +23,12 @@ sources:
     author: Brown et al.
     publisher: arXiv
     year: 2020
+  - id: fedus2021
+    title: "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity"
+    url: https://arxiv.org/abs/2101.03961
+    author: Fedus, Zoph & Shazeer
+    publisher: arXiv
+    year: 2021
 ---
 
 # Transformer
@@ -53,6 +59,9 @@ Later work specialized the architecture:
 - **Encoder-only** models such as [[BERT]] excel at understanding tasks.[^bert2018]
 - **Decoder-only** models such as [[GPT-3]] excel at generation and became the
   dominant design for general-purpose LLMs.[^gpt3-2020]
+- **Sparse** variants such as the [[Mixture of Experts|Mixture-of-Experts]]
+  Transformer add many expert feed-forward sub-networks and activate only a few
+  per token, scaling capacity without a proportional rise in compute.[^fedus2021]
 
 ## Legacy
 

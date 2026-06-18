@@ -94,7 +94,7 @@ Context windows have grown by orders of magnitude in just a few years:
 - **[[Llama 2]]** (2023) "doubled the context length" of its predecessor to 4,096
   tokens.[^touvron2023]
 - By 2024, frontier models reached the hundreds of thousands of tokens, and
-  **Gemini 1.5** pushed into the millions — its technical report reporting
+  **[[Gemini 1.5]]** pushed into the millions — its technical report reporting
   near-perfect retrieval "up to at least 10M tokens."[^gemini2024]
 
 The arc runs roughly 512 → 1k → 2k → 4k → tens or hundreds of thousands → 1M+,

@@ -34,6 +34,12 @@ sources:
     author: Anthropic
     publisher: Anthropic
     year: 2024
+  - id: cc-announce
+    title: "Claude 3.7 Sonnet and Claude Code"
+    url: https://www.anthropic.com/news/claude-3-7-sonnet
+    author: Anthropic
+    publisher: Anthropic
+    year: 2025
 ---
 
 # Anthropic
@@ -87,3 +93,5 @@ empirical, measure-as-you-go approach to safety.[^anthropic-coreviews]
   work.[^anthropic-coreviews]
 - The **[[Model Context Protocol]]** — an open standard it open-sourced in
   November 2024 for connecting AI applications to external tools and data.[^mcp-announce]
+- **[[Claude Code]]** — its agentic coding tool, introduced in 2025, which drives
+  Claude to read, edit, and run code across a project.[^cc-announce]

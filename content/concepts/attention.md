@@ -55,6 +55,10 @@ sequence length,[^vaswani2017] computing attention efficiently becomes a central
 concern at scale — one addressed by efficient exact implementations such as
 [[FlashAttention]].
 
+During autoregressive generation, the keys and values computed for earlier tokens
+are reused at every step rather than recomputed — the optimization known as the
+[[KV cache]].
+
 ## Multi-head attention
 
 A single attention computation captures one kind of relationship. **Multi-head

@@ -13,8 +13,14 @@ import {
 } from "./types.ts";
 import { joinBase } from "./urls.ts";
 
+// Alphabetization ignores leading punctuation and quotation marks, so a title
+// like '"Attention Is All You Need" published' files under A — not a "#" bucket.
+function alphaKey(title: string): string {
+  return title.replace(/^[^\p{L}\p{N}]+/u, "");
+}
+
 function byTitle(a: Page, b: Page): number {
-  return a.title.localeCompare(b.title);
+  return alphaKey(a.title).localeCompare(alphaKey(b.title));
 }
 
 function listItem(page: Page): string {
@@ -80,7 +86,7 @@ export function allPagesIndexHtml(pages: Page[]): string {
 
   const groups = new Map<string, Page[]>();
   for (const page of articles) {
-    const first = (page.title.trim()[0] ?? "#").toUpperCase();
+    const first = (alphaKey(page.title)[0] ?? "#").toUpperCase();
     const key = first >= "A" && first <= "Z" ? first : "#";
     const bucket = groups.get(key);
     if (bucket) bucket.push(page);

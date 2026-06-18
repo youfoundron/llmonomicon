@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { categoryIndexHtml } from "../scripts/pages.ts";
+import { allPagesIndexHtml, categoryIndexHtml } from "../scripts/pages.ts";
 import type { Page } from "../scripts/types.ts";
 
 // Minimal Page factory for index-rendering tests; only the fields the category
@@ -62,6 +62,21 @@ test("concepts index groups by family in CONCEPT_GROUPS order", () => {
   const safety = html.indexOf("Safety &amp; security");
   assert.ok(tok >= 0 && arch >= 0 && safety >= 0);
   assert.ok(tok < arch && arch < safety);
+});
+
+test("A–Z index ignores leading punctuation when alphabetizing", () => {
+  const pages = [
+    page({ category: "events", slug: "aiayn", title: '"Attention Is All You Need" published' }),
+    page({ category: "concepts", slug: "attention", title: "Attention" }),
+    page({ category: "software", slug: "bert", title: "BERT" }),
+  ];
+  const html = allPagesIndexHtml(pages);
+
+  // The quoted title files under "A" — not a leading-punctuation "#" bucket.
+  assert.doesNotMatch(html, /id="#"/);
+  assert.match(html, /<h2 id="a">A<\/h2>/);
+  // Within A, plain "Attention" sorts before the quoted '"Attention Is All You Need"'.
+  assert.ok(html.indexOf(">Attention<") < html.indexOf("Attention Is All You Need"));
 });
 
 test("concepts with no group or an unrecognized one fall to a trailing Uncategorized bucket", () => {

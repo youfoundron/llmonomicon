@@ -3,7 +3,7 @@ title: Benchmark
 description: "What an LLM benchmark is — a task, a dataset, and a scoring metric — how models are scored, and the ways benchmarks break: contamination, saturation, and construct validity."
 technicality: somewhat-technical
 tags: [evaluation, benchmark]
-group: training
+group: evaluation
 aliases: [Benchmarks, Benchmarking, LLM benchmark, Evaluation benchmark, Benchmark (LLM evaluation)]
 updated: 2026-06-17
 sources:

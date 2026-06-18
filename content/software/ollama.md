@@ -66,7 +66,7 @@ tools.[^ol-import]
 
 By turning a multi-step chore — install an inference engine, find compatible
 weights, pick a quantization — into a single `ollama run`, Ollama became one of
-the most popular on-ramps to local inference and helped carry the open-weights
+the most popular on-ramps to [[Local LLMs|local inference]] and helped carry the open-weights
 movement to a wider audience.[^ol-repo] It sits one layer above [[llama.cpp]] and
 the [[GGML]] lineage that powers it, trading some low-level control for an
 experience almost anyone can use.

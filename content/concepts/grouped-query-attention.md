@@ -39,7 +39,7 @@ their own keys and values. The fix is to have query heads **share** key/value he
 In standard **multi-head attention (MHA)**, every query head has its own key and value
 head, so the KV cache grows with the head count.
 
-- **Multi-query attention (MQA)**, introduced by Noam Shazeer in 2019, takes the
+- **Multi-query attention (MQA)**, introduced by [[Noam Shazeer]] in 2019, takes the
   extreme case: *all* query heads share a **single** key/value head, "greatly reducing
   the size of these tensors and hence the memory bandwidth requirements of incremental
   decoding."[^shazeer2019] The savings are large, but using just one K/V head "can lead

@@ -59,8 +59,10 @@ On April 20, 2023, Google combined DeepMind and Google Research's Brain team int
 **[[Demis Hassabis]]** as CEO.[^gdm-announce] Announcing the merger, Hassabis
 credited the "Brain and DeepMind teams" with having "laid much of the foundations
 of the current AI industry, from Deep Reinforcement Learning to
-Transformers."[^gdm-announce] The lab describes itself as bringing together "two of
-the world's leading AI labs — Google Brain and DeepMind."[^gdm-about]
+Transformers."[^gdm-announce] He described the reorganization as the product of a
+"fantastic partnership" with Sundar Pichai, [[Jeff Dean]], and James Manyika.[^gdm-announce]
+The lab describes itself as bringing together "two of the world's leading AI labs — Google
+Brain and DeepMind."[^gdm-about]
 
 ## Two lineages
 

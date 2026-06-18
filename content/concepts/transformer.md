@@ -39,7 +39,9 @@ The original design is an **encoder–decoder** stack:[^vaswani2017]
 - The **encoder** maps an input sequence into a set of contextual
   representations.
 - The **decoder** generates an output sequence one token at a time, attending
-  both to its own previous outputs and to the encoder's representations.
+  both to its own previous outputs and to the encoder's representations; the rule
+  it uses to turn each step's probabilities into a chosen token is its
+  [[Decoding strategies|decoding strategy]].
 
 Each layer combines multi-head [[Attention]] with a position-wise feed-forward
 network, plus residual connections and layer normalization. Because attention

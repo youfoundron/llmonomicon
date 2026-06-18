@@ -63,4 +63,4 @@ Llama 2 reset expectations for the open ecosystem. It moved open weights from
 licensed foundation that enterprises could actually deploy, and it set the template
 that later open-weight releases followed: free to use, with an acceptable-use policy
 and scale-based conditions attached. Meta continued the line with
-[[Llama 3 released|Llama 3]] and its successors.
+[[Llama 3 released|Llama 3]], [[Llama 4 released|Llama 4]], and beyond.

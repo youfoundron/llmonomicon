@@ -50,7 +50,9 @@ functions, classes, and even files simultaneously."[^jimenez2023] The difficulty
 showed at launch: the best model evaluated, Claude 2, resolved just
 **1.96%** of the issues.[^jimenez2023] That gap is exactly why SWE-bench became
 the defining benchmark of the **coding-agent** era — the target that systems
-built to autonomously edit code are measured against.
+built to autonomously edit code are measured against. The canonical *research*
+agent built to tackle it, and the source of the agent–computer-interface idea, is
+[[SWE-agent]].
 
 ## SWE-bench Verified
 

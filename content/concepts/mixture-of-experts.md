@@ -75,7 +75,7 @@ Sparse activation is not free:
   layers between stacked LSTM layers.[^shazeer2017]
 - **Switch Transformer** (Fedus, Zoph & Shazeer, 2021) — single-expert (top-1)
   routing at trillion-parameter scale.[^fedus2021]
-- **Mixtral 8×7B** (2024) — a modern decoder-only MoE with eight experts per
+- **[[Mixtral|Mixtral 8×7B]]** (2024) — a modern decoder-only MoE with eight experts per
   layer and top-2 routing, totaling about 47B parameters but activating only
   ~13B per token, matching or beating much larger dense models.[^jiang2024]
 

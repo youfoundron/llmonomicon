@@ -22,7 +22,8 @@ sources:
 
 **Ashish Vaswani** is a computer scientist best known as the lead author of
 [[Attention Is All You Need]], the 2017 paper that introduced the
-[[Transformer]].[^vaswani2017] At the time he was a researcher at Google Brain.
+[[Transformer]].[^vaswani2017] At the time he was a researcher at
+[[Google DeepMind|Google Brain]].
 
 ## Work
 

@@ -25,6 +25,12 @@ sources:
     author: Zhang et al.
     publisher: arXiv
     year: 2024
+  - id: suzgun2022
+    title: "Challenging BIG-Bench Tasks and Whether Chain-of-Thought Can Solve Them"
+    url: https://arxiv.org/abs/2210.09261
+    author: Suzgun et al.
+    publisher: arXiv
+    year: 2022
 ---
 
 # Benchmark
@@ -49,7 +55,10 @@ human preference (see [[Chatbot Arena]]).[^helm2022]
 A subtlety that trips up readers: the *same* model can score very differently on
 the *same* benchmark depending on the **prompting protocol** — whether it is
 given no examples (**zero-shot**), a few worked examples (**few-shot**), or asked
-to reason step by step (**chain-of-thought**). A benchmark number is only
+to reason step by step (**chain-of-thought**). The gap can be large: on the
+[[BIG-bench|BIG-Bench Hard]] task subset, chain-of-thought prompting lifted models
+from below the average human rater to above it on many of its 23 tasks.[^suzgun2022]
+A benchmark number is only
 meaningful alongside the conditions that produced it, which is why standardized
 evaluation matters: a holistic survey of the field found that before efforts to
 standardize, "models on average were evaluated on just 17.9% of the core HELM

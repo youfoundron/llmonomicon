@@ -50,8 +50,9 @@ and as sequences grow longer that table comes to dominate GPU memory.
 Counterintuitively, the real cost is usually not the arithmetic but the *memory
 traffic* — shuttling that table between the GPU's small, fast on-chip memory
 (SRAM) and its larger but slower main memory (HBM).[^dao2022] Earlier attempts to
-tame attention's quadratic cost used *approximate* methods such as sparse or
-low-rank attention, but, as the FlashAttention paper notes, these approximate
+tame attention's quadratic cost used *approximate* methods such as
+[[Sliding-window & sparse attention|sparse]] or low-rank attention, but, as the
+FlashAttention paper notes, these approximate
 methods "often do not achieve wall-clock speedup."[^dao2022]
 
 ## The idea

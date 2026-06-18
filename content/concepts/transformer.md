@@ -51,7 +51,7 @@ The original design is an **encoder–decoder** stack:[^vaswani2017]
 
 Each layer combines multi-head [[Attention]] with a position-wise feed-forward
 network, plus residual connections and layer normalization. Because attention
-itself is order-agnostic, **positional encodings** are added to inject
+itself is order-agnostic, **[[Positional encoding|positional encodings]]** are added to inject
 information about token order.[^vaswani2017] Most modern LLMs swap the original
 additive encodings for [[Rotary Position Embedding]].
 

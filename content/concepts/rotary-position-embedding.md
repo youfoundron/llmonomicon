@@ -65,4 +65,4 @@ RoPE also turned out to be the lever for running a model on inputs longer than i
 was trained on. Its rotation frequencies (set by a base value, commonly around
 10,000) can be rescaled to extend a model's usable context — the basis for methods
 such as position interpolation, NTK-aware scaling, and YaRN. Those belong to the
-separate topic of context-length extension.
+separate topic of [[Context-length extension (RoPE scaling)|context-length extension]].

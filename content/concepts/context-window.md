@@ -76,7 +76,7 @@ Why can't a model simply take unlimited text? Three forces bound the window:
   caching the keys and values of every previous token, so a longer context
   consumes proportionally more memory — part of why methods like
   [[Grouped-query & multi-query attention]] exist to shrink that cache.
-- **Positional encodings have a range.** A model must know *where* each token
+- **[[Positional encoding|Positional encodings]] have a range.** A model must know *where* each token
   sits. Early models used a fixed-size table of learned position embeddings —
   BERT's 512 and GPT-2's 1,024 are literally the sizes of those
   tables[^devlin2018][^radford2019] — and even formula-based schemes are only

@@ -57,8 +57,9 @@ The technique has its own entry: [[PagedAttention]].
 Beyond the memory trick, vLLM bundles the machinery a production deployment needs:
 **[[Continuous batching]]** of incoming requests (adding and retiring requests
 mid-flight rather than waiting for a fixed batch to finish), an
-**OpenAI-compatible API server** so existing client code works unchanged, support
-for spreading a model across multiple GPUs, and a wide range of
+**OpenAI-compatible API server** so existing client code works unchanged,
+**[[Speculative decoding|speculative decoding]]** for lower-latency generation,
+support for spreading a model across multiple GPUs, and a wide range of
 [[Quantization|quantized]] weight formats.[^vllm-repo]
 
 ## Why it matters

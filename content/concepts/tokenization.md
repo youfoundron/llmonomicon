@@ -56,7 +56,7 @@ since unknown words decompose into known fragments.[^bpe2016]
 
 ## Why it matters
 
-Token count drives both cost and the [[Transformer|context window]]: longer
+Token count drives both cost and the [[Context window]]: longer
 inputs mean more tokens to attend over. Tokenization quirks also explain many
 model failures, such as difficulty with arithmetic or spelling, where the token
 boundaries cut across the units a human would reason about.

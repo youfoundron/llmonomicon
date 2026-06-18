@@ -32,7 +32,7 @@ progress."[^hf-archive] Under the hood it ran on EleutherAI's
 ## What it measured
 
 The original (v1) leaderboard combined six benchmarks: **ARC**, **[[HellaSwag]]**,
-**[[MMLU]]**, **TruthfulQA**, **WinoGrande**, and **[[GSM8K]]**, each run at a fixed
+**[[MMLU]]**, **[[TruthfulQA]]**, **WinoGrande**, and **[[GSM8K]]**, each run at a fixed
 number of few-shot examples.[^hf-archive] It became the community's go-to scoreboard —
 the archive notes more than two million unique visitors over a ten-month
 span.[^hf-archive]

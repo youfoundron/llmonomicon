@@ -91,7 +91,7 @@ Context windows have grown by orders of magnitude in just a few years:
   respectively — a few paragraphs.[^devlin2018][^radford2019]
 - **GPT-3** (2020) used 2,048; as its paper states, "all models use a context
   window of n_ctx = 2048 tokens."[^brown2020]
-- **Llama 2** (2023) "doubled the context length" of its predecessor to 4,096
+- **[[Llama 2]]** (2023) "doubled the context length" of its predecessor to 4,096
   tokens.[^touvron2023]
 - By 2024, frontier models reached the hundreds of thousands of tokens, and
   **Gemini 1.5** pushed into the millions — its technical report reporting

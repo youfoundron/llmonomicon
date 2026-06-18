@@ -96,4 +96,5 @@ without giving up speed, and it did so as a small, well-specified format rather
 than a framework. It sits alongside local-inference formats like [[GGUF]]: where
 GGUF packs an often [[Quantization|quantized]] model into one portable file for
 running on a laptop, safetensors is the format of choice for the full-precision
-weights traded in the research-and-fine-tuning workflow.[^st-docs]
+weights traded in the research-and-fine-tuning workflow.[^st-docs] The same format
+also carries lighter-weight artifacts such as [[LoRA]] fine-tuning adapters.

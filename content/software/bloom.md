@@ -17,7 +17,7 @@ sources:
 # BLOOM
 
 **BLOOM** is a 176-billion-parameter, open-access, multilingual language model
-released in 2022 by the BigScience Workshop — a collaboration of hundreds of
+released in 2022 by the [[BigScience]] Workshop — a collaboration of hundreds of
 researchers. At GPT-3 scale but built entirely in the open, it proved that a
 frontier-class model could come from a public scientific collaboration rather than
 only a corporate lab.[^lescao2022]

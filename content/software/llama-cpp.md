@@ -34,7 +34,7 @@ ground for [[GGML]], the underlying tensor library.[^repo]
 ## Why it matters
 
 By making capable models runnable on a laptop, llama.cpp helped catalyze the
-[[Local LLMs|local]] and open-weights movement, complementing higher-level libraries like
+[[Local LLMs|local]] and [[Open weights|open-weights]] movement, complementing higher-level libraries like
 [[Hugging Face Transformers]] and serving as the inference engine inside
 one-command runners such as [[Ollama]]. Its quantized GGUF files are the
 local-inference counterpart to [[safetensors]], the format used for the

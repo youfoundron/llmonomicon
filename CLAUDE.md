@@ -35,6 +35,16 @@ backend**; contributions happen through GitHub (prefilled issues + PRs).
    `node scripts/*.ts` with no build step. Stay within erasable TS (no enums,
    namespaces, or parameter properties; use `import type`). `tsc --noEmit` is for
    type-checking only.
+6. **Stay current — distrust your training cutoff.** Your model's knowledge
+   lags real time by a year or more, but the environment tells you today's
+   *actual* date. This is a living record of a fast-moving field, so any
+   time-sensitive claim — what the latest model is, who runs an org, a version
+   number, an "ongoing/current" status, anything that happened after your
+   cutoff — must be **checked against the live web (WebSearch/WebFetch), not
+   recalled from memory.** Treat training knowledge as a stale hypothesis to
+   verify, never as a source. A symptom to watch for: a timeline or corpus that
+   stops at your cutoff year instead of reaching the present day. When in doubt,
+   search.
 
 ## Commands
 
@@ -131,8 +141,8 @@ they appear in that list), each family listed alphabetically. Rules:
   default — the entry just lands under **Uncategorized** on the index (no warning).
   A `group` that doesn't match any family is treated as a typo: it also renders
   under Uncategorized but emits a **non-fatal build warning**. The current families
-  are: `tokenization`, `architecture`, `training`, `decoding`, `inference`,
-  `efficiency`, `prompting`, `retrieval`, `agents`, `safety` (display names live in
+  are: `tokenization`, `architecture`, `training`, `evaluation`, `decoding`,
+  `inference`, `efficiency`, `prompting`, `retrieval`, `agents`, `safety` (display names live in
   `CONCEPT_GROUP_LABELS`). Assigning a real family is encouraged — a wall of
   Uncategorized concepts is a smell — but never required to ship.
 - **One family per concept.** Cross-family relationships are expressed with
@@ -273,6 +283,15 @@ checklist, then remove `changes-requested` and hand off forward again.
 triaging `stage:scoping` issues / incoming human `new-article` proposals:
 - Survey the existing corpus first (`ls -R content/`, grep titles/aliases) to
   avoid duplicates and find real gaps.
+- **Scout the present, not just the corpus.** A gap-survey of `content/` alone
+  systematically misses everything recent, because your training data stops ~a
+  year before today's date — this is exactly why the event timeline is thin and
+  trails off at your cutoff. So **web-search for major LLM developments since
+  your cutoff** (model releases, product launches, org/leadership changes,
+  landmark papers, policy & controversies) and scope the ones a serious reader
+  would expect. **Events especially:** the timeline should reach *today*, not
+  stop at 2024 — periodically sweep recent months for dated occurrences and file
+  them as `events` entries (linked to the entity entry via `related`).
 - Decompose the topic into discrete prospective entries. For each, decide the
   category, a working title, and the angle — **and, for concepts, the `group:`
   family** from `CONCEPT_GROUPS` (only you may introduce a new family, and only
@@ -288,9 +307,15 @@ triaging `stage:scoping` issues / incoming human `new-article` proposals:
 **🔬 Researcher** — runs on a loop. Claims a `stage:research` issue, then:
 - Re-check the corpus for overlap; if it duplicates an existing entry, recommend
   "expand X" instead and kick to `stage:scoping`.
-- Gather sources — prefer **primary** (papers, official docs, release notes). Use
-  your own knowledge to surface key facts but **verify each against a real source
-  (WebSearch/WebFetch); never invent a URL.**
+- Gather sources — prefer **primary** (papers, official docs, release notes).
+  Your knowledge lags today's date, so treat it as a starting hypothesis, not
+  fact: use it to surface candidate facts, then **verify each against a real
+  source (WebSearch/WebFetch); never invent a URL.** Give **time-sensitive
+  claims extra scrutiny** — latest version, current leadership, "still ongoing"
+  status, dates, "state of the art" — and confirm them as of today, since these
+  are exactly what your training memory gets wrong. If a fact can't be confirmed
+  against a live source, flag it or drop it. For a recent topic, expect *most*
+  of the dossier to come from search, not recall.
 - Post a **Research Dossier** comment: proposed title/category/slug/aliases (for
   concepts, the `group` family; **for every entry, the `technicality` level** — see
   Technicality); relevance & priority; key facts each with a citation; a
@@ -312,6 +337,12 @@ triaging `stage:scoping` issues / incoming human `new-article` proposals:
 - **Tone: approachable, not too academic, for a technically competent but
   non-specialist reader.** Lead with what it is and why it matters; short
   paragraphs; define jargon on first use; no hype.
+- **Write from the dossier, not from memory.** Don't add time-sensitive claims
+  (latest model, current leadership, version numbers, "as of now") that the
+  dossier didn't source — your recall of them is likely stale. If a fact you
+  need is missing or reads as dated, web-check and cite it (or flag it for the
+  Editor); prefer dated phrasing ("as of June 2026") over "currently" or "the
+  latest," which rots.
 - Post the **full proposed file** as a fenced comment with its intended path
   (`content/<category>/<slug>.md`). Authors don't touch git — the Editor commits.
 - Self-check: every claim cited, ≥1 source, events have date+related, concepts
@@ -325,7 +356,11 @@ its own clone/worktree. Claims a `stage:edit` issue, then does **≥2 passes**:
   claim and the URL resolves (WebFetch); fix or replace bad ones; ensure ≥1 source,
   (events) date+related, (concepts) a real `group` (not Uncategorized), and a
   sensible `technicality` on every entry (set it if a persona left it off, and
-  reconcile the front-matter value with the issue's `tech:*` label).
+  reconcile the front-matter value with the issue's `tech:*` label). Also catch
+  **staleness**, not just broken links — a citation can resolve yet be out of
+  date. Flag present-tense "latest/current/now" statements, version numbers,
+  leadership, and "ongoing" status, and re-confirm them against the live web as
+  of today's date; rewrite anything time-sensitive with dated phrasing.
 - *Pass 2 — tone, consistency, cross-refs:* enforce the house tone; read recent
   entries (`git log`, newest files) for consistent voice/terminology; add
   cross-references the Author missed **both directions** — `[[links]]` in the new
@@ -372,6 +407,12 @@ reviews, rebase-merges → issue closes, Pages redeploys, the entry is live.
   failure leaves it red — which is why the Publisher runs `npm run check` *before*
   merging, not after.
 - **Only the Publisher merges to `main`.**
+- **Recency is a standing job, not a one-off.** The corpus only stays current if
+  someone keeps looking past the model's training cutoff (rule 6). Run the
+  Research Officer's "scout the present" sweep on a recurring cadence — e.g. a
+  scheduled RO pass that web-searches the last few months of LLM news and files
+  fresh `events` + entity issues — so the timeline tracks real time instead of
+  drifting back to the cutoff year.
 
 ## Deployment
 

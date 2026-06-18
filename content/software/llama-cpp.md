@@ -15,7 +15,7 @@ sources:
 
 # llama.cpp
 
-**llama.cpp** is an open-source project, started by Georgi Gerganov in 2023, for
+**llama.cpp** is an open-source project, started by [[Georgi Gerganov]] in 2023, for
 running large language models efficiently in plain C/C++ with no heavyweight
 dependencies. It began as a port of Meta's LLaMA weights to the CPU and grew into
 a widely used engine for **local inference**.[^repo] It is also the main testing

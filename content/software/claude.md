@@ -70,7 +70,7 @@ relying on human feedback alone.[^claudes-constitution]
 Anthropic first released **Claude** — alongside a faster, cheaper variant, **Claude
 Instant** — on March 14, 2023.[^introducing-claude] **Claude 2** followed in July
 2023.[^claude2] The line took its lasting shape with the **Claude 3** family on
-March 4, 2024, which introduced the three named tiers that persist today: **Opus**
+[[Claude 3 released|March 4, 2024]], which introduced the three named tiers that persist today: **Opus**
 (the most capable), **Sonnet** (balanced for everyday use), and **Haiku** (the
 fastest and most compact).[^claude3]
 

@@ -1,6 +1,7 @@
 ---
 title: Chain-of-thought prompting
 description: A prompting technique that asks a model to work through intermediate reasoning steps before answering, sharply improving its performance on multi-step problems.
+technicality: somewhat-technical
 tags: [prompting, reasoning, emergent]
 group: prompting
 aliases: [Chain of thought, CoT, Zero-shot CoT]

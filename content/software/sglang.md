@@ -1,6 +1,7 @@
 ---
 title: SGLang
 description: A high-performance LLM serving engine, distinguished from vLLM by RadixAttention—which reuses KV-cache prefixes across requests—and a structured-generation frontend.
+technicality: highly-technical
 tags: [open-source, inference, serving]
 updated: 2026-06-18
 sources:

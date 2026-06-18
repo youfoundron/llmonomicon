@@ -1,6 +1,7 @@
 ---
 title: Sam Altman
 description: Co-founder and chief executive of OpenAI, and the organization's most prominent public face through the ChatGPT era.
+technicality: non-technical
 tags: [founder, executive]
 aliases: [Samuel Altman, Samuel H. Altman]
 updated: 2026-06-17

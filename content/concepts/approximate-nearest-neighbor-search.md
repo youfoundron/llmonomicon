@@ -1,6 +1,7 @@
 ---
 title: Approximate nearest neighbor (ANN) search
 description: The algorithms that find vectors closest to a query quickly by accepting approximate answers — HNSW, IVF, and product quantization — the engine inside vector databases and FAISS.
+technicality: technical
 tags: [retrieval, search]
 group: retrieval
 aliases: [ANN search, Approximate nearest neighbor, Nearest neighbor search, HNSW]

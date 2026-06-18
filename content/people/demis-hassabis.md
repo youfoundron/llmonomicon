@@ -1,6 +1,7 @@
 ---
 title: Demis Hassabis
 description: Co-founder and CEO of Google DeepMind and a 2024 Chemistry Nobel laureate for AlphaFold; the scientist-entrepreneur behind one of the top AI labs.
+technicality: non-technical
 tags: [researcher, founder]
 aliases: [Hassabis]
 updated: 2026-06-17

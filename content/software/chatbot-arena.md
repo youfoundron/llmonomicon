@@ -1,6 +1,7 @@
 ---
 title: Chatbot Arena
 description: A crowd-sourced LLM leaderboard where users vote on anonymous head-to-head model responses, ranking models by human preference rather than fixed test scores.
+technicality: technical
 tags: [evaluation, benchmark, leaderboard]
 aliases: [LMArena, Chatbot Arena leaderboard]
 updated: 2026-06-17

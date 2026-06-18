@@ -1,6 +1,7 @@
 ---
 title: Open weights
 description: What it means to release a model's trained parameters for download — and why "open weights" is not the same as "open source."
+technicality: somewhat-technical
 tags: [open-weights, licensing]
 group: inference
 aliases: [open-weight, open weight, open-weight models, open-weights model]

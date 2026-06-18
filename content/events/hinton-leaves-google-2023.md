@@ -1,6 +1,7 @@
 ---
 title: Hinton leaves Google
 description: Geoffrey Hinton departs Google to speak freely about AI risk.
+technicality: non-technical
 date: 2023-05-01
 related: [Geoffrey Hinton]
 updated: 2026-06-17

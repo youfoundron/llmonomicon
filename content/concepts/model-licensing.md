@@ -1,6 +1,7 @@
 ---
 title: Model licensing
 description: The licenses that govern what you can actually do with a model's weights—from permissive Apache-2.0 to custom community terms and use-restricted RAIL licenses.
+technicality: non-technical
 tags: [licensing, governance, open-weights]
 group: safety
 aliases: [model license, model licenses, LLM licensing, AI model license]

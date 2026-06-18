@@ -1,6 +1,7 @@
 ---
 title: EleutherAI
 description: The grassroots collective that built open replications of GPT-3 — The Pile dataset and the GPT-Neo/GPT-J/GPT-NeoX models — before any major lab released a large model openly.
+technicality: non-technical
 tags: [organization, open-weights]
 aliases: [Eleuther, EleutherAI Institute]
 updated: 2026-06-18

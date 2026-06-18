@@ -1,6 +1,7 @@
 ---
 title: Grouped-query & multi-query attention
 description: Attention variants that let query heads share key/value heads, shrinking the KV cache and speeding up inference at a small cost to quality.
+technicality: highly-technical
 tags: [architecture, attention, efficiency]
 group: architecture
 aliases: [GQA, MQA, Grouped-query attention, Multi-query attention, grouped query attention, multi query attention]

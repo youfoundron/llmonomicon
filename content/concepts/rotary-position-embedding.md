@@ -1,6 +1,7 @@
 ---
 title: Rotary Position Embedding (RoPE)
 description: The dominant way modern LLMs encode token position—by rotating query and key vectors so that attention naturally depends on the distance between tokens.
+technicality: highly-technical
 tags: [positional-encoding, attention, architecture]
 group: architecture
 aliases: [RoPE, Rotary embeddings, Rotary positional embedding]

@@ -1,6 +1,7 @@
 ---
 title: GSM8K
 description: A benchmark of grade-school math word problems that became the standard test of multi-step reasoning—and the headline number for chain-of-thought prompting.
+technicality: technical
 tags: [benchmark, evaluation, reasoning, math]
 aliases: [Grade School Math 8K, GSM8k]
 updated: 2026-06-17

@@ -1,6 +1,7 @@
 ---
 title: GPT-2
 description: OpenAI's 2019 language model, remembered less for its capabilities than for the staged release that launched the modern debate over whether to publish model weights.
+technicality: technical
 tags: [model, milestone]
 aliases: [Generative Pre-trained Transformer 2]
 date: 2019-02-14

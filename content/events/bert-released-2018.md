@@ -1,6 +1,7 @@
 ---
 title: BERT released
 description: Google releases BERT, a bidirectional Transformer for language understanding.
+technicality: technical
 date: 2018-10-11
 related: [BERT]
 updated: 2026-06-17

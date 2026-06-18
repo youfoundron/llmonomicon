@@ -1,6 +1,7 @@
 ---
 title: BLOOM
 description: The 176-billion-parameter open-access multilingual model from the open BigScience collaboration (2022) — a GPT-3-scale model built in the open under a responsible-use license.
+technicality: technical
 tags: [model, open-access, multilingual, bigscience]
 aliases: [BigScience BLOOM]
 updated: 2026-06-18

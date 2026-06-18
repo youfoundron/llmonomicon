@@ -1,6 +1,7 @@
 ---
 title: Gemini
 description: Google DeepMind's flagship family of natively multimodal frontier models, launched in December 2023 and known for very long context windows.
+technicality: somewhat-technical
 tags: [model, product, multimodal]
 aliases: [Gemini 1.5, Gemini Ultra, Gemini Pro, Gemini Nano]
 updated: 2026-06-17

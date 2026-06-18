@@ -1,6 +1,7 @@
 ---
 title: Arthur Mensch
 description: Co-founder and CEO of Mistral AI, and the most prominent individual advocate for permissive open-weight models.
+technicality: non-technical
 tags: [researcher, founder]
 aliases: [Mensch]
 updated: 2026-06-18

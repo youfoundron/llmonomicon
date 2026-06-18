@@ -1,6 +1,7 @@
 ---
 title: Text Generation Inference (TGI)
 description: Hugging Face's production server for serving LLMs—and a notable case study in open-source licensing, after a brief move to a restrictive license and back.
+technicality: technical
 tags: [open-source, inference, serving]
 aliases: [TGI]
 updated: 2026-06-17

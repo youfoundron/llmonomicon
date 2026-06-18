@@ -1,6 +1,7 @@
 ---
 title: ChatGPT launched
 description: OpenAI releases ChatGPT, bringing LLMs to a mass audience.
+technicality: somewhat-technical
 date: 2022-11-30
 related: [OpenAI, GPT-3]
 aliases: [ChatGPT launch, ChatGPT]

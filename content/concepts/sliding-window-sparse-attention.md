@@ -1,6 +1,7 @@
 ---
 title: Sliding-window & sparse attention
 description: Attention variants — local windows and sparse patterns with a few global tokens — that drop the quadratic all-pairs cost to scale to long sequences, trading some long-range reach for near-linear cost.
+technicality: highly-technical
 tags: [attention, efficiency]
 group: efficiency
 aliases: [Sliding-window attention, Sliding window attention, Local attention, Sparse attention, Block-sparse attention]

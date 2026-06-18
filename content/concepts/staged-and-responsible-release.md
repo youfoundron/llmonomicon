@@ -1,6 +1,7 @@
 ---
 title: Staged and responsible release
 description: The norm—and the debate—around whether and how to release a model's weights, born from OpenAI's staged release of GPT-2 in 2019.
+technicality: somewhat-technical
 tags: [safety, governance, open-weights]
 group: safety
 aliases: [Staged release, Responsible release, Release strategy]

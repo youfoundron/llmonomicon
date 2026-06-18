@@ -1,6 +1,7 @@
 ---
 title: Prompt engineering
 description: The practice of designing an LLM's text input to get reliable outputs — exploiting in-context learning — its core levers, and its honest limits as part-craft, part-folklore.
+technicality: somewhat-technical
 tags: [prompting, craft]
 group: prompting
 aliases: [Prompting, Prompt design]

@@ -1,6 +1,7 @@
 ---
 title: Model serialization
 description: How a trained model's weights are saved to and loaded from disk—and the pickle security problem that reshaped the file formats the field uses.
+technicality: technical
 tags: [serialization, security, formats]
 group: safety
 aliases: [Checkpoint, Model checkpoint, state_dict, Serialization]

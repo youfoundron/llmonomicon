@@ -1,6 +1,7 @@
 ---
 title: safetensors
 description: A simple, secure file format for model weights — unlike Python pickle, loading one runs no code — that still loads fast.
+technicality: technical
 tags: [format, security, open-source]
 aliases: [Safetensors, SafeTensors, .safetensors]
 updated: 2026-06-17

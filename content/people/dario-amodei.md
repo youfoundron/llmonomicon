@@ -1,6 +1,7 @@
 ---
 title: Dario Amodei
 description: Co-founder and CEO of Anthropic; previously OpenAI's VP of research and first author of "Concrete Problems in AI Safety."
+technicality: non-technical
 tags: [researcher, founder]
 aliases: [Dario]
 updated: 2026-06-17

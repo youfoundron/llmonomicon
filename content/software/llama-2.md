@@ -1,6 +1,7 @@
 ---
 title: Llama 2
 description: Meta's July 2023 open-weight model family—the release that made open weights usable commercially, under a custom license with an acceptable-use policy and a large-user clause.
+technicality: technical
 tags: [model, open-weights, meta]
 aliases: [Llama 2-Chat, Llama-2]
 updated: 2026-06-17

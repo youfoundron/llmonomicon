@@ -1,6 +1,7 @@
 ---
 title: GLUE & SuperGLUE
 description: The pre-LLM-era NLU benchmark suites — GLUE bundled nine tasks into one score; once BERT surpassed it, the harder SuperGLUE replaced it — the textbook example of benchmark saturation.
+technicality: technical
 tags: [evaluation, benchmark]
 aliases: [GLUE, SuperGLUE]
 updated: 2026-06-18

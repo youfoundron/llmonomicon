@@ -1,6 +1,7 @@
 ---
 title: Open LLM Leaderboard
 description: Hugging Face's reference scoreboard for open-weight models—reproducible benchmark scores that, over two years, became a textbook case of benchmark saturation.
+technicality: technical
 tags: [evaluation, leaderboard]
 updated: 2026-06-18
 sources:

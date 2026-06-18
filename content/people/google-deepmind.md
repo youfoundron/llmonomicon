@@ -1,6 +1,7 @@
 ---
 title: Google DeepMind
 description: Google's frontier AI lab, formed in 2023 by merging DeepMind and Google Brain—the team that produced the Transformer, BERT, and TensorFlow.
+technicality: non-technical
 tags: [organization, lab]
 aliases: [DeepMind, Google Brain]
 updated: 2026-06-17

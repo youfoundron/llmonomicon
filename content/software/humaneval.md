@@ -1,6 +1,7 @@
 ---
 title: HumanEval
 description: OpenAI's 164-problem Python code-generation benchmark, introduced with Codex — the origin of the pass@k metric and the standard test of whether a model can write working code.
+technicality: technical
 tags: [benchmark, code]
 aliases: [HumanEval benchmark, pass@k]
 updated: 2026-06-17

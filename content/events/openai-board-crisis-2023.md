@@ -1,6 +1,7 @@
 ---
 title: Sam Altman fired and reinstated
 description: Over five days in November 2023, OpenAI's board fired CEO Sam Altman and then reinstated him after a near-total staff revolt.
+technicality: non-technical
 date: 2023-11-17
 related: [OpenAI, Sam Altman, Ilya Sutskever, Greg Brockman, Mira Murati]
 aliases: [OpenAI board crisis, Sam Altman fired, OpenAI leadership crisis 2023]

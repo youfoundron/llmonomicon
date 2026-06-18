@@ -1,6 +1,7 @@
 ---
 title: Quantization
 description: Storing a model's weights at lower numerical precision to shrink it and speed it up—the technique that made running large models on ordinary hardware possible.
+technicality: technical
 tags: [efficiency, inference, quantization]
 group: efficiency
 aliases: [quantized, model quantization, weight quantization]

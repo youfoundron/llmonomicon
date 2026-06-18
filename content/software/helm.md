@@ -1,6 +1,7 @@
 ---
 title: HELM
 description: Stanford CRFM's holistic evaluation framework — it scores models across many scenarios and metrics at once (accuracy, robustness, fairness, toxicity, and more) in a transparent matrix, not a single number.
+technicality: technical
 tags: [benchmark, evaluation]
 aliases: [Holistic Evaluation of Language Models]
 updated: 2026-06-18

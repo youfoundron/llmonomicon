@@ -39,3 +39,11 @@ test("draft flag is read as a boolean", () => {
   assert.equal(parseFrontMatter("---\ndraft: true\n---\n").data.draft, true);
   assert.equal(parseFrontMatter("---\ntitle: x\n---\n").data.draft, false);
 });
+
+test("reads the technicality level as a string", () => {
+  assert.equal(
+    parseFrontMatter("---\ntechnicality: highly-technical\n---\n").data.technicality,
+    "highly-technical",
+  );
+  assert.equal(parseFrontMatter("---\ntitle: x\n---\n").data.technicality, undefined);
+});

@@ -1,6 +1,7 @@
 ---
 title: Constrained decoding
 description: A technique that forces a language model's output to match a formal structure—like JSON or a grammar—by masking out any token that would break it.
+technicality: technical
 tags: [generation, inference, mechanism]
 group: decoding
 aliases: [Structured generation, Structured output, Grammar-constrained decoding, JSON mode, guided generation]

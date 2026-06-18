@@ -1,6 +1,7 @@
 ---
 title: Reranking
 description: The precision stage of retrieval — a slower, more accurate model (often a cross-encoder) re-scores the shortlist from fast first-stage search — the standard quality lever in RAG pipelines.
+technicality: technical
 tags: [retrieval, ranking]
 group: retrieval
 aliases: [Re-ranking, Cross-encoder, Retrieve-then-rerank, "Reranking (cross-encoders)"]

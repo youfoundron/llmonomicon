@@ -1,6 +1,7 @@
 ---
 title: MMLU
 description: The most-cited knowledge benchmark of the LLM era—57 subjects of multiple-choice questions—now largely saturated by frontier models and succeeded by harder, cleaner variants.
+technicality: technical
 tags: [benchmark, evaluation, knowledge]
 aliases: [Massive Multitask Language Understanding, MMLU-Pro, MMLU-Redux]
 updated: 2026-06-17

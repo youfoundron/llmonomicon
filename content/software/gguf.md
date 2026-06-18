@@ -1,6 +1,7 @@
 ---
 title: GGUF
 description: The single-file format of the llama.cpp / ggml ecosystem that packs a model's weights, metadata, and tokenizer into one mmap-friendly file for local inference.
+technicality: technical
 tags: [format, inference, open-source]
 aliases: [GGUF format, .gguf, GGML Universal File]
 updated: 2026-06-17

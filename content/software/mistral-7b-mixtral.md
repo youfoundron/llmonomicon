@@ -1,6 +1,7 @@
 ---
 title: Mistral 7B / Mixtral
 description: Mistral AI's Apache-2.0 open-weight models—Mistral 7B and the Mixture-of-Experts Mixtral 8x7B—that set a new bar for small open models with genuinely unrestricted licenses.
+technicality: technical
 tags: [model, open-weights, mistral]
 aliases: [Mistral 7B, Mixtral, Mixtral 8x7B]
 updated: 2026-06-17

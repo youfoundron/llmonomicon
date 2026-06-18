@@ -1,6 +1,7 @@
 ---
 title: Mistral AI
 description: The Paris-based lab that became the standard-bearer for permissively-licensed (Apache-2.0) open-weight models, and the marquee European challenger to the US AI labs.
+technicality: non-technical
 tags: [organization, lab, open-weights]
 aliases: [Mistral AI SAS]
 updated: 2026-06-17

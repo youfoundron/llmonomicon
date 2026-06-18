@@ -1,6 +1,7 @@
 ---
 title: Cursor
 description: Anysphere's proprietary AI-first code editor — a VS Code fork that wraps frontier models with an agent mode — the breakout product that mainstreamed AI-assisted coding.
+technicality: somewhat-technical
 tags: [closed-source, coding-agent]
 aliases: [Anysphere]
 updated: 2026-06-17

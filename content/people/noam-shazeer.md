@@ -1,6 +1,7 @@
 ---
 title: Noam Shazeer
 description: A co-author of the Transformer paper and originator of Mixture of Experts and multi-query attention; later founded Character.AI and returned to Google to co-lead Gemini.
+technicality: somewhat-technical
 tags: [researcher]
 aliases: [Shazeer]
 updated: 2026-06-18

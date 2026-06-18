@@ -1,6 +1,7 @@
 ---
 title: GPT-3 released
 description: OpenAI introduces GPT-3, a 175-billion-parameter few-shot learner.
+technicality: technical
 date: 2020-05-28
 related: [GPT-3, OpenAI]
 updated: 2026-06-17

@@ -1,6 +1,7 @@
 ---
 title: Anthropic
 description: An AI safety company founded in 2021 by former OpenAI staff, known for the Claude model family and the Constitutional AI training method.
+technicality: non-technical
 tags: [organization, ai-safety]
 aliases: [Anthropic PBC]
 updated: 2026-06-17

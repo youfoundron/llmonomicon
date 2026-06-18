@@ -1,6 +1,7 @@
 ---
 title: Backpropagation popularized
 description: Rumelhart, Hinton & Williams show backpropagation can train multi-layer networks.
+technicality: technical
 date: 1986
 related: [Geoffrey Hinton]
 updated: 2026-06-17

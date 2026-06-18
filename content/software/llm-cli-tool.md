@@ -1,6 +1,7 @@
 ---
 title: LLM (CLI tool)
 description: Simon Willison's open-source command-line tool and Python library for running prompts against many models—notable for logging every interaction to SQLite.
+technicality: somewhat-technical
 tags: [open-source, cli, tooling]
 aliases: [llm, llm CLI, Simon Willison's llm]
 updated: 2026-06-17

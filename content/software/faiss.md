@@ -1,6 +1,7 @@
 ---
 title: FAISS
 description: Meta's open-source library for efficient similarity search over dense vectors — exact and approximate (IVF, HNSW, PQ) indexes on CPU/GPU — the foundational toolkit under much of the vector-search ecosystem.
+technicality: technical
 tags: [open-source, retrieval]
 aliases: [Facebook AI Similarity Search]
 updated: 2026-06-18

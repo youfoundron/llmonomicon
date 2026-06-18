@@ -1,6 +1,7 @@
 ---
 title: lm-evaluation-harness
 description: EleutherAI's open-source framework that runs language models against dozens of benchmarks through one interface—the shared plumbing that makes scores comparable.
+technicality: technical
 tags: [open-source, evaluation]
 aliases: [lm-eval, lm-eval-harness, Language Model Evaluation Harness]
 updated: 2026-06-18

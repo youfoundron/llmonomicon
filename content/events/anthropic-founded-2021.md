@@ -1,6 +1,7 @@
 ---
 title: Anthropic founded
 description: Senior researchers who left OpenAI, led by the Amodei siblings, founded Anthropic as an AI safety company.
+technicality: non-technical
 date: 2021
 related: [Anthropic]
 updated: 2026-06-18

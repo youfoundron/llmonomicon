@@ -1,6 +1,7 @@
 ---
 title: Agent
 description: A system that uses an LLM to decide its own actions in a loop — observe, reason, act — with tool use, memory, and planning, rather than following a fixed script.
+technicality: somewhat-technical
 tags: [agents, reasoning]
 group: agents
 aliases: [LLM agent, agentic systems, AI agent]

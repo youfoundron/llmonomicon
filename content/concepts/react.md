@@ -1,6 +1,7 @@
 ---
 title: ReAct
 description: A prompting pattern that interleaves a model's reasoning with actions and observations — thought, act, observe — letting it use tools mid-reasoning; the ancestor of modern agent loops.
+technicality: technical
 tags: [agents, prompting]
 group: agents
 aliases: [Reasoning and acting, ReAct prompting]

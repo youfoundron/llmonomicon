@@ -1,6 +1,7 @@
 ---
 title: Alpaca
 description: Stanford's 2023 proof-of-concept that fine-tuned Meta's LLaMA into an instruction-following assistant for under $600—sparking a wave of cheap open fine-tunes.
+technicality: technical
 tags: [model, instruction-tuning]
 aliases: [Stanford Alpaca]
 updated: 2026-06-18

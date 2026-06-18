@@ -1,6 +1,7 @@
 ---
 title: Constitutional AI
 description: Anthropic's alignment method that trains a model to be harmless using AI-generated feedback judged against a written list of principles—a "constitution"—instead of human labels.
+technicality: technical
 tags: [alignment, method]
 group: safety
 aliases: [CAI, RLAIF, RL from AI Feedback]

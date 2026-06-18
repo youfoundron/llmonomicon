@@ -44,6 +44,18 @@ body:
         - safety (safety & security)
     validations:
       required: false
+  - type: dropdown
+    id: technicality
+    attributes:
+      label: Technicality
+      description: How much background a reader needs to mostly understand the entry (see CLAUDE.md › Technicality). The Researcher sets/confirms this and applies the matching tech:* label.
+      options:
+        - non-technical (no technical knowledge needed)
+        - somewhat-technical (a consumer of technical products)
+        - technical (some STEM/SWE background)
+        - highly-technical (AI researcher / scientist)
+    validations:
+      required: false
   - type: textarea
     id: angle
     attributes:

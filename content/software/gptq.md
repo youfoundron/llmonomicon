@@ -1,6 +1,7 @@
 ---
 title: GPTQ
 description: A post-training quantization method that compresses LLM weights to 3–4 bits with little accuracy loss by correcting the error each rounding introduces.
+technicality: highly-technical
 tags: [quantization, efficiency, open-source]
 updated: 2026-06-17
 sources:

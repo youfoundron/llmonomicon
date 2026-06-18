@@ -15,7 +15,7 @@ GitHub* link that opens a pull request.
 
 - **Concepts** — the machinery: [[Attention]], the [[Transformer]], and
   [[Tokenization]].
-- **Events** — the turning points: [[Attention Is All You Need]] (2017) and the
+- **Events** — the turning points: [[Attention Is All You Need published|Attention Is All You Need]] (2017) and the
   [[ChatGPT launch]] (2022).
 - **People & Organizations** — the minds and institutions, such as
   [[Geoffrey Hinton]] and [[OpenAI]].

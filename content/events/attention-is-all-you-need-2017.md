@@ -3,8 +3,8 @@ title: "\"Attention Is All You Need\" published"
 description: Vaswani et al. publish the paper that introduces the Transformer.
 technicality: somewhat-technical
 date: 2017-06-12
-related: [Transformer]
-aliases: [Attention Is All You Need, Transformer paper, Vaswani et al. 2017]
+related: [Transformer, Attention Is All You Need]
+aliases: [Attention Is All You Need published]
 updated: 2026-06-17
 sources:
   - id: vaswani2017

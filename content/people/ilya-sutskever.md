@@ -53,7 +53,8 @@ Sutskever earned his PhD at the University of Toronto under [[Geoffrey
 Hinton]].[^wiki-sutskever] With Hinton and Alex Krizhevsky he co-authored
 **[[AlexNet wins ImageNet|AlexNet]]**, the convolutional network whose 2012 ImageNet
 victory is widely credited with launching the modern deep-learning era.[^alexnet2012]
-Two years later he was the lead author of **sequence-to-sequence learning**, an
+Two years later he was the lead author of **sequence-to-sequence learning** — with
+[[Oriol Vinyals]] and Quoc V. Le — an
 encoder–decoder design that used one LSTM network to compress an input sequence
 into a fixed-length vector and a second LSTM to unroll the output from it — a
 recipe that directly anticipated modern generative sequence models.[^seq2seq2014]

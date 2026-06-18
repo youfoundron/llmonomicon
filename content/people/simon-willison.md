@@ -3,7 +3,7 @@ title: Simon Willison
 description: Independent software developer whose widely followed weblog chronicles the practical LLM era; he named "prompt injection" and builds open-source LLM tooling.
 tags: [practitioner, commentator]
 aliases: [simonw]
-updated: 2026-06-17
+updated: 2026-06-18
 sources:
   - id: sw-about
     title: "About — Simon Willison"
@@ -29,6 +29,12 @@ sources:
     author: Simon Willison
     publisher: GitHub
     year: 2023
+  - id: sw-pelican
+    title: "Pelican riding a bicycle (tag) — Simon Willison's Weblog"
+    url: https://simonwillison.net/tags/pelican-riding-a-bicycle/
+    author: Simon Willison
+    publisher: simonwillison.net
+    year: 2025
 ---
 
 # Simon Willison
@@ -40,7 +46,9 @@ writing emphasizes LLM and AI research, and he is frequently invited to preview
 new releases from [[OpenAI]], Anthropic, Google, and Mistral as they
 appear.[^sw-about][^sw-blog] For a field that moves faster than the academic
 literature can track, those hands-on write-ups have become a common reference
-point.
+point. A running feature of that coverage is his informal
+**[[Pelican riding a bicycle]]** test — asking each new model to draw an SVG of a
+pelican on a bicycle.[^sw-pelican]
 
 ## Naming prompt injection
 

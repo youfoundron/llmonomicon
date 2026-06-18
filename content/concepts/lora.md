@@ -2,6 +2,7 @@
 title: LoRA
 description: A parameter-efficient fine-tuning method that freezes a model's weights and trains small low-rank update matrices instead, producing tiny, swappable adapter files.
 tags: [fine-tuning, method]
+group: efficiency
 aliases: [Low-Rank Adaptation, LoRA adapter, LoRA adapters]
 updated: 2026-06-17
 sources:

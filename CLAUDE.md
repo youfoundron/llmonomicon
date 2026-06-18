@@ -88,6 +88,7 @@ A `content/<category>/index.md` is an optional authored category intro.
 title: Attention # optional; falls back to first H1, then the filename
 description: One-sentence summary for meta tags and listings.
 tags: [architecture, mechanism]
+group: architecture # concepts: one controlled family; defaults to Uncategorized if unset (see Concept groups)
 aliases: [Self-Attention] # extra names that [[wiki-links]] resolve to
 date: 2017-06-12 # REQUIRED for events
 updated: 2026-06-17
@@ -116,6 +117,34 @@ of their titles/aliases. Rules:
 - The `/events/` page renders all events as a **timeline**, filterable
   client-side by the category of the related entry and by year range. The filter
   is plain vanilla JS emitted by `timelineHtml` in `pages.ts` — no dependency.
+
+### Concept groups
+
+Every **concept** article declares one **family** via a `group:` front-matter
+field — a controlled vocabulary defined by `CONCEPT_GROUPS` in `scripts/types.ts`.
+The `/concepts/` index renders entries grouped under these families (in the order
+they appear in that list), each family listed alphabetically. Rules:
+
+- **Set `group` to one of the families** for every concept. Unlike the citation
+  and event-date gates, this is *not* a hard gate: an unset `group` is a legitimate
+  default — the entry just lands under **Uncategorized** on the index (no warning).
+  A `group` that doesn't match any family is treated as a typo: it also renders
+  under Uncategorized but emits a **non-fatal build warning**. The current families
+  are: `tokenization`, `architecture`, `training`, `decoding`, `inference`,
+  `efficiency`, `prompting`, `retrieval`, `agents`, `safety` (display names live in
+  `CONCEPT_GROUP_LABELS`). Assigning a real family is encouraged — a wall of
+  Uncategorized concepts is a smell — but never required to ship.
+- **One family per concept.** Cross-family relationships are expressed with
+  `[[wiki-links]]` in the body, not by listing multiple groups.
+- Placing an entry is frequent and local (a field on the file); adding a *new*
+  family is rare and deliberate (an edit to `CONCEPT_GROUPS`). **Only the Research
+  Officer introduces a new family**, and only when a cluster of entries genuinely
+  needs one — don't invent a family for a single entry; pick the closest existing
+  one.
+
+(The `/people/` index similarly splits into **People** and **Organizations**; an
+entry counts as an organization when its `tags` include `organization`, `lab`, or
+`company`. No front-matter field beyond the existing tag is needed.)
 
 ### Linking and citing
 
@@ -216,12 +245,15 @@ triaging `stage:scoping` issues / incoming human `new-article` proposals:
 - Survey the existing corpus first (`ls -R content/`, grep titles/aliases) to
   avoid duplicates and find real gaps.
 - Decompose the topic into discrete prospective entries. For each, decide the
-  category, a working title, and the angle. Be **judicious and protective**: only
-  create an issue if a serious reader of LLM history would expect that entry and
-  it's distinct from what exists. Decline trivia and scope creep.
+  category, a working title, and the angle — **and, for concepts, the `group:`
+  family** from `CONCEPT_GROUPS` (only you may introduce a new family, and only
+  for a real cluster). Be **judicious and protective**: only create an issue if a
+  serious reader of LLM history would expect that entry and it's distinct from
+  what exists. Decline trivia and scope creep.
 - Create one issue per entry (the `research-task` form's fields, or `gh issue create`),
   labeled `stage:research` + `priority:*` + `kind:*`, with a 🔭 comment stating
-  scope, the relevance bar, definition-of-done, and any seed sources.
+  scope, the relevance bar, definition-of-done, the concept `group` (for concepts),
+  and any seed sources.
 - Does **not** research deeply or write content.
 
 **🔬 Researcher** — runs on a loop. Claims a `stage:research` issue, then:
@@ -230,10 +262,11 @@ triaging `stage:scoping` issues / incoming human `new-article` proposals:
 - Gather sources — prefer **primary** (papers, official docs, release notes). Use
   your own knowledge to surface key facts but **verify each against a real source
   (WebSearch/WebFetch); never invent a URL.**
-- Post a **Research Dossier** comment: proposed title/category/slug/aliases;
-  relevance & priority; key facts each with a citation; a ready-to-paste
-  `sources:` list (full fields); suggested `[[wiki-link]]` connections (existing
-  entries + intended red links); for events, the `date` + `related`; open questions.
+- Post a **Research Dossier** comment: proposed title/category/slug/aliases (and,
+  for concepts, the `group` family); relevance & priority; key facts each with a
+  citation; a ready-to-paste `sources:` list (full fields); suggested
+  `[[wiki-link]]` connections (existing entries + intended red links); for events,
+  the `date` + `related`; open questions.
 - If you hit something **extremely compelling or a missed topic**, open a new
   issue (or comment) tagged for the Research Officer (`stage:scoping`, `🔬 → 🔭`).
 - Hand off: set `stage:author`, remove `wip`. Every claim must be backed by a
@@ -241,21 +274,22 @@ triaging `stage:scoping` issues / incoming human `new-article` proposals:
 
 **✍️ Author** — claims a `stage:author` issue, then:
 - Write the **complete entry** from the dossier: front-matter (sources from the
-  dossier; `date`+`related` for events), inline `[^id]` citations, `[[wiki-links]]`,
-  correct category.
+  dossier; `date`+`related` for events; `group` for concepts), inline `[^id]`
+  citations, `[[wiki-links]]`, correct category.
 - **Tone: approachable, not too academic, for a technically competent but
   non-specialist reader.** Lead with what it is and why it matters; short
   paragraphs; define jargon on first use; no hype.
 - Post the **full proposed file** as a fenced comment with its intended path
   (`content/<category>/<slug>.md`). Authors don't touch git — the Editor commits.
-- Self-check: every claim cited, ≥1 source, events have date+related, internal
-  links are wiki-links. Hand off: set `stage:edit`, remove `wip`.
+- Self-check: every claim cited, ≥1 source, events have date+related, concepts
+  carry a real `group` (not left Uncategorized), internal links are wiki-links.
+  Hand off: set `stage:edit`, remove `wip`.
 
 **📝 Editor** — the sole git-writer and **only persona that opens a PR**. Works in
 its own clone/worktree. Claims a `stage:edit` issue, then does **≥2 passes**:
 - *Pass 1 — correctness & citations:* verify EVERY citation actually supports its
-  claim and the URL resolves (WebFetch); fix or replace bad ones; ensure ≥1 source
-  and (events) date+related.
+  claim and the URL resolves (WebFetch); fix or replace bad ones; ensure ≥1 source,
+  (events) date+related, and (concepts) a real `group` (not Uncategorized).
 - *Pass 2 — tone, consistency, cross-refs:* enforce the house tone; read recent
   entries (`git log`, newest files) for consistent voice/terminology; add
   cross-references the Author missed **both directions** — `[[links]]` in the new

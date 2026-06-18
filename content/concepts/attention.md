@@ -2,6 +2,7 @@
 title: Attention
 description: The mechanism that lets a model weigh the relevance of every token to every other token.
 tags: [architecture, mechanism]
+group: architecture
 aliases: [Self-Attention, Scaled Dot-Product Attention]
 updated: 2026-06-17
 sources:

@@ -2,6 +2,7 @@
 title: Prompt injection
 description: An attack in which untrusted input smuggled into a prompt overrides the developer's intended instructions to a language model.
 tags: [security, safety]
+group: safety
 aliases: [prompt-injection, prompt injection attack]
 updated: 2026-06-17
 sources:

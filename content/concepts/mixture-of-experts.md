@@ -2,6 +2,7 @@
 title: Mixture of Experts
 description: A sparse architecture where a learned router sends each token to a few of many expert sub-networks — huge total capacity, but only a fraction of the parameters active per token.
 tags: [architecture, efficiency]
+group: architecture
 aliases: [MoE, Mixture-of-Experts, sparse mixture of experts]
 updated: 2026-06-17
 sources:

@@ -15,6 +15,7 @@ function event(slug: string, date: string, title: string, related: string[]): Pa
     aliases: [],
     sources: [],
     related,
+    group: "",
     data: { tags: [], aliases: [], draft: false, sources: [], related, date },
     body: "",
     outPath: `dist/events/${slug}/index.html`,

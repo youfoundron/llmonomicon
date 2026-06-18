@@ -2,6 +2,7 @@
 title: Speculative decoding
 description: A lossless inference speedup where a small draft model proposes tokens that the large model verifies in parallel, producing the same output 2–3× faster.
 tags: [inference, mechanism]
+group: inference
 aliases: [speculative sampling]
 updated: 2026-06-17
 sources:

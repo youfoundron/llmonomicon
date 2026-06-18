@@ -19,7 +19,7 @@ import { createRegistry, type Registry } from "./registry.ts";
 import { config } from "./site.config.ts";
 import { createSlugger, humanize } from "./slug.ts";
 import { escapeAttr, escapeHtml, renderTemplate } from "./template.ts";
-import { CATEGORIES, categoryLabel, type Page } from "./types.ts";
+import { CATEGORIES, CONCEPT_GROUPS, categoryLabel, isConceptGroup, type Page } from "./types.ts";
 import { editOnGitHubUrl, joinBase, outputPath, pageUrlPath, suggestEditUrl } from "./urls.ts";
 
 /** Path of the dev-only live-reload SSE endpoint (shared with serve.ts). */
@@ -99,6 +99,7 @@ async function discover(dev: boolean): Promise<{ pages: Page[]; registry: Regist
       aliases: data.aliases,
       sources: data.sources,
       related: data.related,
+      group: data.group ?? "",
       data,
       body,
       outPath: outputPath(category, slug),
@@ -196,6 +197,7 @@ function syntheticPage(category: string, slug: string, title: string, descriptio
     aliases: [],
     sources: [],
     related: [],
+    group: "",
     data: { tags: [], aliases: [], draft: false, sources: [], related: [] },
     body: "",
     outPath: outputPath(category, slug),
@@ -211,9 +213,10 @@ function render(
   pages: Page[],
   registry: Registry,
   dev: boolean,
-): { writes: Write[]; errors: string[] } {
+): { writes: Write[]; errors: string[]; warnings: string[] } {
   const writes: Write[] = [];
   const errors: string[] = [];
+  const warnings: string[] = [];
 
   const events = pages.filter((page) => page.category === "events" && !page.isCategoryIndex);
   const resolveEntry = (name: string) => registry.resolve(name);
@@ -246,6 +249,21 @@ function render(
     if (page.category === "events" && !page.isCategoryIndex && !page.data.date) {
       errors.push(
         `${page.contentPath}: event has no date (every event needs a date for the timeline)`,
+      );
+    }
+    // Concept group is organizational, not a correctness invariant. An unset group
+    // is a legitimate "default to Uncategorized" — no gate, no warning. But a value
+    // that doesn't match any family is almost certainly a typo, so warn (non-fatal)
+    // while still rendering the entry under "Uncategorized".
+    if (
+      page.category === "concepts" &&
+      !page.isCategoryIndex &&
+      !page.isHome &&
+      page.group &&
+      !isConceptGroup(page.group)
+    ) {
+      warnings.push(
+        `${page.contentPath}: unknown concept group "${page.group}" → Uncategorized (allowed: ${CONCEPT_GROUPS.join(", ")})`,
       );
     }
     for (const err of citationErrors(page.sources, citations)) {
@@ -298,7 +316,7 @@ function render(
     ),
   });
 
-  return { writes, errors };
+  return { writes, errors, warnings };
 }
 
 // ---- Orchestration ----------------------------------------------------------
@@ -310,13 +328,15 @@ export async function buildSite(options: { dev?: boolean; dry?: boolean } = {}):
 
   const template = await readText(TEMPLATE_PATH);
   const { pages, registry } = await discover(dev);
-  const { writes, errors } = render(template, pages, registry, dev);
+  const { writes, errors, warnings } = render(template, pages, registry, dev);
 
   if (errors.length > 0) {
-    console.error(`\n✗ Citation check failed — ${errors.length} problem(s):`);
+    console.error(`\n✗ Build gate failed — ${errors.length} problem(s):`);
     for (const err of errors) console.error(`  • ${err}`);
-    throw new Error("Citation requirements not met; see errors above.");
+    throw new Error("Build gate requirements not met; see errors above.");
   }
+
+  for (const warning of warnings) console.warn(`⚠︎  ${warning}`);
 
   if (!dry) {
     for (const write of writes) await writeIfChanged(write.path, write.html);

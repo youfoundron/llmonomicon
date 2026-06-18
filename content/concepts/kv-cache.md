@@ -2,6 +2,7 @@
 title: KV cache
 description: The standard inference optimization that stores past keys and values so a model doesn't recompute them for every new token—at the cost of memory that grows with sequence length.
 tags: [inference, mechanism]
+group: inference
 aliases: [KV caching, key-value cache, key/value cache]
 updated: 2026-06-17
 sources:

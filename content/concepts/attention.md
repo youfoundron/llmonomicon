@@ -50,6 +50,11 @@ to take a weighted average of the values.[^vaswani2017]
 The scaling factor (dividing by the square root of the key dimension) keeps the
 dot products from growing too large and saturating the softmax.[^vaswani2017]
 
+Because these scores form an N×N table whose size grows with the square of the
+sequence length,[^vaswani2017] computing attention efficiently becomes a central
+concern at scale — one addressed by efficient exact implementations such as
+[[FlashAttention]].
+
 ## Multi-head attention
 
 A single attention computation captures one kind of relationship. **Multi-head

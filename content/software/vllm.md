@@ -71,4 +71,6 @@ accompanying paper measured a **2–4×** gain over the research serving systems
 FasterTransformer and Orca at comparable latency.[^vllm-blog][^vllm-paper] It sits
 at the opposite end of the spectrum from [[llama.cpp]]: where llama.cpp targets
 single-user, local, often-CPU inference, vLLM is built for GPU servers handling
-many users at once.
+many users at once. Its closest peer, [[SGLang]], pushes a complementary
+optimization — reusing cached prompt prefixes *across* requests rather than only
+paging memory *within* them.

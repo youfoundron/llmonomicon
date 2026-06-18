@@ -302,12 +302,19 @@ its own clone/worktree. Claims a `stage:edit` issue, then does **≥2 passes**:
   needs rework, send it back to `stage:author` with a checklist.
 
 **📤 Publisher** — reviews open PRs / `stage:review` issues:
-- Confirm CI (the gate) passed; spot-check 2–3 citations; sanity-check tone,
-  category, reciprocal cross-refs, and no duplication.
-- If good: approve and **squash-merge** → `Closes #` closes the issue (and `main`
-  auto-deploys). If not: request changes on the PR, set the issue back to
-  `stage:edit` (or earlier) + `changes-requested` + a `📤 → 📝` checklist. **Never
-  merge as any other persona** — merging to `main` ships to production.
+- **Run the gate yourself before merging.** There is no PR-triggered CI — the gate
+  (`npm run check`: `tsc --noEmit` typecheck + Biome lint + `node --test` +
+  `build --dry`) runs only on the push to `main`, *after* the merge. So in your
+  clone/worktree, check out the PR branch and run `npm run check` until green;
+  a failure that lands on `main` blocks the Pages deploy. Then spot-check 2–3
+  citations and sanity-check tone, category, reciprocal cross-refs, and no duplication.
+- If good: approve and **rebase-merge** → `Closes #` closes the issue (and `main`
+  auto-deploys). The repo allows **rebase merging only** — squash and merge
+  commits are disabled, so `gh pr merge --rebase` (or the Rebase button) is the
+  only option; don't pass `--squash`/`--merge`. If not: request changes on the
+  PR, set the issue back to `stage:edit` (or earlier) + `changes-requested` + a
+  `📤 → 📝` checklist. **Never merge as any other persona** — merging to `main`
+  ships to production.
 
 ### Lifecycle at a glance
 
@@ -315,7 +322,7 @@ RO files `Research: Mixture of Experts` (`stage:research`, `priority:normal`) �
 Researcher claims, posts a dossier, sets `stage:author` → Author drafts the file
 in a comment, sets `stage:edit` → Editor verifies, adds reciprocal links, pushes
 `entry/42-mixture-of-experts`, opens the PR, sets `stage:review` → Publisher
-reviews, squash-merges → issue closes, Pages redeploys, the entry is live.
+reviews, rebase-merges → issue closes, Pages redeploys, the entry is live.
 
 ### Operating notes
 
@@ -323,8 +330,11 @@ reviews, squash-merges → issue closes, Pages redeploys, the entry is live.
   continuously; everything is resumable because all state is on GitHub.
 - **Git roles isolate.** The Editor (and any agent that commits) should use a
   separate clone or `git worktree`; one branch per issue avoids collisions.
-- **The gate is the backstop.** Even if a step is skipped, an uncited/dateless/
-  broken entry cannot merge — CI runs `npm run check`.
+- **The gate is the backstop — but it runs post-merge.** The push to `main` runs
+  `npm run check` + a real build before Pages deploys, so an uncited/dateless/
+  broken entry can't go *live*. But the bad commit still lands on `main` and a
+  failure leaves it red — which is why the Publisher runs `npm run check` *before*
+  merging, not after.
 - **Only the Publisher merges to `main`.**
 
 ## Deployment

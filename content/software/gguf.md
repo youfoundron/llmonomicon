@@ -84,4 +84,6 @@ GGUF arrived as a single deliberate breaking change that required users to
 re-convert their existing models.[^gguf-pr] It has since become the de facto
 format of the [[Local LLMs|local]] and [[Open weights|open-weights]] movement, read by [[llama.cpp]], [[Ollama]],
 LM Studio, and GPT4All, and supported directly on the Hugging Face Hub with a
-metadata viewer and a dedicated filter.[^hf-gguf]
+metadata viewer and a dedicated filter.[^hf-gguf] Within the wider
+[[Model serialization]] landscape, GGUF is the branch tuned for portable, quantized
+local inference.

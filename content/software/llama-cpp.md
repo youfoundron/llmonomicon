@@ -2,19 +2,13 @@
 title: llama.cpp
 description: A C/C++ project for running LLMs efficiently on commodity hardware, popularizing local inference and quantization.
 tags: [inference, open-source]
-aliases: [llama cpp, GGUF]
+aliases: [llama cpp]
 updated: 2026-06-17
 sources:
   - id: repo
     title: "ggerganov/llama.cpp (GitHub repository)"
     url: https://github.com/ggerganov/llama.cpp
     author: Georgi Gerganov and contributors
-    publisher: GitHub
-    year: 2023
-  - id: gguf
-    title: "GGUF file format specification"
-    url: https://github.com/ggerganov/ggml/blob/master/docs/gguf.md
-    author: ggml project
     publisher: GitHub
     year: 2023
 ---
@@ -31,8 +25,8 @@ a widely used engine for **local inference**.[^repo]
 - **Quantization.** Reducing weights to 4-bit and other low-precision formats so
   multi-billion-parameter models fit in consumer RAM with modest quality
   loss.[^repo]
-- **The GGUF format.** A single-file model format carrying weights and metadata,
-  now a de facto standard for portable local models.[^gguf]
+- **The [[GGUF]] format.** A single-file model format carrying weights and
+  metadata, now a de facto standard for portable local models.
 - **Broad hardware support.** CPU, Apple Silicon (Metal), and GPU backends from
   one codebase.[^repo]
 

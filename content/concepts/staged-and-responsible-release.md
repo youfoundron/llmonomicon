@@ -31,8 +31,9 @@ later open-versus-closed decision is argued.
 ## The GPT-2 case
 
 When OpenAI announced GPT-2 in February 2019 it withheld the full model, citing the
-risk that it could be used for spam or disinformation, and released progressively
-larger versions over the year — 124M, then 355M, then 774M, and finally the full 1.5B
+risk that it could be used for spam or disinformation, and
+[[GPT-2 staged release|released progressively larger versions]] over the year —
+124M, then 355M, then 774M, and finally the full 1.5B
 in November 2019.[^solaiman2019] The point of a **staged release**, in OpenAI's
 framing, was to allow "time between model releases to conduct risk and benefit
 analyses."[^solaiman2019] The underlying worry is **dual use**: the same capability

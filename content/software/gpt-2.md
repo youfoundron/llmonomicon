@@ -49,7 +49,8 @@ When OpenAI announced GPT-2 on February 14, 2019, it did something unusual for a
 research lab: it **withheld the full model**, publishing only a small version and
 citing concern that the technology could be used to generate misleading news,
 impersonate people, or automate abuse.[^better-lm] Instead of releasing everything
-at once, OpenAI rolled the model out in stages over the year — a 124M-parameter
+at once, OpenAI [[GPT-2 staged release|rolled the model out in stages]] over the
+year — a 124M-parameter
 version in February, 355M in May, 774M in August, and finally the full
 1.5-billion-parameter model on November 5, 2019, by which point it reported having
 "seen no strong evidence of misuse so far."[^gpt2-15b]

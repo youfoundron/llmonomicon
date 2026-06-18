@@ -43,5 +43,5 @@ recur throughout the grimoire as reference points for capability, scale, and
 alignment techniques such as reinforcement learning from human feedback.
 
 This page is filed under **People & Organizations** alongside individual
-researchers like [[Geoffrey Hinton]], since institutions are as much a part of
-the story as individuals.
+researchers like [[Geoffrey Hinton]] and peer labs like [[Anthropic]], since
+institutions are as much a part of the story as individuals.

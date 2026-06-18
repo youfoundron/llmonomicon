@@ -52,7 +52,9 @@ showed at launch: the best model evaluated, Claude 2, resolved just
 the defining benchmark of the **coding-agent** era — the target that systems
 built to autonomously edit code are measured against. The canonical *research*
 agent built to tackle it, and the source of the agent–computer-interface idea, is
-[[SWE-agent]].
+[[SWE-agent]]. Commercial agents leaned on the same yardstick too: [[Devin]]'s 2024
+launch led with its SWE-bench score, a capability claim that independent evaluations
+later complicated.
 
 ## SWE-bench Verified
 

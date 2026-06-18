@@ -34,7 +34,7 @@ sources:
 # GGML
 
 **GGML** is two things that share one name. It is a lightweight tensor library
-written in C by Georgi Gerganov, and it is also the family of early single-file
+written in C by [[Georgi Gerganov]], and it is also the family of early single-file
 model formats — GGML, GGMF, and GGJT — that the surrounding tools first used to
 ship quantized weights.[^ggml-repo][^gguf-spec] Both senses sit at the root of
 the local-inference movement: the library is the engine behind [[llama.cpp]], and

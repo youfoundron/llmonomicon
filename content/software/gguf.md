@@ -82,6 +82,6 @@ file size against quality.[^hf-gguf] The details belong with the broader idea of
 Introduced on 21 August 2023 by [[Georgi Gerganov]] — the author of [[llama.cpp]] —
 GGUF arrived as a single deliberate breaking change that required users to
 re-convert their existing models.[^gguf-pr] It has since become the de facto
-format of the local and open-weights movement, read by [[llama.cpp]], [[Ollama]],
+format of the [[Local LLMs|local]] and open-weights movement, read by [[llama.cpp]], [[Ollama]],
 LM Studio, and GPT4All, and supported directly on the Hugging Face Hub with a
 metadata viewer and a dedicated filter.[^hf-gguf]

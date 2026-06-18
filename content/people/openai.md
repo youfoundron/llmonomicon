@@ -29,10 +29,11 @@ sources:
 
 **OpenAI** is an artificial-intelligence research organization founded in
 December 2015, originally as a non-profit with the stated mission of ensuring
-that artificial general intelligence benefits all of humanity.[^intro2015] In
-2019 it restructured into a "capped-profit" entity to raise the capital needed
-for large-scale model training, and co-founder [[Sam Altman]] became its chief
-executive.[^intro2015][^openai-lp]
+that artificial general intelligence benefits all of humanity.[^intro2015] Its
+founding group included [[Sam Altman]], [[Greg Brockman]], and
+[[Ilya Sutskever]], among others.[^intro2015] In 2019 it restructured into a
+"capped-profit" entity to raise the capital needed for large-scale model
+training, and co-founder [[Sam Altman]] became its chief executive.[^intro2015][^openai-lp]
 
 ## Why it matters here
 

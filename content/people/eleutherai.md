@@ -16,6 +16,12 @@ sources:
     author: Gao et al. (EleutherAI)
     publisher: arXiv
     year: 2020
+  - id: lm-eval-repo
+    title: "EleutherAI/lm-evaluation-harness (GitHub repository)"
+    url: https://github.com/EleutherAI/lm-evaluation-harness
+    author: Gao et al. (EleutherAI)
+    publisher: GitHub
+    year: 2024
 ---
 
 # EleutherAI
@@ -46,6 +52,8 @@ EleutherAI's output defined open LLM work in the early 2020s:
   open-source GPT-3-style model in the world at its release), and GPT-NeoX-20B
   (2022): the open models people actually ran before Meta's [[LLaMA]].[^eleuther-wiki]
 - Later, **Pythia**, a suite of models built for studying how LLMs learn.[^eleuther-wiki]
+- And **[[lm-evaluation-harness]]**, the open framework that became a standard way to
+  run models against benchmarks — the backend of the [[Open LLM Leaderboard]].[^lm-eval-repo]
 
 These were typically distributed as open weights and runnable through
 [[Hugging Face Transformers]], reinforcing the open ecosystem.

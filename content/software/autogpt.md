@@ -60,4 +60,5 @@ larger "AutoGPT Platform," parts of which are dual-licensed (the platform
 component uses the source-available Polyform Shield License, while the classic
 agent remains MIT), but the historically significant release was the simple,
 fully open MIT project.[^autogpt-repo] It occupies the autonomous-agent corner of
-the [[Agent harnesses]] landscape.
+the [[Agent harnesses]] landscape — a corner that commercial successors like
+[[Devin]] would later claim.

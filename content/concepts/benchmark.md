@@ -70,7 +70,9 @@ appears to. Several failure modes recur:
 - **Saturation.** As models improve, scores creep toward the maximum until a
   benchmark can no longer tell the best models apart. The
   natural-language-understanding suites of the [[BERT]] era were saturated this
-  way and replaced by deliberately harder successors (see [[GLUE & SuperGLUE]]).
+  way and replaced by deliberately harder successors (see [[GLUE & SuperGLUE]]);
+  the once-dominant broad-knowledge test [[MMLU]] has more recently met the same
+  fate.
 - **Construct validity.** A benchmark measures one narrow thing but is often
   treated as a measure of general ability. Raji et al. examined popular
   benchmarks to "reveal the construct validity issues in their framing as the

@@ -351,7 +351,8 @@ h4:hover .anchor {
   font-size: 0.92rem;
 }
 
-.az-group h2 {
+.az-group h2,
+.cat-group h2 {
   font-size: 1.2rem;
   color: var(--accent);
   border: none;

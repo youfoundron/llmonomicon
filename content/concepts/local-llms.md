@@ -2,6 +2,7 @@
 title: Local LLMs
 description: Running capable language models on your own consumer hardware instead of a provider's API — the enabling stack, what it unlocks, and the tradeoffs against hosted frontier models.
 tags: [inference, open-weights]
+group: inference
 aliases: [Local LLM, running LLMs locally, on-device LLMs]
 updated: 2026-06-17
 sources:

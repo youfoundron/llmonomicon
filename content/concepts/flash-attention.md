@@ -2,6 +2,7 @@
 title: FlashAttention
 description: An IO-aware algorithm that computes exact attention without storing the full score matrix — faster and far more memory-efficient on GPUs.
 tags: [attention, optimization]
+group: inference
 aliases: [Flash Attention, FlashAttention-2, FlashAttention-3, FA2]
 updated: 2026-06-17
 sources:

@@ -26,6 +26,24 @@ body:
         - software (research, models, libraries, products)
     validations:
       required: true
+  - type: dropdown
+    id: concept-group
+    attributes:
+      label: Concept group
+      description: Concepts only — the controlled family this entry belongs to (see CLAUDE.md › Concept groups). Leave blank for non-concept categories.
+      options:
+        - tokenization (tokenization & inputs)
+        - architecture (model architecture)
+        - training (training & alignment)
+        - decoding (decoding & sampling)
+        - inference (inference & serving)
+        - efficiency (quantization & adaptation)
+        - prompting (prompting & reasoning)
+        - retrieval (retrieval & RAG)
+        - agents (agents & tool use)
+        - safety (safety & security)
+    validations:
+      required: false
   - type: textarea
     id: angle
     attributes:

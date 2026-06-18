@@ -3,7 +3,14 @@
 
 import type { SiteConfig } from "./site.config.ts";
 import { escapeAttr, escapeHtml } from "./template.ts";
-import { CATEGORIES, categoryLabel, type Page, type RegistryEntry } from "./types.ts";
+import {
+  CATEGORIES,
+  CONCEPT_GROUPS,
+  categoryLabel,
+  conceptGroupLabel,
+  type Page,
+  type RegistryEntry,
+} from "./types.ts";
 import { joinBase } from "./urls.ts";
 
 function byTitle(a: Page, b: Page): number {
@@ -17,6 +24,19 @@ function listItem(page: Page): string {
   return `<li><a href="${escapeAttr(page.url)}">${escapeHtml(page.title)}</a>${desc}</li>`;
 }
 
+/** A titled section wrapping an alphabetical list of pages. */
+function pageSection(heading: string, items: Page[]): string {
+  const list = items.map(listItem).join("");
+  return `<section class="cat-group"><h2>${escapeHtml(heading)}</h2><ul class="page-list">${list}</ul></section>`;
+}
+
+/** Tags marking a People & Organizations entry as an organization rather than a person. */
+const ORG_TAGS = new Set(["organization", "lab", "company"]);
+
+function isOrganization(page: Page): boolean {
+  return page.tags.some((tag) => ORG_TAGS.has(tag.toLowerCase()));
+}
+
 /** Bulleted list of the articles within a single category. */
 export function categoryIndexHtml(category: string, pages: Page[]): string {
   const articles = pages
@@ -24,6 +44,29 @@ export function categoryIndexHtml(category: string, pages: Page[]): string {
     .sort(byTitle);
   if (articles.length === 0) {
     return '<p class="empty">No articles in this category yet.</p>';
+  }
+  // People & Organizations splits its two kinds into labelled groups, each
+  // listed alphabetically; other categories stay a single flat list.
+  if (category === "people") {
+    const orgs = articles.filter(isOrganization);
+    const people = articles.filter((page) => !isOrganization(page));
+    return [
+      people.length ? pageSection("People", people) : "",
+      orgs.length ? pageSection("Organizations", orgs) : "",
+    ].join("");
+  }
+  // Concepts group into controlled families (in CONCEPT_GROUPS order), each
+  // listed alphabetically. A concept with no group, or an unrecognized one, falls
+  // to a trailing "Uncategorized" bucket rather than vanishing.
+  if (category === "concepts") {
+    const sections = CONCEPT_GROUPS.map((group) => {
+      const items = articles.filter((page) => page.group === group);
+      return items.length ? pageSection(conceptGroupLabel(group), items) : "";
+    });
+    const known = new Set<string>(CONCEPT_GROUPS);
+    const ungrouped = articles.filter((page) => !known.has(page.group));
+    if (ungrouped.length) sections.push(pageSection("Uncategorized", ungrouped));
+    return sections.join("");
   }
   return `<ul class="page-list">${articles.map(listItem).join("")}</ul>`;
 }

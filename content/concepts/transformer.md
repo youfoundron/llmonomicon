@@ -2,6 +2,7 @@
 title: Transformer
 description: The neural network architecture, built entirely on attention, that underpins virtually every modern LLM.
 tags: [architecture]
+group: architecture
 aliases: [Transformer architecture]
 updated: 2026-06-17
 sources:

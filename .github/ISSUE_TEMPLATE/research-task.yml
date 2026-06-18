@@ -1,0 +1,59 @@
+name: Research task (agent pipeline)
+description: Scope a prospective grimoire entry for the contributor-agent pipeline.
+title: "Research: "
+labels: ["stage:research", "kind:new-article", "content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Defines one prospective entry for the agent pipeline (Research Officer → Researcher →
+        Author → Editor → Publisher). See **CLAUDE.md › Contributor agent workflow** for how this flows.
+  - type: input
+    id: proposed-title
+    attributes:
+      label: Proposed title
+      placeholder: Mixture of Experts
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - concepts
+        - events
+        - people (people & organizations)
+        - software (research, models, libraries, products)
+    validations:
+      required: true
+  - type: textarea
+    id: angle
+    attributes:
+      label: Scope & angle
+      description: What the entry should cover — and what it should NOT. Keep it focused.
+    validations:
+      required: true
+  - type: textarea
+    id: relevance
+    attributes:
+      label: Why it belongs in the grimoire
+      description: The relevance bar. Why would a serious reader of LLM history expect this entry, and how is it distinct from what we already have?
+    validations:
+      required: true
+  - type: textarea
+    id: seed-sources
+    attributes:
+      label: Seed sources (optional)
+      description: Starting-point links a Researcher can build from.
+    validations:
+      required: false
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - normal
+        - high
+        - low
+    validations:
+      required: true

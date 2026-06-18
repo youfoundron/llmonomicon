@@ -28,6 +28,12 @@ sources:
     url: https://en.wikipedia.org/wiki/Anthropic
     publisher: Wikipedia
     year: 2025
+  - id: mcp-announce
+    title: "Introducing the Model Context Protocol"
+    url: https://www.anthropic.com/news/model-context-protocol
+    author: Anthropic
+    publisher: Anthropic
+    year: 2024
 ---
 
 # Anthropic
@@ -79,3 +85,5 @@ empirical, measure-as-you-go approach to safety.[^anthropic-coreviews]
 - A substantial research program in **mechanistic interpretability** — trying to
   understand the internal workings of models — alongside its safety and governance
   work.[^anthropic-coreviews]
+- The **[[Model Context Protocol]]** — an open standard it open-sourced in
+  November 2024 for connecting AI applications to external tools and data.[^mcp-announce]

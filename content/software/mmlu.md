@@ -62,4 +62,5 @@ to separate the strongest models. Two responses followed:
 
 Together these mark MMLU's shift from frontier yardstick to a benchmark whose
 limits — in both difficulty and labeling — are now well understood. It sits
-alongside harder successors such as [[GPQA]] in the modern evaluation toolkit.
+alongside harder successors such as [[GPQA]], and a multimodal counterpart in
+[[MMMU]], in the modern evaluation toolkit.

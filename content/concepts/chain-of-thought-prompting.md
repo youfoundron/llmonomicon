@@ -59,6 +59,6 @@ Chain-of-thought is a [[Prompt engineering|prompting]] technique that exploits
 [[In-context learning]] — a model's ability to be steered by its prompt — and it
 opened a long line of follow-up work. [[Self-consistency]] samples many independent
 reasoning chains and takes a majority vote over their answers; and the idea was
-eventually folded into training itself, with [[Reasoning models (test-time
-compute)]] learning to generate long chains of thought by default rather than
-needing a prompt to coax them out.
+eventually folded into training itself, with
+[[Reasoning models (test-time compute)]] learning to generate long chains of
+thought by default rather than needing a prompt to coax them out.

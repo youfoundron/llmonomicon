@@ -45,7 +45,7 @@ anyone could download and build on.
   total parameters, of which about 37 billion are active per token.[^deepseek-v3] Its
   technical report stresses efficiency, reporting that full training took "only 2.788M
   H800 GPU hours" on 14.8 trillion tokens.[^deepseek-v3]
-- **DeepSeek-R1** (January 2025) is a [[Reasoning models (test-time compute)|reasoning
+- **DeepSeek-R1** ([[DeepSeek-R1 release|January 2025]]) is a [[Reasoning models (test-time compute)|reasoning
   model]]. Its headline finding is that "the reasoning abilities of LLMs can be
   incentivized through pure reinforcement learning," without human-labeled reasoning
   examples — a result detailed in that entry.[^deepseek-r1]

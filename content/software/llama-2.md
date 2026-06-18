@@ -27,8 +27,8 @@ sources:
 
 # Llama 2
 
-**Llama 2** is Meta's family of open-weight large language models, released on July
-18, 2023. Its significance is less about raw capability than about *terms*: where
+**Llama 2** is [[Meta AI|Meta]]'s family of open-weight large language models,
+released on July 18, 2023. Its significance is less about raw capability than about *terms*: where
 the original [[LLaMA]] had leaked out under a research-only license, Llama 2 was
 published "free for research and commercial use," which made it the first
 high-quality open-weight model that companies could legitimately build products

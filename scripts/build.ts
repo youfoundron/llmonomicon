@@ -14,7 +14,7 @@ import { buildCitationContext, citationErrors, renderReferences } from "./citati
 import { parseFrontMatter } from "./frontmatter.ts";
 import { copyDir, readText, writeIfChanged } from "./fsutil.ts";
 import { buildToc, extractFirstH1, renderMarkdown } from "./markdown.ts";
-import { allPagesIndexHtml, categoryIndexHtml, notFoundHtml } from "./pages.ts";
+import { allPagesIndexHtml, categoryIndexHtml, notFoundHtml, timelineHtml } from "./pages.ts";
 import { createRegistry, type Registry } from "./registry.ts";
 import { config } from "./site.config.ts";
 import { createSlugger, humanize } from "./slug.ts";
@@ -98,6 +98,7 @@ async function discover(dev: boolean): Promise<{ pages: Page[]; registry: Regist
       tags: data.tags,
       aliases: data.aliases,
       sources: data.sources,
+      related: data.related,
       data,
       body,
       outPath: outputPath(category, slug),
@@ -194,7 +195,8 @@ function syntheticPage(category: string, slug: string, title: string, descriptio
     tags: [],
     aliases: [],
     sources: [],
-    data: { tags: [], aliases: [], draft: false, sources: [] },
+    related: [],
+    data: { tags: [], aliases: [], draft: false, sources: [], related: [] },
     body: "",
     outPath: outputPath(category, slug),
     isHome: false,
@@ -213,6 +215,9 @@ function render(
   const writes: Write[] = [];
   const errors: string[] = [];
 
+  const events = pages.filter((page) => page.category === "events" && !page.isCategoryIndex);
+  const resolveEntry = (name: string) => registry.resolve(name);
+
   // Authored pages (articles, home, authored category indexes).
   for (const page of pages) {
     const citations = buildCitationContext(page.sources);
@@ -225,12 +230,22 @@ function render(
     );
 
     let content = html;
-    if (page.isCategoryIndex) content += categoryIndexHtml(page.category, pages);
+    if (page.isCategoryIndex) {
+      content +=
+        page.category === "events"
+          ? timelineHtml(events, resolveEntry)
+          : categoryIndexHtml(page.category, pages);
+    }
     content += renderReferences(page.sources, citations);
 
     if (requiresSources(page) && page.sources.length === 0) {
       errors.push(
         `${page.contentPath}: article cites no sources (every article must cite at least one)`,
+      );
+    }
+    if (page.category === "events" && !page.isCategoryIndex && !page.data.date) {
+      errors.push(
+        `${page.contentPath}: event has no date (every event needs a date for the timeline)`,
       );
     }
     for (const err of citationErrors(page.sources, citations)) {
@@ -249,7 +264,11 @@ function render(
     if (!hasArticles) continue;
     const label = categoryLabel(category);
     const page = syntheticPage(category, "index", label, `Articles on ${label}.`);
-    const content = `<h1>${escapeHtml(label)}</h1>${categoryIndexHtml(category, pages)}`;
+    const body =
+      category === "events"
+        ? timelineHtml(events, resolveEntry)
+        : categoryIndexHtml(category, pages);
+    const content = `<h1>${escapeHtml(label)}</h1>${body}`;
     writes.push({ path: page.outPath, html: renderDocument(template, page, content, "", dev) });
   }
 

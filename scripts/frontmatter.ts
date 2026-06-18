@@ -68,6 +68,7 @@ export function parseFrontMatter(raw: string): ParsedDoc {
     updated: toOptionalString(d.updated),
     draft: d.draft === true,
     sources: toSources(d.sources),
+    related: toStringList(d.related),
   };
   return { data, body: parsed.content };
 }

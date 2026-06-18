@@ -45,6 +45,8 @@ export interface FrontMatter {
   updated?: string;
   draft: boolean;
   sources: Source[];
+  /** For events: titles/aliases of the entries this event maps to (e.g. [OpenAI]). */
+  related: string[];
 }
 
 /** A fully-resolved content page, produced by the discover pass. */
@@ -62,6 +64,8 @@ export interface Page {
   tags: string[];
   aliases: string[];
   sources: Source[];
+  /** For events: titles/aliases of the entries this event maps to. */
+  related: string[];
   data: FrontMatter;
   /** Markdown body with front-matter stripped. */
   body: string;

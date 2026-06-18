@@ -72,7 +72,7 @@ Articles live at `content/<category>/<slug>.md`. Categories (folder = slug):
 | Folder      | Nav label                | Holds                                      |
 | ----------- | ------------------------ | ------------------------------------------ |
 | `concepts`  | Concepts                 | ideas & mechanisms                         |
-| `events`    | Events                   | dated moments: papers, launches            |
+| `events`    | Events                   | dated point-occurrences (see Events below) |
 | `people`    | People & Organizations   | individuals **and** labs/companies         |
 | `software`  | Research & Software      | research, models, libraries, products      |
 
@@ -89,9 +89,10 @@ title: Attention # optional; falls back to first H1, then the filename
 description: One-sentence summary for meta tags and listings.
 tags: [architecture, mechanism]
 aliases: [Self-Attention] # extra names that [[wiki-links]] resolve to
-date: 2017-06-12 # for events
+date: 2017-06-12 # REQUIRED for events
 updated: 2026-06-17
 draft: false # true hides the page from production builds
+related: [Transformer] # events only: titles this event maps to (see Events)
 sources: # REQUIRED for category articles
   - id: vaswani2017 # the key used by inline [^vaswani2017]
     title: "Attention Is All You Need"
@@ -101,6 +102,20 @@ sources: # REQUIRED for category articles
     year: 2017
 ---
 ```
+
+### Events
+
+An **event** is a single dated occurrence phrased as a short sentence (e.g.
+"OpenAI founded"), mapping to entries in other categories via a `related:` list
+of their titles/aliases. Rules:
+
+- **`date` is required** for every event — the build fails without it (same
+  spirit as the citation gate). Use `YYYY` or `YYYY-MM-DD`.
+- Keep the body terse (a sentence or two with the `[[related]]` link + a
+  citation); depth belongs in the entity entry the event points to.
+- The `/events/` page renders all events as a **timeline**, filterable
+  client-side by the category of the related entry and by year range. The filter
+  is plain vanilla JS emitted by `timelineHtml` in `pages.ts` — no dependency.
 
 ### Linking and citing
 

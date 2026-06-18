@@ -362,6 +362,97 @@ h4:hover .anchor {
   font-style: italic;
 }
 
+/* ---- Events timeline + filters ------------------------------------------ */
+.tl-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  margin: 0 0 1.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--background-alt);
+  border: var(--rule);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+}
+
+.tl-filters fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tl-filters legend {
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  padding: 0;
+  margin-bottom: 0.3rem;
+}
+
+.tl-cats label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-right: 0.9rem;
+}
+
+.tl-range label {
+  margin-right: 0.75rem;
+}
+
+.tl-range input {
+  width: 5rem;
+}
+
+.timeline {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0.5rem;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1rem;
+  padding: 0.55rem 0 0.55rem 1.1rem;
+  border-left: 2px solid var(--border);
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -0.4rem;
+  top: 1rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.timeline-date {
+  flex: 0 0 3rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.timeline-title {
+  font-weight: 600;
+}
+
+.timeline-rel {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.timeline-rel a {
+  color: var(--text-muted);
+}
+
+.timeline-rel a:hover {
+  color: var(--links);
+}
+
 /* ---- Contribution footer ------------------------------------------------- */
 .contribute {
   margin-top: 3rem;

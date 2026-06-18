@@ -73,6 +73,13 @@ The Transformer debuted in 2017.[^vaswani2017]
 This renders a superscript link to an auto-generated **References** section. An
 inline `[^id]` with no matching source is a build error.
 
+### Events
+
+An event is a single dated occurrence written as a short sentence (e.g.
+"OpenAI founded"). Give it a **`date`** (required — the build enforces it) and a
+**`related:`** list naming the entries it maps to. The `/events/` page renders
+all events as a timeline you can filter by category and year range.
+
 ### Linking between pages
 
 Use wiki-style links — they resolve by title or alias and survive renames:

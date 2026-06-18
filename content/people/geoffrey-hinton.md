@@ -49,8 +49,9 @@ era would later build upon.
 - Co-authored the influential 1986 paper popularizing **backpropagation** for
   training multi-layer networks.[^backprop1986]
 - Helped develop **Boltzmann machines** and, later, deep belief networks.
-- Co-authored **AlexNet** (2012), whose decisive win on the ImageNet benchmark
-  is widely credited with launching the modern deep learning boom.[^alexnet2012]
+- Co-authored **AlexNet** (2012) — with his students Alex Krizhevsky and
+  [[Ilya Sutskever]] — whose decisive win on the ImageNet benchmark is widely
+  credited with launching the modern deep learning boom.[^alexnet2012]
 
 ## Recognition and later views
 

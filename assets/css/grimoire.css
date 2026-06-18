@@ -419,6 +419,13 @@ h4:hover .anchor {
   position: relative;
 }
 
+/* The filter script toggles `hidden` on items it filters out. Author `display:
+   flex` above outranks the UA `[hidden] { display: none }` rule (same
+   specificity, author origin wins), so without this the controls do nothing. */
+.timeline-item[hidden] {
+  display: none;
+}
+
 .timeline-item::before {
   content: "";
   position: absolute;

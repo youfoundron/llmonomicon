@@ -1,6 +1,7 @@
 ---
 title: Claude
 description: Anthropic's family of large language models—and the assistant built on them—trained with Constitutional AI and organized into Opus, Sonnet, and Haiku tiers.
+technicality: somewhat-technical
 tags: [model, product, assistant]
 aliases: [Claude 3, Claude 4, Claude Opus, Claude Sonnet, Claude Haiku, Claude (Anthropic)]
 updated: 2026-06-17

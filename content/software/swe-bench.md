@@ -1,6 +1,7 @@
 ---
 title: SWE-bench
 description: A benchmark of real-world software-engineering tasks — resolve an actual GitHub issue so the repository's tests pass — and the defining yardstick of the coding-agent era.
+technicality: technical
 tags: [benchmark, code, agents]
 aliases: [SWE-bench Verified, SWEbench, SWE bench]
 updated: 2026-06-17

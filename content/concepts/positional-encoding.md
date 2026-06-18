@@ -1,6 +1,7 @@
 ---
 title: Positional encoding
 description: How Transformers inject word-order information — since self-attention is order-agnostic, position must be encoded explicitly — from sinusoidal encodings to relative schemes like RoPE and ALiBi.
+technicality: highly-technical
 tags: [architecture, position]
 group: architecture
 aliases: [Position embedding, Positional embeddings, Position encoding]

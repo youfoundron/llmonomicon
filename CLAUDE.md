@@ -89,6 +89,7 @@ title: Attention # optional; falls back to first H1, then the filename
 description: One-sentence summary for meta tags and listings.
 tags: [architecture, mechanism]
 group: architecture # concepts: one controlled family; defaults to Uncategorized if unset (see Concept groups)
+technicality: technical # audience level: non-technical | somewhat-technical | technical | highly-technical (soft gate; Researcher assigns — see Technicality)
 aliases: [Self-Attention] # extra names that [[wiki-links]] resolve to
 date: 2017-06-12 # REQUIRED for events
 updated: 2026-06-17
@@ -146,6 +147,33 @@ they appear in that list), each family listed alphabetically. Rules:
 entry counts as an organization when its `tags` include `organization`, `lab`, or
 `company`. No front-matter field beyond the existing tag is needed.)
 
+### Technicality
+
+Every encyclopedic entry (concept, event, person/org, software) declares a
+**technicality** level via the `technicality:` front-matter field — an estimate of
+how much background a reader needs to *mostly* understand the entry. The controlled
+vocabulary (least to most demanding) lives in `TECHNICALITY_LEVELS` in
+`scripts/types.ts`:
+
+- **`non-technical`** — needs no technical knowledge (most bios, orgs, and dated
+  events: foundings, launches, awards, crises).
+- **`somewhat-technical`** — a consumer of technical products would mostly follow it
+  (consumer-facing apps, high-level "what it is / why it matters", licensing &
+  release-policy).
+- **`technical`** — a reader with some STEM/SWE background would mostly follow it
+  (most core ML concepts, models, libraries, benchmarks). This is the common case.
+- **`highly-technical`** — realistically only an AI researcher/scientist would mostly
+  follow it (architecture internals, novel algorithms, kernel/serving optimizations,
+  quantization math, attention/positional-encoding variants).
+
+Judge the **entry as written**, not the subject in the abstract: a plain-language bio
+of a researcher is `non-technical` even though their work is `highly-technical`. Like
+concept groups this is a **soft gate**, not a hard one — a missing or unrecognized
+value renders fine but emits a non-fatal build warning so it gets filled in. **The
+Researcher owns this label** (states it in the dossier and applies the matching
+`tech:*` issue label); the Author copies it into front-matter and the Editor
+sanity-checks it.
+
 ### Linking and citing
 
 - **Internal links must be wiki-links** — `[[Title]]` or `[[Title|label]]`. They
@@ -192,6 +220,7 @@ gate (run in CI on every PR) is the safety net no persona can bypass.
 | `wip` | claimed / in progress (a claim comment says by whom) |
 | `changes-requested` | sent back to an earlier persona; revision needed |
 | `priority:high\|normal\|low`, `kind:new-article\|expand` | set by the Research Officer |
+| `tech:non-technical\|somewhat-technical\|technical\|highly-technical` | the entry's technicality; the Researcher applies it (see Technicality) |
 
 An issue carries exactly **one `stage:*` label** at a time. Closing the issue
 (via a merged PR's `Closes #`) is the terminal "published" state.
@@ -262,11 +291,15 @@ triaging `stage:scoping` issues / incoming human `new-article` proposals:
 - Gather sources — prefer **primary** (papers, official docs, release notes). Use
   your own knowledge to surface key facts but **verify each against a real source
   (WebSearch/WebFetch); never invent a URL.**
-- Post a **Research Dossier** comment: proposed title/category/slug/aliases (and,
-  for concepts, the `group` family); relevance & priority; key facts each with a
-  citation; a ready-to-paste `sources:` list (full fields); suggested
-  `[[wiki-link]]` connections (existing entries + intended red links); for events,
-  the `date` + `related`; open questions.
+- Post a **Research Dossier** comment: proposed title/category/slug/aliases (for
+  concepts, the `group` family; **for every entry, the `technicality` level** — see
+  Technicality); relevance & priority; key facts each with a citation; a
+  ready-to-paste `sources:` list (full fields); suggested `[[wiki-link]]` connections
+  (existing entries + intended red links); for events, the `date` + `related`; open
+  questions.
+- **You own the `technicality` label.** Judge how much background the entry-as-written
+  will demand (`non-technical` → `highly-technical`), state it in the dossier, and
+  apply the matching `tech:*` label to the issue before handing off.
 - If you hit something **extremely compelling or a missed topic**, open a new
   issue (or comment) tagged for the Research Officer (`stage:scoping`, `🔬 → 🔭`).
 - Hand off: set `stage:author`, remove `wip`. Every claim must be backed by a
@@ -274,22 +307,25 @@ triaging `stage:scoping` issues / incoming human `new-article` proposals:
 
 **✍️ Author** — claims a `stage:author` issue, then:
 - Write the **complete entry** from the dossier: front-matter (sources from the
-  dossier; `date`+`related` for events; `group` for concepts), inline `[^id]`
-  citations, `[[wiki-links]]`, correct category.
+  dossier; `date`+`related` for events; `group` for concepts; `technicality` for
+  every entry), inline `[^id]` citations, `[[wiki-links]]`, correct category.
 - **Tone: approachable, not too academic, for a technically competent but
   non-specialist reader.** Lead with what it is and why it matters; short
   paragraphs; define jargon on first use; no hype.
 - Post the **full proposed file** as a fenced comment with its intended path
   (`content/<category>/<slug>.md`). Authors don't touch git — the Editor commits.
 - Self-check: every claim cited, ≥1 source, events have date+related, concepts
-  carry a real `group` (not left Uncategorized), internal links are wiki-links.
+  carry a real `group` (not left Uncategorized), every entry carries the
+  `technicality` from the dossier, internal links are wiki-links.
   Hand off: set `stage:edit`, remove `wip`.
 
 **📝 Editor** — the sole git-writer and **only persona that opens a PR**. Works in
 its own clone/worktree. Claims a `stage:edit` issue, then does **≥2 passes**:
 - *Pass 1 — correctness & citations:* verify EVERY citation actually supports its
   claim and the URL resolves (WebFetch); fix or replace bad ones; ensure ≥1 source,
-  (events) date+related, and (concepts) a real `group` (not Uncategorized).
+  (events) date+related, (concepts) a real `group` (not Uncategorized), and a
+  sensible `technicality` on every entry (set it if a persona left it off, and
+  reconcile the front-matter value with the issue's `tech:*` label).
 - *Pass 2 — tone, consistency, cross-refs:* enforce the house tone; read recent
   entries (`git log`, newest files) for consistent voice/terminology; add
   cross-references the Author missed **both directions** — `[[links]]` in the new

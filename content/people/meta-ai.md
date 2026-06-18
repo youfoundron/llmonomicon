@@ -1,6 +1,7 @@
 ---
 title: Meta AI
 description: Meta's AI research organization (formerly FAIR), the most influential force in open-weight models—the lab behind PyTorch, LLaMA, and FAISS.
+technicality: non-technical
 tags: [lab, open-weights]
 aliases: [FAIR, Facebook AI Research, Meta FAIR, Meta AI / FAIR]
 updated: 2026-06-17

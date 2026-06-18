@@ -20,6 +20,7 @@ function page(overrides: Partial<Page>): Page {
     sources: [],
     related: [],
     group: "",
+    technicality: "",
     data: { tags: [], aliases: [], draft: false, sources: [], related: [] },
     body: "",
     outPath: `dist/${category}/${slug}/index.html`,

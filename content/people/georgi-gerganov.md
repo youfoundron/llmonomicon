@@ -1,6 +1,7 @@
 ---
 title: Georgi Gerganov
 description: The developer behind ggml, llama.cpp, and the GGUF format — the tools that made running large language models on consumer hardware practical.
+technicality: somewhat-technical
 tags: [developer, open-source]
 aliases: [Gerganov, ggerganov]
 updated: 2026-06-17

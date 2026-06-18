@@ -1,6 +1,7 @@
 ---
 title: Ashish Vaswani
 description: Lead author of "Attention Is All You Need" and a key figure in the creation of the Transformer.
+technicality: non-technical
 tags: [researcher]
 updated: 2026-06-17
 sources:

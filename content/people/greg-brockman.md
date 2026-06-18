@@ -1,6 +1,7 @@
 ---
 title: Greg Brockman
 description: Co-founder and president of OpenAI—its first CTO—who led the engineering and compute infrastructure behind its large language models.
+technicality: non-technical
 tags: [engineer, founder]
 aliases: [Brockman]
 updated: 2026-06-17

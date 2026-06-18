@@ -1,6 +1,7 @@
 ---
 title: Beam search
 description: A decoding algorithm that keeps several high-probability candidate sequences at once—great for translation, but the wrong choice for open-ended generation.
+technicality: technical
 tags: [decoding, generation, search]
 group: decoding
 aliases: [Beam search decoding, Beam width]

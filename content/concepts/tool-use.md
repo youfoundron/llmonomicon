@@ -1,6 +1,7 @@
 ---
 title: Tool use
 description: How an LLM invokes external tools — emitting a structured call that a harness executes and feeds back — the mechanism that turns a text model into an agent.
+technicality: technical
 tags: [agents, tool-use]
 group: agents
 aliases: [function calling, tools, tool calling]

@@ -1,6 +1,7 @@
 ---
 title: Chris Olah
 description: A co-founder of Anthropic and the most recognizable figure in mechanistic interpretability—the effort to reverse-engineer what neural networks have learned.
+technicality: somewhat-technical
 tags: [researcher, founder]
 aliases: [colah]
 updated: 2026-06-18

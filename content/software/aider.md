@@ -1,6 +1,7 @@
 ---
 title: Aider
 description: An open-source, git-native coding agent for the terminal — chat to edit your code and it commits the changes — the vendor-neutral, model-agnostic counterpart to closed agents like Cursor and Claude Code.
+technicality: technical
 tags: [open-source, coding-agent]
 updated: 2026-06-17
 sources:

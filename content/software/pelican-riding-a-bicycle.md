@@ -1,6 +1,7 @@
 ---
 title: Pelican riding a bicycle
 description: Simon Willison's informal LLM test—"generate an SVG of a pelican riding a bicycle"—a deliberately absurd, hard-to-game check he runs on every new model.
+technicality: somewhat-technical
 tags: [evaluation, informal-benchmark]
 aliases: [Pelican on a bicycle, Pelican SVG benchmark]
 updated: 2026-06-18

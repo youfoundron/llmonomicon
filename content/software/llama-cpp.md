@@ -1,6 +1,7 @@
 ---
 title: llama.cpp
 description: A C/C++ project for running LLMs efficiently on commodity hardware, popularizing local inference and quantization.
+technicality: technical
 tags: [inference, open-source]
 aliases: [llama cpp]
 updated: 2026-06-17

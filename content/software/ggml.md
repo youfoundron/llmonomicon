@@ -1,6 +1,7 @@
 ---
 title: GGML
 description: Georgi Gerganov's C tensor library and the early quantized model formats that preceded GGUF and seeded local LLM inference.
+technicality: technical
 tags: [library, inference, file-format, open-source]
 aliases: [ggml, GGML library, GGML format, GGMF, GGJT]
 updated: 2026-06-17

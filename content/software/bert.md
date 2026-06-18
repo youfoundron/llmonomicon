@@ -1,6 +1,7 @@
 ---
 title: BERT
 description: Google's 2018 bidirectional encoder that set new standards for language understanding tasks.
+technicality: technical
 tags: [model, milestone]
 aliases: [Bidirectional Encoder Representations from Transformers]
 date: 2018-10-11

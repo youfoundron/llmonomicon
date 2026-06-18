@@ -1,6 +1,7 @@
 ---
 title: Hugging Face
 description: The company and its Hub — the platform where open models, datasets, and demos are published and downloaded, making it the distribution layer of the open-model ecosystem.
+technicality: non-technical
 tags: [organization, company, platform]
 aliases: [HF, Hugging Face Hub, The Hub]
 updated: 2026-06-17

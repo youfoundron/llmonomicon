@@ -19,7 +19,15 @@ import { createRegistry, type Registry } from "./registry.ts";
 import { config } from "./site.config.ts";
 import { createSlugger, humanize } from "./slug.ts";
 import { escapeAttr, escapeHtml, renderTemplate } from "./template.ts";
-import { CATEGORIES, CONCEPT_GROUPS, categoryLabel, isConceptGroup, type Page } from "./types.ts";
+import {
+  CATEGORIES,
+  CONCEPT_GROUPS,
+  categoryLabel,
+  isConceptGroup,
+  isTechnicalityLevel,
+  type Page,
+  TECHNICALITY_LEVELS,
+} from "./types.ts";
 import { editOnGitHubUrl, joinBase, outputPath, pageUrlPath, suggestEditUrl } from "./urls.ts";
 
 /** Path of the dev-only live-reload SSE endpoint (shared with serve.ts). */
@@ -100,6 +108,7 @@ async function discover(dev: boolean): Promise<{ pages: Page[]; registry: Regist
       sources: data.sources,
       related: data.related,
       group: data.group ?? "",
+      technicality: data.technicality ?? "",
       data,
       body,
       outPath: outputPath(category, slug),
@@ -198,6 +207,7 @@ function syntheticPage(category: string, slug: string, title: string, descriptio
     sources: [],
     related: [],
     group: "",
+    technicality: "",
     data: { tags: [], aliases: [], draft: false, sources: [], related: [] },
     body: "",
     outPath: outputPath(category, slug),
@@ -265,6 +275,20 @@ function render(
       warnings.push(
         `${page.contentPath}: unknown concept group "${page.group}" → Uncategorized (allowed: ${CONCEPT_GROUPS.join(", ")})`,
       );
+    }
+    // Technicality is an audience hint, not a correctness invariant, so it warns
+    // rather than gates. Every encyclopedic entry should carry one; a missing or
+    // unrecognized value is surfaced (non-fatal) so a persona fills it in.
+    if (requiresSources(page)) {
+      if (!page.technicality) {
+        warnings.push(
+          `${page.contentPath}: no technicality level (expected one of: ${TECHNICALITY_LEVELS.join(", ")})`,
+        );
+      } else if (!isTechnicalityLevel(page.technicality)) {
+        warnings.push(
+          `${page.contentPath}: unknown technicality "${page.technicality}" (allowed: ${TECHNICALITY_LEVELS.join(", ")})`,
+        );
+      }
     }
     for (const err of citationErrors(page.sources, citations)) {
       errors.push(`${page.contentPath}: ${err}`);

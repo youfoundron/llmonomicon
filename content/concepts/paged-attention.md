@@ -1,6 +1,7 @@
 ---
 title: PagedAttention
 description: The technique that manages a model's KV cache like operating-system virtual memory—in non-contiguous pages—nearly eliminating the waste that limited LLM serving.
+technicality: highly-technical
 tags: [inference, serving, memory]
 group: inference
 aliases: [Paged attention]

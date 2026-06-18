@@ -1,6 +1,7 @@
 ---
 title: LLM.int8()
 description: An 8-bit inference method that halves a large model's memory with no quality loss, by keeping a few outlier features in higher precision.
+technicality: highly-technical
 tags: [quantization, inference, efficiency]
 group: efficiency
 aliases: [LLM.int8, int8 quantization, load_in_8bit]

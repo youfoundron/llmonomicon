@@ -1,6 +1,7 @@
 ---
 title: Ilya Sutskever
 description: Deep-learning researcher who co-authored AlexNet and seq2seq, co-founded OpenAI as its chief scientist, and later founded Safe Superintelligence.
+technicality: non-technical
 tags: [researcher]
 aliases: [Sutskever]
 updated: 2026-06-17

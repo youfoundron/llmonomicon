@@ -1,6 +1,7 @@
 ---
 title: Claude Code
 description: Anthropic's proprietary agentic coding tool — it drives Claude models to read, edit, run, and commit code across a project — launched as a research preview in February 2025.
+technicality: technical
 tags: [closed-source, coding-agent, agents]
 updated: 2026-06-17
 sources:

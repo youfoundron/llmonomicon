@@ -1,6 +1,7 @@
 ---
 title: Repetition penalty
 description: A family of decoding knobs—repetition, frequency, and presence penalties—that discourage a model from repeating itself by down-weighting tokens it has already used.
+technicality: technical
 tags: [sampling, decoding, generation]
 group: decoding
 aliases: [Repetition penalties, Frequency penalty, Presence penalty]

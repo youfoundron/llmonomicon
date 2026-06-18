@@ -1,6 +1,7 @@
 ---
 title: Context window
 description: The maximum span of tokens a model can attend to at once — prompt plus output — and why it's bounded, how it grew to a million tokens, and why bigger isn't always better.
+technicality: somewhat-technical
 tags: [context, tokens, attention, limits]
 group: inference
 aliases: [Context length, Context size, Maximum context length]

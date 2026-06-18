@@ -1,6 +1,7 @@
 ---
 title: Model Context Protocol
 description: An open standard, open-sourced by Anthropic in November 2024, for connecting AI applications to external tools and data via a client–server protocol — "a USB-C port for AI applications."
+technicality: technical
 tags: [agents, open-standard, tool-use]
 aliases: [MCP]
 updated: 2026-06-17

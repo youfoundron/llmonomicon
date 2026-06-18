@@ -1,6 +1,7 @@
 ---
 title: Reasoning models
 description: Models trained to "think" at length before answering—spending more compute per query as a new scaling axis, distinct from making the model bigger.
+technicality: technical
 tags: [reasoning, inference, scaling, reinforcement-learning]
 group: inference
 aliases: [Reasoning models (test-time compute), Test-time compute, Inference-time scaling, Reasoning model]

@@ -1,6 +1,7 @@
 ---
 title: AlexNet wins ImageNet
 description: A deep CNN by Krizhevsky, Sutskever & Hinton wins ImageNet decisively.
+technicality: somewhat-technical
 date: 2012
 related: [Geoffrey Hinton]
 updated: 2026-06-17

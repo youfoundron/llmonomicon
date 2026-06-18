@@ -1,6 +1,7 @@
 ---
 title: vLLM
 description: A high-throughput open-source engine for serving large language models on GPUs, built around the PagedAttention memory technique.
+technicality: highly-technical
 tags: [inference, serving, open-source]
 aliases: [vllm-project]
 updated: 2026-06-17

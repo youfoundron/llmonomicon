@@ -1,6 +1,7 @@
 ---
 title: QLoRA
 description: A method for finetuning a large model on a single GPU by training LoRA adapters over a frozen, 4-bit-quantized base—at almost no loss in quality.
+technicality: highly-technical
 tags: [fine-tuning, quantization, efficiency, peft]
 group: efficiency
 aliases: [4-bit NormalFloat, NF4]

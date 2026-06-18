@@ -1,6 +1,7 @@
 ---
 title: Gemma
 description: Google DeepMind's family of open-weight models, built from the same research and technology as the Gemini line.
+technicality: technical
 tags: [model, open-weights]
 aliases: [CodeGemma, PaliGemma]
 updated: 2026-06-17

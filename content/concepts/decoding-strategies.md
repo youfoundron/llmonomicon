@@ -1,6 +1,7 @@
 ---
 title: Decoding strategies
 description: How an autoregressive model turns next-token probabilities into text — the decoding loop, deterministic vs stochastic strategies, and the coherence-versus-diversity trade-off.
+technicality: technical
 tags: [decoding, generation]
 group: decoding
 aliases: [Decoding, Greedy decoding, Autoregressive decoding, Text generation]

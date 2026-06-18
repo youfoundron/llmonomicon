@@ -1,6 +1,7 @@
 ---
 title: MATH (Hendrycks)
 description: A benchmark of 12,500 competition math problems, each with a worked solution—far harder than grade-school GSM8K and a key tracker of reasoning progress.
+technicality: technical
 tags: [benchmark, evaluation, reasoning, math]
 aliases: [MATH, MATH dataset, Hendrycks MATH]
 updated: 2026-06-18

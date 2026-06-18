@@ -1,6 +1,7 @@
 ---
 title: Agent harnesses
 description: A survey of the software that wraps an LLM into an acting agent — frameworks, coding agents, and autonomous agents — and how they split along the open-source-versus-proprietary axis.
+technicality: technical
 tags: [agents, tools]
 aliases: [Agent frameworks, Coding agents, AI coding agents, Agentic tools]
 updated: 2026-06-17

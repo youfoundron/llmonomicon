@@ -1,6 +1,7 @@
 ---
 title: John Schulman
 description: An OpenAI co-founder who created the PPO algorithm and led the reinforcement-learning work behind ChatGPT, before moving to Anthropic and then Thinking Machines Lab.
+technicality: non-technical
 tags: [researcher, founder]
 aliases: [Schulman]
 updated: 2026-06-18

@@ -1,6 +1,7 @@
 ---
 title: Embeddings
 description: Dense vector representations of text in which semantic similarity becomes geometric closeness — the representation underlying semantic search, RAG, and clustering.
+technicality: technical
 tags: [retrieval, embeddings]
 group: retrieval
 aliases: [Embedding, Word embeddings, Text embeddings, Vector embeddings]

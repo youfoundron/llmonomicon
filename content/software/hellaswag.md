@@ -1,6 +1,7 @@
 ---
 title: HellaSwag
 description: A commonsense sentence-completion benchmark whose wrong answers were adversarially filtered to fool models—easy for humans, hard for 2019 models, and now saturated.
+technicality: technical
 tags: [benchmark, evaluation, commonsense]
 updated: 2026-06-18
 sources:

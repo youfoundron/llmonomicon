@@ -1,6 +1,7 @@
 ---
 title: In-context learning
 description: A large model's ability to learn a new task from instructions and a few examples in the prompt alone, with no change to its weights.
+technicality: somewhat-technical
 tags: [prompting, capability, emergent]
 group: prompting
 aliases: [ICL, Few-shot prompting, Zero-shot prompting]

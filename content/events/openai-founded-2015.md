@@ -1,6 +1,7 @@
 ---
 title: OpenAI founded
 description: OpenAI is established as a non-profit AI research lab.
+technicality: non-technical
 date: 2015-12-11
 related: [OpenAI]
 updated: 2026-06-17

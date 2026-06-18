@@ -1,6 +1,7 @@
 ---
 title: Top-k and top-p sampling
 description: Two truncation methods that improve text generation by sampling only from a model's most probable next tokens—a fixed number (top-k) or a dynamic probability mass (top-p, also called nucleus sampling).
+technicality: technical
 tags: [sampling, decoding, generation]
 group: decoding
 aliases: [Nucleus sampling, Top-p sampling, Top-k sampling, Truncation sampling, "Top-k & top-p (nucleus) sampling", "Top-k & top-p sampling"]

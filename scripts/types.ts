@@ -69,6 +69,42 @@ export function isConceptGroup(value: string): value is ConceptGroup {
   return (CONCEPT_GROUPS as readonly string[]).includes(value);
 }
 
+/**
+ * The controlled vocabulary of technicality levels, ordered least to most demanding.
+ * Every encyclopedic entry declares one via its `technicality:` front-matter field —
+ * an estimate of how much background a reader needs to *mostly* understand the entry
+ * as written (not the subject in the abstract). Like concept groups this is an
+ * organizational hint, not a correctness gate: a missing or unrecognized value renders
+ * fine but emits a non-fatal build warning so it gets filled in. The Researcher assigns
+ * it (see CLAUDE.md › Technicality).
+ */
+export const TECHNICALITY_LEVELS = [
+  "non-technical",
+  "somewhat-technical",
+  "technical",
+  "highly-technical",
+] as const;
+
+export type TechnicalityLevel = (typeof TECHNICALITY_LEVELS)[number];
+
+/** Display labels for technicality levels; the front-matter value stays a short key. */
+export const TECHNICALITY_LABELS: Record<TechnicalityLevel, string> = {
+  "non-technical": "Non-technical",
+  "somewhat-technical": "Somewhat technical",
+  technical: "Technical",
+  "highly-technical": "Highly technical",
+};
+
+/** Human-facing label for a technicality key, falling back to a humanized slug. */
+export function technicalityLabel(level: string): string {
+  return (TECHNICALITY_LABELS as Record<string, string>)[level] ?? humanize(level);
+}
+
+/** Whether a string is one of the controlled technicality levels. */
+export function isTechnicalityLevel(value: string): value is TechnicalityLevel {
+  return (TECHNICALITY_LEVELS as readonly string[]).includes(value);
+}
+
 /** A single bibliographic source for an article. Title is required; URL is strongly encouraged. */
 export interface Source {
   /** Stable id used to cite this source inline via `[^id]`. */
@@ -97,6 +133,8 @@ export interface FrontMatter {
   related: string[];
   /** For concepts: the family key (one of `CONCEPT_GROUPS`) this concept belongs to. */
   group?: string;
+  /** Audience hint: how much background a reader needs (one of `TECHNICALITY_LEVELS`). */
+  technicality?: string;
 }
 
 /** A fully-resolved content page, produced by the discover pass. */
@@ -118,6 +156,8 @@ export interface Page {
   related: string[];
   /** For concepts: the family key (one of `CONCEPT_GROUPS`); "" if unset. */
   group: string;
+  /** Audience hint (one of `TECHNICALITY_LEVELS`); "" if unset. */
+  technicality: string;
   data: FrontMatter;
   /** Markdown body with front-matter stripped. */
   body: string;

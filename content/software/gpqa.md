@@ -1,6 +1,7 @@
 ---
 title: GPQA
 description: A small, expert-written benchmark of "Google-proof" graduate-level science questions, used to test frontier reasoning after MMLU saturated.
+technicality: somewhat-technical
 tags: [benchmark, evaluation, reasoning, science]
 aliases: [Graduate-Level Google-Proof Q&A, GPQA Diamond]
 updated: 2026-06-17

@@ -1,6 +1,7 @@
 ---
 title: Mira Murati
 description: OpenAI's chief technology officer through the ChatGPT and GPT-4 era, briefly its interim CEO during the 2023 board crisis, and later founder of Thinking Machines Lab.
+technicality: non-technical
 tags: [executive]
 aliases: [Murati]
 updated: 2026-06-18

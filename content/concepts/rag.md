@@ -1,6 +1,7 @@
 ---
 title: Retrieval-augmented generation
 description: Grounding an LLM in external knowledge at inference time — retrieve relevant documents and insert them into the prompt — so answers reflect current or private data instead of frozen training memory.
+technicality: technical
 tags: [retrieval, grounding]
 group: retrieval
 aliases: [RAG, Retrieval augmented generation, Grounding]

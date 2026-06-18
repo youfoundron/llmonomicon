@@ -1,6 +1,7 @@
 ---
 title: Andrej Karpathy
 description: A founding member of OpenAI and one of the most influential educators in deep learning, known for nanoGPT, his "Zero to Hero" lectures, and coining "vibe coding."
+technicality: non-technical
 tags: [researcher, educator]
 aliases: [Karpathy]
 updated: 2026-06-18

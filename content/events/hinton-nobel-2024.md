@@ -1,6 +1,7 @@
 ---
 title: Hinton shares Nobel Prize in Physics
 description: Hinton and Hopfield win the 2024 Nobel Prize in Physics for neural-network work.
+technicality: non-technical
 date: 2024-10-08
 related: [Geoffrey Hinton]
 updated: 2026-06-17

@@ -1,6 +1,7 @@
 ---
 title: Vector database
 description: A database built to store embeddings and retrieve them by similarity (nearest-neighbor) rather than exact match — the storage layer of RAG and semantic search.
+technicality: technical
 tags: [retrieval, database]
 group: retrieval
 aliases: [Vector databases, Vector store, Vector DB, Vector search]

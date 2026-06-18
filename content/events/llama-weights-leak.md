@@ -1,6 +1,7 @@
 ---
 title: LLaMA weights leak
 description: Meta's research-only LLaMA model weights leaked publicly, igniting the open-weight era.
+technicality: non-technical
 date: 2023-03-03
 related: [LLaMA]
 updated: 2026-06-17

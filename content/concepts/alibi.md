@@ -1,6 +1,7 @@
 ---
 title: ALiBi (Attention with Linear Biases)
 description: A positional method that adds no embeddings — it penalizes attention scores by query–key distance — enabling length extrapolation ("train short, test long"); the relative-position alternative to RoPE.
+technicality: highly-technical
 tags: [architecture, position]
 group: architecture
 aliases: [ALiBi, Attention with Linear Biases]

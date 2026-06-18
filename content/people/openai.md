@@ -1,6 +1,7 @@
 ---
 title: OpenAI
 description: The research organization behind the GPT series and ChatGPT, central to the modern LLM era.
+technicality: non-technical
 tags: [organization, lab]
 aliases: [Open AI]
 updated: 2026-06-18

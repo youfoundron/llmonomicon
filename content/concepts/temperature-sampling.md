@@ -1,6 +1,7 @@
 ---
 title: Temperature (sampling)
 description: The generation knob that sharpens or flattens a model's next-token distribution—low for focused, deterministic output, high for diverse, creative output.
+technicality: technical
 tags: [sampling, decoding, generation]
 group: decoding
 aliases: [Temperature, Softmax temperature]

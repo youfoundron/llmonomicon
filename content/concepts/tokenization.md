@@ -1,6 +1,7 @@
 ---
 title: Tokenization
 description: How raw text is split into the discrete units a language model actually reads.
+technicality: technical
 tags: [data, preprocessing]
 group: tokenization
 aliases: [Tokenizer, Subword tokenization]

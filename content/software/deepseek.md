@@ -1,6 +1,7 @@
 ---
 title: DeepSeek
 description: A Chinese lab whose open-weight models—the MoE-based V3 and the RL-trained R1 reasoning model—reached near-frontier quality and rattled assumptions about the cost of AI.
+technicality: technical
 tags: [model, open-weights, moe]
 aliases: [DeepSeek AI, DeepSeek-V3, DeepSeek-R1]
 updated: 2026-06-18

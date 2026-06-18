@@ -1,6 +1,7 @@
 ---
 title: LangChain
 description: The open-source framework, launched in October 2022, that defined how developers build LLM apps and agents — and the abstraction-overhead debate around it.
+technicality: technical
 tags: [agents, framework, open-source]
 aliases: [LangGraph, LCEL, LangChain Expression Language]
 updated: 2026-06-17

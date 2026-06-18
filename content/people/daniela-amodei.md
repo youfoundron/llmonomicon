@@ -1,6 +1,7 @@
 ---
 title: Daniela Amodei
 description: Co-founder and president of Anthropic, who runs the company operationally; previously an early Stripe employee and an OpenAI safety-and-policy executive.
+technicality: non-technical
 tags: [executive, founder]
 updated: 2026-06-18
 sources:

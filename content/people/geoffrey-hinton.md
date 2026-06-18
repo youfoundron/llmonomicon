@@ -1,6 +1,7 @@
 ---
 title: Geoffrey Hinton
 description: Cognitive psychologist and computer scientist whose work on neural networks helped ignite the deep learning era.
+technicality: non-technical
 tags: [researcher]
 aliases: [Hinton]
 updated: 2026-06-17

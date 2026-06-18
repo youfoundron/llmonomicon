@@ -1,6 +1,7 @@
 ---
 title: Continuous batching
 description: A scheduling technique for LLM serving that adds and removes requests from a running batch at every step, keeping the GPU busy instead of waiting for the slowest sequence.
+technicality: highly-technical
 tags: [inference, serving, throughput]
 group: inference
 aliases: [In-flight batching, Iteration-level batching, Dynamic batching]

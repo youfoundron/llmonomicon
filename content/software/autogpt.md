@@ -1,6 +1,7 @@
 ---
 title: AutoGPT
 description: The open-source project that ignited the 2023 "autonomous agent" wave — wrap GPT-4 in a loop, give it a goal, let it plan and act — and whose limits steered the field toward scoped agents.
+technicality: technical
 tags: [agents, open-source]
 aliases: [Auto-GPT]
 updated: 2026-06-17

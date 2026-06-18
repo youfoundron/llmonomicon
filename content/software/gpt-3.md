@@ -1,6 +1,7 @@
 ---
 title: GPT-3
 description: OpenAI's 175-billion-parameter model that demonstrated few-shot learning and helped kick off the modern LLM era.
+technicality: technical
 tags: [model, milestone]
 aliases: [GPT-3.5, Generative Pre-trained Transformer 3]
 date: 2020-05-28

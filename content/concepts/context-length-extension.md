@@ -1,6 +1,7 @@
 ---
 title: Context-length extension (RoPE scaling)
 description: Techniques that stretch a trained model's context window beyond its training length by rescaling RoPE position frequencies — Position Interpolation, NTK-aware scaling, and YaRN — with little or no fine-tuning.
+technicality: highly-technical
 tags: [architecture, context]
 group: architecture
 aliases: [RoPE scaling, Position Interpolation, YaRN, NTK-aware scaling]

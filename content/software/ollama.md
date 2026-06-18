@@ -1,6 +1,7 @@
 ---
 title: Ollama
 description: A user-friendly local LLM runner that wraps the llama.cpp engine with a one-command CLI, a REST API, and a model library.
+technicality: somewhat-technical
 tags: [inference, local, open-source]
 aliases: [ollama]
 updated: 2026-06-17

@@ -1,6 +1,7 @@
 ---
 title: Simon Willison
 description: Independent software developer whose widely followed weblog chronicles the practical LLM era; he named "prompt injection" and builds open-source LLM tooling.
+technicality: somewhat-technical
 tags: [practitioner, commentator]
 aliases: [simonw]
 updated: 2026-06-18

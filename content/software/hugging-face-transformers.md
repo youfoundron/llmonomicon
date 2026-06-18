@@ -1,6 +1,7 @@
 ---
 title: Hugging Face Transformers
 description: The open-source Python library and model hub that made pretrained Transformers easy to use.
+technicality: technical
 tags: [library, open-source]
 aliases: [transformers library]
 updated: 2026-06-17

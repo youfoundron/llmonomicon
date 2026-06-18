@@ -3,7 +3,7 @@ title: Perplexity
 description: The classic intrinsic measure of how well a language model predicts text—the exponential of its average per-token loss—along with the caveats that limit it.
 technicality: technical
 tags: [evaluation, metric, training]
-group: training
+group: evaluation
 aliases: [PP]
 updated: 2026-06-17
 sources:

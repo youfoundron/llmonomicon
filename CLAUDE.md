@@ -131,8 +131,8 @@ they appear in that list), each family listed alphabetically. Rules:
   default — the entry just lands under **Uncategorized** on the index (no warning).
   A `group` that doesn't match any family is treated as a typo: it also renders
   under Uncategorized but emits a **non-fatal build warning**. The current families
-  are: `tokenization`, `architecture`, `training`, `decoding`, `inference`,
-  `efficiency`, `prompting`, `retrieval`, `agents`, `safety` (display names live in
+  are: `tokenization`, `architecture`, `training`, `evaluation`, `decoding`,
+  `inference`, `efficiency`, `prompting`, `retrieval`, `agents`, `safety` (display names live in
   `CONCEPT_GROUP_LABELS`). Assigning a real family is encouraged — a wall of
   Uncategorized concepts is a smell — but never required to ship.
 - **One family per concept.** Cross-family relationships are expressed with

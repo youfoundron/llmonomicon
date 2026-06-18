@@ -29,7 +29,7 @@ was an order of magnitude larger than its predecessors.[^brown2020]
 
 ## The key result
 
-GPT-3's headline finding was **in-context, few-shot learning**: without any
+GPT-3's headline finding was **[[In-context learning|in-context, few-shot learning]]**: without any
 gradient updates, the model could perform a new task simply from a few examples
 provided in its prompt. Scaling the model and its training data produced
 qualitatively new capabilities, lending weight to the idea that scale alone could

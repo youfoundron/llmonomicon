@@ -66,7 +66,7 @@ support for spreading a model across multiple GPUs, and a wide range of
 
 vLLM made high-throughput open-model serving practical. At its 2023 launch it
 reported up to **24× higher throughput** than [[Hugging Face Transformers]] and up
-to **3.5× more** than Hugging Face's Text Generation Inference (TGI); the
+to **3.5× more** than Hugging Face's [[Text Generation Inference (TGI)]]; the
 accompanying paper measured a **2–4×** gain over the research serving systems
 FasterTransformer and Orca at comparable latency.[^vllm-blog][^vllm-paper] It sits
 at the opposite end of the spectrum from [[llama.cpp]]: where llama.cpp targets

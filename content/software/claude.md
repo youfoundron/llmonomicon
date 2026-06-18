@@ -81,7 +81,7 @@ Releases since have advanced steadily:
 - **Claude 3.7 Sonnet** (February 2025) — added an opt-in "extended thinking" mode,
   which Anthropic billed as "the first hybrid reasoning model on the
   market."[^claude37sonnet]
-- **Claude 4** (May 2025) — the Opus 4 and Sonnet 4 models, with a strong emphasis
+- **Claude 4** ([[Claude 4 released|May 2025]]) — the Opus 4 and Sonnet 4 models, with a strong emphasis
   on coding and longer-running agentic tasks.[^claude4]
 
 As of 2026 the current generation is **Claude 4.x** — models such as Opus 4.8,

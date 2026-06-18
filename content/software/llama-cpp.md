@@ -35,7 +35,9 @@ ground for [[GGML]], the underlying tensor library.[^repo]
 
 By making capable models runnable on a laptop, llama.cpp helped catalyze the
 local and open-weights movement, complementing higher-level libraries like
-[[Hugging Face Transformers]]. Its quantized GGUF files are the local-inference
-counterpart to [[safetensors]], the format used for the full-precision weights
-shared during research and fine-tuning. It lowered the cost of experimenting with
-[[Transformer]] models from a data-center budget to a personal one.
+[[Hugging Face Transformers]] and serving as the inference engine inside
+one-command runners such as [[Ollama]]. Its quantized GGUF files are the
+local-inference counterpart to [[safetensors]], the format used for the
+full-precision weights shared during research and fine-tuning. It lowered the
+cost of experimenting with [[Transformer]] models from a data-center budget to a
+personal one.

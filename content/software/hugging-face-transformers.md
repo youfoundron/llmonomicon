@@ -2,7 +2,7 @@
 title: Hugging Face Transformers
 description: The open-source Python library and model hub that made pretrained Transformers easy to use.
 tags: [library, open-source]
-aliases: [transformers library, Hugging Face]
+aliases: [transformers library]
 updated: 2026-06-17
 sources:
   - id: wolf2020
@@ -21,7 +21,7 @@ sources:
 
 # Hugging Face Transformers
 
-**Transformers** is an open-source Python library from Hugging Face that provides
+**Transformers** is an open-source Python library from [[Hugging Face]] that provides
 a unified API for downloading, running, and fine-tuning thousands of pretrained
 [[Transformer]] models.[^wolf2020] Together with the **Hugging Face Hub**, it
 became the default on-ramp for working with modern NLP models.

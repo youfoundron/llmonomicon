@@ -25,7 +25,8 @@ sources:
 **GPT-3** (Generative Pre-trained Transformer 3) is a decoder-only
 [[Transformer]] language model released by [[OpenAI]] in 2020, described in the
 paper *"Language Models are Few-Shot Learners."* With 175 billion parameters, it
-was an order of magnitude larger than its predecessors.[^brown2020]
+was an order of magnitude larger than its predecessors, such as
+[[GPT-2]].[^brown2020]
 
 ## The key result
 

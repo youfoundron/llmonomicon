@@ -34,5 +34,5 @@ entries are open to human correction. See the [[Colophon]] for details.
 Anyone can help. Found an error, an omission, or a missing page? Use the
 **Suggest an edit** button at the bottom of any article to file a prefilled
 issue, or **Edit on GitHub** to propose a change directly. Red links like
-[[Mixture of Experts]] mark pages that don't exist yet — following one opens a
+[[this unwritten page]] mark pages that don't exist yet — following one opens a
 prefilled "new article" issue so you can claim it.

@@ -85,7 +85,7 @@ appears to. Several failure modes recur:
 ## Responses
 
 The field has developed several countermeasures. **Holistic** evaluation reports
-many metrics at once instead of a single accuracy number — HELM, for example,
+many metrics at once instead of a single accuracy number — [[HELM]], for example,
 scores models on "accuracy, calibration, robustness, fairness, bias, toxicity,
 and efficiency" across standardized scenarios so that "metrics beyond accuracy
 don't fall to the wayside."[^helm2022] Other responses include retiring saturated

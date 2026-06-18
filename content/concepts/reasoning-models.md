@@ -52,7 +52,7 @@ compute is best allocated adaptively, per question.[^snell2024]
 The behavior itself is not new — it is what [[Chain-of-thought prompting]] coaxed
 out of ordinary models with a prompt. What changed is that the long reasoning is now
 **trained into** the model and scaled deliberately at inference. OpenAI's **o1**,
-released in September 2024, opened the public "reasoning model" category — a model
+[[OpenAI o1 released|released in September 2024]], opened the public "reasoning model" category — a model
 that produces an extended internal reasoning process before answering.[^openai-o1]
 
 The mechanism became fully visible with **DeepSeek-R1** (January 2025), released

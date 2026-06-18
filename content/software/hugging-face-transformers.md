@@ -40,4 +40,5 @@ became the default on-ramp for working with modern NLP models.
 By standardizing how models are packaged and loaded, the library dramatically
 lowered the barrier to applied NLP.[^wolf2020] It complements lower-level local
 engines like [[llama.cpp]], covering the research-and-fine-tuning end of the
-workflow.
+workflow — where weights are now shared as [[safetensors]] rather than the older,
+unsafe Python pickle format.

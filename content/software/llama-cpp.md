@@ -23,7 +23,7 @@ ground for [[GGML]], the underlying tensor library.[^repo]
 
 ## What it popularized
 
-- **Quantization.** Reducing weights to 4-bit and other low-precision formats so
+- **[[Quantization]].** Reducing weights to 4-bit and other low-precision formats so
   multi-billion-parameter models fit in consumer RAM with modest quality
   loss.[^repo]
 - **The [[GGUF]] format.** A single-file model format carrying weights and

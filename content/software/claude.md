@@ -3,8 +3,8 @@ title: Claude
 description: Anthropic's family of large language models—and the assistant built on them—trained with Constitutional AI and organized into Opus, Sonnet, and Haiku tiers.
 technicality: somewhat-technical
 tags: [model, product, assistant]
-aliases: [Claude 3, Claude 4, Claude Opus, Claude Sonnet, Claude Haiku, Claude (Anthropic)]
-updated: 2026-06-17
+aliases: [Claude 3, Claude 4, Claude Opus, Claude Sonnet, Claude Haiku, Claude (Anthropic), Claude Fable 5, Fable 5, Claude Mythos, Claude Mythos 5, Mythos 5]
+updated: 2026-06-18
 sources:
   - id: introducing-claude
     title: "Introducing Claude"
@@ -54,6 +54,22 @@ sources:
     author: Anthropic
     publisher: Anthropic
     year: 2026
+  - id: anthropic-fable
+    title: "Claude Fable 5 and Claude Mythos 5"
+    url: https://www.anthropic.com/news/claude-fable-5-mythos-5
+    author: Anthropic
+    publisher: Anthropic
+    year: 2026
+  - id: techcrunch-fable
+    title: "Anthropic's Claude Fable 5 is a version of Mythos the public can access today"
+    url: https://techcrunch.com/2026/06/09/anthropics-claude-fable-5-is-a-version-of-mythos-the-public-can-access-today/
+    publisher: TechCrunch
+    year: 2026
+  - id: techcrunch-recall
+    title: "Anthropic's safety warnings may have just backfired — the government has pulled the plug on its most powerful AI"
+    url: https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/
+    publisher: TechCrunch
+    year: 2026
 ---
 
 # Claude
@@ -87,6 +103,18 @@ Releases since have advanced steadily:
 As of 2026 the current generation is **Claude 4.x** — models such as Opus 4.8,
 Sonnet 4.6, and Haiku 4.5 keep the Opus/Sonnet/Haiku tiering — alongside a newer and
 more capable line released as **Claude Fable 5**.[^anthropic-models]
+
+The 2026 generation also introduced Anthropic's most capable — and most tightly held — model,
+**Mythos**. Unveiled as a preview in April 2026, Mythos was "initially limited to a handful of
+partners due to cybersecurity concerns," shared through a controlled program (**Project Glasswing**)
+with roughly 50 vetted organizations.[^techcrunch-fable][^techcrunch-recall] **Claude Fable 5**,
+released on 9 June 2026, is the publicly available counterpart — "a version of Mythos fitted with
+guardrails" that block high-risk domains (cybersecurity, biology, chemistry, and model distillation)
+and fall back to Opus 4.8, while the unrestricted **Mythos 5** stayed in limited release.[^techcrunch-fable][^techcrunch-recall]
+Days later, a US government export-control directive forced Anthropic to
+[[US suspends foreign access to Fable 5 & Mythos 5|suspend both models for all foreign nationals]],
+and the company disabled them entirely to comply — part of the broader 2026 governance arc covered
+in the [[Anthropic]] entry.[^techcrunch-recall]
 
 ## What distinguishes it
 

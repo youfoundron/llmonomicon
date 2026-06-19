@@ -4,7 +4,7 @@ description: An AI safety company founded in 2021 by former OpenAI staff, known 
 technicality: non-technical
 tags: [organization, ai-safety]
 aliases: [Anthropic PBC]
-updated: 2026-06-17
+updated: 2026-06-18
 sources:
   - id: anthropic-company
     title: "Company — Anthropic"
@@ -41,6 +41,21 @@ sources:
     author: Anthropic
     publisher: Anthropic
     year: 2025
+  - id: cbs
+    title: "What's behind the Anthropic-Pentagon feud"
+    url: https://www.cbsnews.com/news/anthropic-pentagon-pete-hegseth-feud/
+    publisher: CBS News
+    year: 2026
+  - id: mit
+    title: "The Pentagon's culture-war tactic against Anthropic has backfired"
+    url: https://www.technologyreview.com/2026/03/30/1134881/the-pentagons-culture-war-tactic-against-anthropic-has-backfired/
+    publisher: MIT Technology Review
+    year: 2026
+  - id: aljazeera-access
+    title: "US orders Anthropic to disable AI models for all foreign nationals"
+    url: https://www.aljazeera.com/news/2026/6/13/us-orders-anthropic-to-disable-ai-models-for-all-foreign-nationals
+    publisher: Al Jazeera
+    year: 2026
 ---
 
 # Anthropic
@@ -97,3 +112,33 @@ empirical, measure-as-you-go approach to safety.[^anthropic-coreviews]
   November 2024 for connecting AI applications to external tools and data.[^mcp-announce]
 - **[[Claude Code]]** — its agentic coding tool, introduced in 2025, which drives
   Claude to read, edit, and run code across a project.[^cc-announce]
+
+## The 2026 Pentagon dispute and federal access cut
+
+In early 2026, Anthropic's safety stance collided with the US government in a sequence that became
+one of the sharpest clashes yet between a frontier AI lab and a state.
+
+The dispute went public in February 2026. By CBS News's account, the standoff was "reportedly set
+off by the U.S. military's use of its technology … during the operation to capture former Venezuela
+President Nicolás Maduro in January" — a use Anthropic said it could not confirm, stating it "has
+not discussed the use of Claude for specific operations" with the Pentagon.[^cbs] Defense Secretary
+Pete Hegseth then "gave Anthropic until Friday, Feb. 27 to agree to give the U.S. military
+unrestricted use of its technology or risk being blacklisted."[^cbs] Anthropic held two red lines:
+no use of [[Claude]] for "mass surveillance of Americans," and no fully autonomous targeting —
+ensuring Claude "is not used by the Pentagon for final targeting decisions … without any human
+involvement," given models' tendency to hallucinate.[^cbs]
+
+Anthropic did not back down. On February 27 the administration moved to bar federal use of its
+products and the Pentagon **[[Pentagon designates Anthropic a supply-chain risk|designated Anthropic
+a "supply-chain risk"]]**, declaring that no military contractor "may conduct any commercial
+activity with Anthropic."[^mit] Anthropic sued, arguing the government was trying to "publicly punish
+Anthropic for its 'ideology' and 'rhetoric'" in violation of the First Amendment.[^mit] In **late
+March 2026**, Judge Rita Lin issued a preliminary injunction blocking the designation, finding
+Anthropic "likely to prevail on essentially all of its theories for why the government's actions
+were unlawful."[^mit]
+
+The friction returned in June. Days after Anthropic released **[[Claude Fable 5 released|Claude
+Fable 5]]**, a government export-control directive ordered it to **[[US suspends foreign access to
+Fable 5 & Mythos 5|suspend Fable 5 and Mythos 5 for all foreign nationals]]**, and Anthropic
+disabled the models for everyone to comply while disputing the order.[^aljazeera-access] As of June
+2026 the matter was unresolved: the March ruling was a preliminary injunction, not a final judgment.

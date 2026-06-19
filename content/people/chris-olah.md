@@ -17,6 +17,11 @@ sources:
     author: Olah et al.
     publisher: Distill
     year: 2020
+  - id: magnifica-wiki
+    title: "Magnifica humanitas"
+    url: https://en.wikipedia.org/wiki/Magnifica_humanitas
+    publisher: Wikipedia
+    year: 2026
 ---
 
 # Chris Olah
@@ -42,3 +47,7 @@ At Anthropic, Olah leads the interpretability effort — mapping the internal
 "features" of large [[Transformer]] models — and is a prominent voice for the view
 that genuinely understanding a model's internals is essential to making it
 safe.[^olah-wiki] The organization's broader mission is covered in [[Anthropic]].
+
+In 2026 he was invited to the Vatican to speak at the presentation of Pope Leo XIV's
+[[Magnifica Humanitas]], the first papal encyclical devoted to artificial
+intelligence.[^magnifica-wiki]

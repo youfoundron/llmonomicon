@@ -72,7 +72,7 @@ closest counterpart to [[OpenAI]] itself.
 Anthropic was founded in 2021 by seven former OpenAI employees, among them the
 siblings **[[Dario Amodei]]** — OpenAI's former vice president of research, now
 Anthropic's CEO — and **[[Daniela Amodei]]**, its president, along with chief science
-officer **[[Jared Kaplan]]**.[^anthropic-wiki] By
+officer **[[Jared Kaplan]]** and head of policy **[[Jack Clark]]**.[^anthropic-wiki] By
 their own account they left OpenAI over "directional differences," wanting to build
 an organization centered on the safety and reliability of AI
 systems.[^anthropic-wiki] The company introduced itself publicly in May 2021 with a

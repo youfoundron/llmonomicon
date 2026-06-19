@@ -5,7 +5,7 @@ technicality: technical
 tags: [decoding, generation]
 group: decoding
 aliases: [Decoding, Greedy decoding, Autoregressive decoding, Text generation]
-updated: 2026-06-17
+updated: 2026-06-18
 sources:
   - id: holtzman2019
     title: "The Curious Case of Neural Text Degeneration"
@@ -19,6 +19,12 @@ sources:
     author: Patrick von Platen
     publisher: Hugging Face
     year: 2020
+  - id: nguyen2024
+    title: "Turning Up the Heat: Min-p Sampling for Creative and Coherent LLM Outputs"
+    url: https://arxiv.org/abs/2407.01082
+    author: Nguyen et al.
+    publisher: "arXiv (ICLR 2025)"
+    year: 2024
 ---
 
 # Decoding strategies
@@ -80,7 +86,9 @@ knobs shape the sampling:
   distribution, which allows for diversity while effectively truncating the less
   reliable tail of the distribution" — keeping the smallest set of tokens whose
   probabilities sum past a threshold, a set that grows and shrinks with the
-  model's confidence.[^holtzman2019]
+  model's confidence.[^holtzman2019] A more recent relative variant,
+  **[[Min-p sampling]]**, sets that floor as a fraction of the top token's
+  probability, so the cutoff scales with the model's confidence directly.[^nguyen2024]
 
 The tension running through all of these is one trade-off: **coherence and
 quality** (favoring high-probability choices) versus **diversity and creativity**

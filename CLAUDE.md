@@ -133,8 +133,11 @@ of their titles/aliases. Rules:
 
 Every **concept** article declares one **family** via a `group:` front-matter
 field — a controlled vocabulary defined by `CONCEPT_GROUPS` in `scripts/types.ts`.
-The `/concepts/` index renders entries grouped under these families (in the order
-they appear in that list), each family listed alphabetically. Rules:
+The `/concepts/` index renders entries grouped under these families — the family
+sections ordered alphabetically by display label (with **Uncategorized** always
+last), each family listed alphabetically. A client-side **technicality slider**
+(emitted by `conceptsIndexHtml` in `pages.ts`, no dependency) filters the rows:
+sliding it down hides entries above the chosen `technicality` level. Rules:
 
 - **Set `group` to one of the families** for every concept. Unlike the citation
   and event-date gates, this is *not* a hard gate: an unset `group` is a legitimate

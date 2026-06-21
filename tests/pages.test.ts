@@ -48,7 +48,7 @@ test("people index splits People from Organizations, each alphabetical", () => {
   assert.ok(html.indexOf("Organizations</h2>") < html.indexOf("OpenAI"));
 });
 
-test("concepts index groups by family in CONCEPT_GROUPS order", () => {
+test("concepts index orders family sections alphabetically by label", () => {
   const pages = [
     page({ slug: "prompt-injection", title: "Prompt injection", group: "safety" }),
     page({ slug: "attention", title: "Attention", group: "architecture" }),
@@ -56,12 +56,41 @@ test("concepts index groups by family in CONCEPT_GROUPS order", () => {
   ];
   const html = categoryIndexHtml("concepts", pages);
 
-  // tokenization precedes architecture precedes safety (CONCEPT_GROUPS order).
-  const tok = html.indexOf("Tokenization &amp; inputs");
+  // Sections sort by display label: "Model architecture" < "Safety & security"
+  // < "Tokenization & inputs".
   const arch = html.indexOf("Model architecture");
   const safety = html.indexOf("Safety &amp; security");
+  const tok = html.indexOf("Tokenization &amp; inputs");
   assert.ok(tok >= 0 && arch >= 0 && safety >= 0);
-  assert.ok(tok < arch && arch < safety);
+  assert.ok(arch < safety && safety < tok);
+});
+
+test("concepts index emits the technicality slider and tags rows with their rank", () => {
+  const pages = [
+    page({
+      slug: "attention",
+      title: "Attention",
+      group: "architecture",
+      technicality: "highly-technical",
+    }),
+    page({
+      slug: "local-llms",
+      title: "Local LLMs",
+      group: "inference",
+      technicality: "somewhat-technical",
+    }),
+    page({ slug: "loose", title: "Loose end", group: "architecture", technicality: "" }),
+  ];
+  const html = categoryIndexHtml("concepts", pages);
+
+  // The threshold slider and its scoped container/script are present.
+  assert.match(html, /<input type="range" id="tech-range"/);
+  assert.match(html, /<div data-concepts>/);
+  // Rows carry their technicality rank (index in TECHNICALITY_LEVELS); an unset
+  // level renders an empty rank so the filter always shows it.
+  assert.match(html, /<li data-tech="3"><a[^>]*>Attention</);
+  assert.match(html, /<li data-tech="1"><a[^>]*>Local LLMs</);
+  assert.match(html, /<li data-tech=""><a[^>]*>Loose end</);
 });
 
 test("concepts with no group or an unrecognized one fall to a trailing Uncategorized bucket", () => {

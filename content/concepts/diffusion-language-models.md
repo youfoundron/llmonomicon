@@ -63,7 +63,7 @@ the dominant [[Transformer]]-based, [[Decoding strategies|autoregressive]] recip
 
 ## How they work
 
-A diffusion model generates by **iterative denoising**. It starts from a sequence
+A [[Diffusion models|diffusion model]] generates by **iterative denoising**. It starts from a sequence
 of masked or noised tokens and, over a small number of steps, repeatedly predicts
 a cleaner version until a coherent passage emerges. This is the same denoising
 family behind image generators such as [[Stable Diffusion]], turned toward text;

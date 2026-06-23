@@ -38,7 +38,7 @@ blends the artist Salvador Dalí and Pixar's WALL·E.[^dalle-wiki])
 
 DALL·E was announced on **January 5, 2021**, described by OpenAI as "a version of
 [[GPT-3|GPT-3]]" adapted to generate images from text prompts.[^dalle-wiki] **DALL·E 2**
-(April 2022) was a large jump in quality built on a different mechanism: a diffusion model
+(April 2022) was a large jump in quality built on a different mechanism: a [[Diffusion models|diffusion model]]
 conditioned on [[CLIP]] image embeddings — an approach its authors called "unCLIP," set out
 in Ramesh et al.'s "Hierarchical Text-Conditional Image Generation with CLIP
 Latents."[^dalle2-unclip] **DALL·E 3** followed in September 2023 and was integrated directly

@@ -25,7 +25,8 @@ sources:
 **Transformers** is an open-source Python library from [[Hugging Face]] that provides
 a unified API for downloading, running, and fine-tuning thousands of pretrained
 [[Transformer]] models.[^wolf2020] Together with the **Hugging Face Hub**, it
-became the default on-ramp for working with modern NLP models.
+became the default on-ramp for working with modern NLP models. Under the hood, the
+models run on a deep-learning framework — predominantly [[PyTorch]].
 
 ## What it provides
 

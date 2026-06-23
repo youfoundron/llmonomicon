@@ -31,7 +31,7 @@ into the open.
 The lab was founded in 2013 as **Facebook AI Research (FAIR)**, with **Yann LeCun**
 as its first director until 2018.[^meta-wiki] It was renamed **Meta AI** after the
 company's 2021 rebrand from Facebook to Meta.[^meta-wiki] Its open contributions
-reach well beyond language models: FAIR released **PyTorch** in 2017, now one of the
+reach well beyond language models: FAIR released **[[PyTorch]]** in 2017, now one of the
 most widely used deep-learning frameworks,[^meta-wiki] along with open tools like the
 [[FAISS]] similarity-search library.
 

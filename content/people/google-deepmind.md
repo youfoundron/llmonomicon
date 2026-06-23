@@ -79,5 +79,5 @@ through this wiki: the **word2vec** word-embedding method (2013),[^g-word2vec] t
 ## Today
 
 Google DeepMind's stated mission is to "build AI responsibly to benefit
-humanity."[^gdm-about] It develops the [[Gemini]] family of models and the
-open-weights [[Gemma]] family.[^gdm-wiki]
+humanity."[^gdm-about] It develops the [[Gemini]] family of models, the
+open-weights [[Gemma]] family, and the [[Imagen]] text-to-image line.[^gdm-wiki]

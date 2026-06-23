@@ -18,6 +18,12 @@ sources:
     author: Demis Hassabis & Google DeepMind
     publisher: Google
     year: 2024
+  - id: imagen-migration
+    title: "Migrate from Imagen to a Gemini Image model (Nano Banana)"
+    url: https://firebase.google.com/docs/ai-logic/imagen-models-migration
+    author: Google (Firebase AI Logic)
+    publisher: Google
+    year: 2026
 ---
 
 # Gemini
@@ -27,7 +33,9 @@ Google's principal competitor to [[OpenAI]]'s [[GPT-3|GPT]] line and [[Claude]].
 Announced on December 6, 2023, it was designed to be **natively [[Multimodal models|multimodal]]** —
 "built from the ground up" to "understand, operate across and combine different
 types of information including text, code, audio, image and video," rather than
-bolting those abilities onto a text-only model after the fact.[^gemini-intro]
+bolting those abilities onto a text-only model after the fact.[^gemini-intro] By 2026, Gemini's
+native image generation was superseding Google's standalone [[Imagen]] models, which Google
+scheduled to shut down on June 24, 2026 in favor of Gemini's built-in image capability.[^imagen-migration]
 
 ## The original tiers
 

@@ -59,6 +59,10 @@ frameworks surveyed in [[Agent harnesses]].
 LangChain's reach is hard to overstate: for most of the LLM era it has been the
 canonical reference point for "how do I build an agent." The company became a
 unicorn, raising a $125M Series B at a $1.25 billion valuation in 2025.[^techcrunch]
+For the data- and retrieval-centric end of that work — ingesting and indexing
+documents for [[RAG]] — its most-cited sibling is [[LlamaIndex]]; the two are the
+frameworks most associated with building LLM-over-your-data apps, and many teams use
+one, the other, or both.
 
 ## The critique
 

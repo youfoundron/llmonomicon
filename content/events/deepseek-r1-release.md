@@ -3,7 +3,7 @@ title: DeepSeek-R1 release
 description: DeepSeek released its MIT-licensed open-weight reasoning model, triggering a record market reaction.
 technicality: somewhat-technical
 date: 2025-01-20
-related: [DeepSeek]
+related: [DeepSeek-R1, DeepSeek]
 updated: 2026-06-18
 sources:
   - id: deepseek-r1
@@ -32,4 +32,4 @@ On 20 January 2025, [[DeepSeek]] released **DeepSeek-R1**, an MIT-licensed open-
 learning.[^deepseek-r1][^deepseek-r1-hf] Within a week, the arrival of a cheap, open,
 frontier-adjacent model triggered a record market reaction: on 27 January, **Nvidia shed
 roughly $600 billion in market value — the largest one-day loss in U.S. market
-history**.[^cnbc-nvidia] More depth is in [[DeepSeek]].
+history**.[^cnbc-nvidia] More depth on the models is in [[DeepSeek (models)]], and on the lab in [[DeepSeek]].

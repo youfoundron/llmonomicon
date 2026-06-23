@@ -30,6 +30,12 @@ sources:
     author: Ollama
     publisher: GitHub
     year: 2024
+  - id: ol-mlx
+    title: "Ollama is now powered by MLX on Apple Silicon"
+    url: https://ollama.com/blog/mlx
+    author: Ollama
+    publisher: Ollama
+    year: 2026
 ---
 
 # Ollama
@@ -57,7 +63,9 @@ packaging, and a local server so that `ollama run <model>` just works.[^ol-repo]
 ## Its relationship to llama.cpp
 
 Ollama is the packaging, UX, and model-distribution layer; [[llama.cpp]] is the
-inference engine underneath, listed among Ollama's supported backends.[^ol-repo]
+inference engine underneath, listed among Ollama's supported backends.[^ol-repo] As of 2026,
+[[MLX]] is another backend: on [[Apple Silicon]], Ollama's builds run on Apple's MLX framework for
+faster inference.[^ol-mlx]
 The models it runs are [[GGUF]] files: you can pull them from Ollama's own
 library, import an existing GGUF with a Modelfile (`FROM ./model.gguf` followed by
 `ollama create`), or convert a model from [[safetensors]] using llama.cpp's

@@ -85,7 +85,7 @@ over time.
 finding is that "the reasoning abilities of LLMs can be incentivized through pure
 reinforcement learning," without human-labeled reasoning examples.[^deepseek-r1] It
 shipped under the permissive **MIT license**, which allows commercial use, modification,
-and even distillation of its outputs into other models.[^deepseek-r1-hf]
+and even [[Knowledge distillation|distillation]] of its outputs into other models.[^deepseek-r1-hf]
 
 Notably, DeepSeek has **not** released an "R2" successor as of mid-2026; reporting
 attributes the delay to performance concerns and chip-supply constraints, and the

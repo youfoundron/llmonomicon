@@ -109,7 +109,7 @@ The 2026 generation also introduced Anthropic's most capable — and most tightl
 partners due to cybersecurity concerns," shared through a controlled program (**Project Glasswing**)
 with roughly 50 vetted organizations.[^techcrunch-fable][^techcrunch-recall] **Claude Fable 5**,
 released on 9 June 2026, is the publicly available counterpart — "a version of Mythos fitted with
-guardrails" that block high-risk domains (cybersecurity, biology, chemistry, and model distillation)
+guardrails" that block high-risk domains (cybersecurity, biology, chemistry, and model [[Knowledge distillation|distillation]])
 and fall back to Opus 4.8, while the unrestricted **Mythos 5** stayed in limited release.[^techcrunch-fable][^techcrunch-recall]
 Days later, a US government export-control directive forced Anthropic to
 [[US suspends foreign access to Fable 5 & Mythos 5|suspend both models for all foreign nationals]],

@@ -18,6 +18,12 @@ sources:
     author: PyTorch maintainers
     publisher: GitHub
     year: 2026
+  - id: pytorch-hn
+    title: "PyTorch – Tensors and Dynamic neural networks in Python (public launch announcement, linking to pytorch.org)"
+    url: https://news.ycombinator.com/item?id=13428098
+    author: Hacker News
+    publisher: Hacker News
+    year: 2017
   - id: caffe2_v1
     title: "Caffe2 and PyTorch join forces to create a Research + Production platform PyTorch 1.0"
     url: https://caffe2.ai/blog/2018/05/02/Caffe2_PyTorch_1_0.html
@@ -69,7 +75,7 @@ widely credited for its rapid takeover of machine-learning research.[^paszke2019
 PyTorch grew out of the older Lua-based Torch library; development began in 2016 at
 Facebook AI Research (now [[Meta AI]]), led by Soumith Chintala with Adam Paszke,
 Sam Gross, and Gregory Chanan among the early authors.[^pytorch_versions] It was
-first released publicly in **January 2017** (version 0.1).[^pytorch_versions] A few
+first released publicly in **January 2017** (version 0.1).[^pytorch-hn] A few
 releases mark the path since:
 
 - **PyTorch 1.0** (announced May 2018, stable that December) merged in Facebook's

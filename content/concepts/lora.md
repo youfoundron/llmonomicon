@@ -74,4 +74,6 @@ to full model weights.
 
 For a variant that also quantizes the frozen base model to 4-bit, so a large
 fine-tuning run fits on a single GPU, see [[QLoRA]]; the underlying idea of
-shrinking weights to lower precision is [[Quantization]].
+shrinking weights to lower precision is [[Quantization]]. LoRA is also ubiquitous
+beyond text: the [[Stable Diffusion]] community uses it heavily to fine-tune
+image models into custom styles and subjects.

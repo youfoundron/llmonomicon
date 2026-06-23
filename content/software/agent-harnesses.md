@@ -50,6 +50,11 @@ sources:
     url: https://github.com/openai/codex
     publisher: GitHub
     year: 2026
+  - id: pi
+    title: "earendil-works/pi (GitHub repository)"
+    url: https://github.com/earendil-works/pi
+    publisher: GitHub
+    year: 2026
   - id: sweagent
     title: "SWE-agent (GitHub repository)"
     url: https://github.com/SWE-agent/SWE-agent
@@ -102,6 +107,8 @@ Harnesses differ mainly in *what* they target and *how open* they are.
 - [[Aider]] — "AI pair programming in your terminal."[^aider]
 - [[OpenCode]] — an open-source, model-agnostic terminal coding agent that works
   across many LLM providers.[^opencode]
+- [[Pi (coding agent)|Pi]] — a deliberately minimal, self-extensible coding agent
+  (Earendil Works) that leaves out features other agents bundle in by default.[^pi]
 - [[SWE-agent]] — an autonomous coding agent, from Princeton and Stanford
   researchers, that fixes real GitHub issues.[^sweagent]
 
@@ -121,6 +128,7 @@ of 2026:
 | [[OpenAI Agents SDK]] | framework | open (MIT)[^openai-agents] |
 | [[Aider]] | coding CLI | open (Apache-2.0)[^aider] |
 | [[OpenCode]] | coding CLI | open (MIT)[^opencode] |
+| [[Pi (coding agent)]] | coding CLI | open (MIT)[^pi] |
 | [[SWE-agent]] | coding agent | open (MIT)[^sweagent] |
 | [[AutoGPT]] | autonomous | mixed[^autogpt] |
 | [[Claude Code]] | coding CLI / IDE | proprietary[^claudecode] |

@@ -28,7 +28,7 @@ sources:
 
 # Attention
 
-**Attention** is the mechanism that lets a neural network decide, for each
+**Attention** is the mechanism that lets a [[Neural network|neural network]] decide, for each
 element of a sequence, which other elements matter most. Rather than compressing
 a whole input into a single fixed vector, attention computes a weighted sum over
 all positions, where the weights are learned and content-dependent. The idea was

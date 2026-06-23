@@ -35,7 +35,7 @@ sources:
 
 # Transformer
 
-The **Transformer** is a neural network architecture introduced in 2017 that
+The **Transformer** is a [[Neural network|neural network]] architecture introduced in 2017 that
 dispenses with the [[Long Short-Term Memory|recurrence]] of earlier sequence
 models and convolution entirely, relying instead on
 [[Attention]] to model relationships between tokens.[^vaswani2017] It is the

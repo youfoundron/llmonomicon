@@ -36,6 +36,12 @@ sources:
     author: Wikipedia contributors
     publisher: Wikipedia
     year: 2026
+  - id: bfl-wiki
+    title: "Black Forest Labs"
+    url: https://en.wikipedia.org/wiki/Black_Forest_Labs
+    author: Wikipedia contributors
+    publisher: Wikipedia
+    year: 2026
 ---
 
 # Stable Diffusion
@@ -90,4 +96,6 @@ of the [[Multimodal models|multimodal]]-generation era. Its licensing shifted ov
 from the **Creative ML OpenRAIL-M** license of the early releases to the **Stability AI
 Community License** introduced with SD 3.5 (October 2024), which adds commercial terms above a
 revenue threshold — a [[Model licensing]] evolution that mirrors debates in the open-LLM
-world.[^sd-wiki]
+world.[^sd-wiki] Stable Diffusion's original creators later left [[Stability AI]] to found
+Black Forest Labs, whose [[FLUX]] models carried the open-image-generation lineage
+forward.[^bfl-wiki]

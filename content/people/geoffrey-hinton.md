@@ -59,5 +59,8 @@ era would later build upon.
 Hinton shared the 2018 **Turing Award** with Yoshua Bengio and Yann
 LeCun,[^turing2018] and in 2024 received the **Nobel Prize in Physics** (with
 John Hopfield) for foundational discoveries in machine learning with neural
-networks.[^nobel2024] In 2023 he left Google to speak more freely about the
-risks of advanced AI, becoming a prominent voice on safety.[^nyt-quit]
+networks.[^nobel2024] The assignment of credit for those foundations has itself been
+publicly contested — [[Jürgen Schmidhuber]] has long argued that he and other earlier
+pioneers were under-recognized relative to the award's recipients. In 2023 Hinton left
+Google to speak more freely about the risks of advanced AI, becoming a prominent voice on
+safety.[^nyt-quit]

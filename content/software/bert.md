@@ -31,7 +31,7 @@ it especially strong at understanding tasks.[^devlin2018]
 
 ## Training objectives
 
-BERT is pretrained with two self-supervised objectives:[^devlin2018]
+BERT is [[Pretraining|pretrained]] with two self-supervised objectives:[^devlin2018]
 
 - **Masked language modeling (MLM)** — randomly hide tokens and train the model
   to predict them from surrounding context.

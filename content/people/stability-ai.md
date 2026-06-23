@@ -24,6 +24,12 @@ sources:
     author: VentureBeat
     publisher: VentureBeat
     year: 2024
+  - id: bfl-wiki
+    title: "Black Forest Labs"
+    url: https://en.wikipedia.org/wiki/Black_Forest_Labs
+    author: Wikipedia contributors
+    publisher: Wikipedia
+    year: 2026
 ---
 
 # Stability AI
@@ -52,7 +58,8 @@ recapitalized the company and installed **Prem Akkaraju** — former CEO of the 
 studio Weta Digital — as CEO, with Sean Parker as executive chairman.[^stability-news][^vb-leadership]
 The filmmaker James Cameron joined the board that September.[^stability-wiki] The arc is
 emblematic of the generative-AI boom: a wildly popular open release that proved difficult to
-convert into a stable company.
+convert into a stable company. Several of Stable Diffusion's original creators left around this
+time to found Black Forest Labs, makers of the [[FLUX]] models.[^bfl-wiki]
 
 ## Significance
 

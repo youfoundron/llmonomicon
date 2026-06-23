@@ -35,7 +35,7 @@ dedicated inference engine for deployment.[^wiki-onnx]
 
 ## Origin
 
-ONNX began inside Facebook's PyTorch team under the codename "Toffee"; in **September
+ONNX began inside Facebook's [[PyTorch]] team under the codename "Toffee"; in **September
 2017** it was renamed ONNX and announced jointly by **Facebook and Microsoft**.[^wiki-onnx]
 That December, "Facebook, AWS, and Microsoft" announced that "the first version of ONNX is
 now production-ready,"[^meta-onnx] and support soon followed from across the hardware and

@@ -45,8 +45,8 @@ on a downstream task with a small task-specific head.[^devlin2018]
 ## Influence
 
 BERT topped a wide range of NLP benchmarks on release — notably
-[[GLUE & SuperGLUE|GLUE]] — and made the **pretrain-then-fine-tune** recipe
-standard practice.[^devlin2018] It remains a
+[[GLUE & SuperGLUE|GLUE]] and [[SQuAD]] reading comprehension — and made the
+**pretrain-then-fine-tune** recipe standard practice.[^devlin2018] It remains a
 workhorse for classification, retrieval, and other understanding tasks — its
 contextual [[Embeddings]] still power many semantic-search systems — and is a
 staple of the [[Hugging Face Transformers]] library.

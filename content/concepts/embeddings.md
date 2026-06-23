@@ -78,3 +78,7 @@ and found that "no particular text embedding method dominates across all
 tasks."[^mteb] In a retrieval system, embeddings are what get stored in and
 searched from a [[Vector database]] — often paired with lexical
 [[BM25 & hybrid search|BM25]] in a hybrid retriever.
+
+Embeddings also reach beyond text: [[CLIP]] places images and text in a *single*
+shared space, so a picture and a caption describing it land near each other — the
+basis for text-to-image generation and multimodal models.

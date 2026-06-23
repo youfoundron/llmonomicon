@@ -102,7 +102,8 @@ don't fall to the wayside."[^helm2022] Other responses include retiring saturate
 benchmarks for harder ones, keeping test sets **private or held out** to resist
 contamination, ranking models by **human preference** in arenas like
 [[Chatbot Arena]], automating that grading with a strong model as the rater
-([[LLM-as-a-judge]]), and — informally — the "vibe check," where practitioners
+([[LLM-as-a-judge]]), and — informally — the
+[[Informal & vibe-check benchmarks|"vibe check"]], where practitioners
 simply judge a model's outputs for themselves.
 
 This is the instrument-level view; for the broader practice of judging models see

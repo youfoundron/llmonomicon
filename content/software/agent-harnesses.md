@@ -40,6 +40,11 @@ sources:
     url: https://github.com/Aider-AI/aider
     publisher: GitHub
     year: 2024
+  - id: opencode
+    title: "anomalyco/opencode (GitHub repository)"
+    url: https://github.com/anomalyco/opencode
+    publisher: GitHub
+    year: 2026
   - id: sweagent
     title: "SWE-agent (GitHub repository)"
     url: https://github.com/SWE-agent/SWE-agent
@@ -88,6 +93,8 @@ Harnesses differ mainly in *what* they target and *how open* they are.
   elsewhere.[^claudecode]
 - [[Cursor]] — Anysphere's AI code editor, built as a fork of VS Code.[^cursor]
 - [[Aider]] — "AI pair programming in your terminal."[^aider]
+- [[OpenCode]] — an open-source, model-agnostic terminal coding agent that works
+  across many LLM providers.[^opencode]
 - [[SWE-agent]] — an autonomous coding agent, from Princeton and Stanford
   researchers, that fixes real GitHub issues.[^sweagent]
 
@@ -106,6 +113,7 @@ of 2026:
 | [[LangChain]] | framework | open (MIT)[^langchain] |
 | [[OpenAI Agents SDK]] | framework | open (MIT)[^openai-agents] |
 | [[Aider]] | coding CLI | open (Apache-2.0)[^aider] |
+| [[OpenCode]] | coding CLI | open (MIT)[^opencode] |
 | [[SWE-agent]] | coding agent | open (MIT)[^sweagent] |
 | [[AutoGPT]] | autonomous | mixed[^autogpt] |
 | [[Claude Code]] | coding CLI / IDE | proprietary[^claudecode] |

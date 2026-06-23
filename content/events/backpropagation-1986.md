@@ -2,9 +2,9 @@
 title: Backpropagation popularized
 description: Rumelhart, Hinton & Williams show backpropagation can train multi-layer networks.
 technicality: technical
-date: 1986
+date: 1986-10-09
 related: [Geoffrey Hinton]
-updated: 2026-06-17
+updated: 2026-06-23
 sources:
   - id: backprop1986
     title: "Learning representations by back-propagating errors"
@@ -16,6 +16,6 @@ sources:
 
 # Backpropagation popularized
 
-In **1986**, David Rumelhart, [[Geoffrey Hinton]], and Ronald Williams published
-a *Nature* paper showing that backpropagation could learn useful internal
-representations, helping revive interest in neural networks.[^backprop1986]
+On **9 October 1986**, David Rumelhart, [[Geoffrey Hinton]], and Ronald Williams
+published a *Nature* paper showing that backpropagation could learn useful
+internal representations, helping revive interest in neural networks.[^backprop1986]

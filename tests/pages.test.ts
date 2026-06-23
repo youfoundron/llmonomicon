@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { allPagesIndexHtml, categoryIndexHtml } from "../scripts/pages.ts";
+import { allPagesIndexHtml, categoryIndexHtml, homeExtrasHtml } from "../scripts/pages.ts";
 import type { Page } from "../scripts/types.ts";
 
 // Minimal Page factory for index-rendering tests; only the fields the category
@@ -106,6 +106,69 @@ test("A–Z index ignores leading punctuation when alphabetizing", () => {
   assert.match(html, /<h2 id="a">A<\/h2>/);
   // Within A, plain "Attention" sorts before the quoted '"Attention Is All You Need"'.
   assert.ok(html.indexOf(">Attention<") < html.indexOf("Attention Is All You Need"));
+});
+
+test("home extras feature the 3 most-recent entries (by git date) and a random-entry button", () => {
+  const pages = [
+    page({ category: "concepts", slug: "a", title: "Alpha", url: "/u/a/" }),
+    page({ category: "software", slug: "b", title: "Bravo", url: "/u/b/" }),
+    page({ category: "people", slug: "c", title: "Charlie", url: "/u/c/" }),
+    page({ category: "events", slug: "d", title: "Delta", url: "/u/d/" }),
+    page({ category: "concepts", slug: "index", title: "Concepts", isCategoryIndex: true }),
+    page({ category: "", slug: "about", title: "About", isHome: false }),
+  ];
+  const recency = new Map([
+    ["content/concepts/a.md", 100],
+    ["content/software/b.md", 400],
+    ["content/people/c.md", 300],
+    ["content/events/d.md", 200],
+  ]);
+  const html = homeExtrasHtml(pages, recency);
+
+  // Three cards, ordered by recency desc: Bravo(400) > Charlie(300) > Delta(200).
+  const bravo = html.indexOf("Bravo");
+  const charlie = html.indexOf("Charlie");
+  const delta = html.indexOf("Delta");
+  assert.ok(bravo >= 0 && bravo < charlie && charlie < delta);
+  // The oldest entry (Alpha) and the non-entries (index, meta page) are not featured.
+  assert.doesNotMatch(html, /feat-link[^>]*>Alpha/);
+  assert.doesNotMatch(html, /Concepts<\/a>/);
+  assert.doesNotMatch(html, />About</);
+  // The random button and its embedded list cover every entry (incl. unfeatured Alpha),
+  // but never a category index or meta page.
+  assert.match(html, /id="random-entry"/);
+  for (const url of ["/u/a/", "/u/b/", "/u/c/", "/u/d/"]) assert.ok(html.includes(url));
+});
+
+test("home extras fall back to front-matter dates when git recency is empty", () => {
+  const fm = (updated: string) => ({
+    tags: [],
+    aliases: [],
+    draft: false,
+    sources: [],
+    related: [],
+    updated,
+  });
+  const pages = [
+    page({
+      category: "concepts",
+      slug: "old",
+      title: "Older",
+      url: "/u/old/",
+      data: fm("2020-01-01"),
+    }),
+    page({
+      category: "concepts",
+      slug: "new",
+      title: "Newer",
+      url: "/u/new/",
+      data: fm("2026-01-01"),
+    }),
+  ];
+  const html = homeExtrasHtml(pages, new Map());
+
+  // With no git data, the more recent front-matter `updated` wins.
+  assert.ok(html.indexOf("Newer") < html.indexOf("Older"));
 });
 
 test("concepts with no group or an unrecognized one fall to a trailing Uncategorized bucket", () => {

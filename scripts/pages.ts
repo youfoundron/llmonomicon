@@ -232,23 +232,23 @@ const TIMELINE_SCRIPT = `<script>
 })();
 </script>`;
 
-const MONTH_NAMES = [
-  "January",
-  "February",
-  "March",
-  "April",
+const MONTH_ABBR = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
   "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
 ];
 
 // Render an event's `date` for display. Dates are normalized to `YYYY`,
-// `YYYY-MM`, or `YYYY-MM-DD` strings (frontmatter.ts), so show "June 2017" when
+// `YYYY-MM`, or `YYYY-MM-DD` strings (frontmatter.ts), so show "Jun 2017" when
 // a month is present and fall back to the bare year otherwise. Day precision is
 // intentionally dropped — month + year is the right granularity for a timeline.
 // Returns "—" when the date is missing or unparseable.
@@ -257,7 +257,7 @@ function formatEventDate(date: string): string {
   if (!/^\d{4}$/.test(year)) return "—";
   const month = Number.parseInt(date.slice(5, 7), 10);
   if (date.length >= 7 && month >= 1 && month <= 12) {
-    return `${MONTH_NAMES[month - 1]} ${year}`;
+    return `${MONTH_ABBR[month - 1]} ${year}`;
   }
   return year;
 }
@@ -314,6 +314,79 @@ export function timelineHtml(
 </form>`;
 
   return `${filters}<ol class="timeline" data-timeline>${items}</ol><p id="tl-empty" class="empty" hidden>No events match the current filters.</p>${TIMELINE_SCRIPT}`;
+}
+
+/** Encyclopedic entries (category articles, not home/category-index pages). */
+function isEntry(page: Page): boolean {
+  return page.category !== "" && !page.isCategoryIndex && !page.isHome;
+}
+
+/**
+ * Recency key for an entry: its last-commit time (see gitdates.ts) when known,
+ * otherwise its front-matter `updated`/`date` parsed to ms — so the featured
+ * panel stays deterministic and populated even outside a git checkout. Returns 0
+ * when nothing is available, which simply sorts the entry last.
+ */
+function recencyKey(page: Page, recency: Map<string, number>): number {
+  const git = recency.get(page.contentPath);
+  if (git) return git;
+  const stamp = page.data.updated ?? page.data.date;
+  const parsed = stamp ? Date.parse(stamp) : Number.NaN;
+  return Number.isNaN(parsed) ? 0 : parsed;
+}
+
+// Inline, dependency-free "surprise me" jump. The full entry list is embedded
+// as a JS array (internal URLs have no `<`, so they're safe in a script body);
+// the click handler picks one at random client-side, keeping the build
+// deterministic. Lives only on the home page, so it ships with the home extras.
+function randomScript(urls: string[]): string {
+  const list = JSON.stringify(urls).replace(/</g, "\\u003c");
+  return `<script>
+(function () {
+  var btn = document.getElementById("random-entry");
+  if (!btn) return;
+  var urls = ${list};
+  btn.addEventListener("click", function () {
+    if (!urls.length) return;
+    window.location.href = urls[Math.floor(Math.random() * urls.length)];
+  });
+})();
+</script>`;
+}
+
+/**
+ * Home-page extras appended after the authored intro: a panel featuring the
+ * three most recently added/edited entries, and a button that jumps to a random
+ * entry. `recency` maps contentPath → last-commit ms (see gitdates.ts).
+ */
+export function homeExtrasHtml(pages: Page[], recency: Map<string, number>): string {
+  const entries = pages.filter(isEntry);
+  if (entries.length === 0) return "";
+
+  const recent = [...entries]
+    .sort(
+      (a, b) => recencyKey(b, recency) - recencyKey(a, recency) || a.title.localeCompare(b.title),
+    )
+    .slice(0, 3);
+
+  const cards = recent
+    .map((page) => {
+      const desc = page.description
+        ? `<p class="feat-desc">${escapeHtml(page.description)}</p>`
+        : "";
+      return `<li class="feat-card"><a class="feat-link" href="${escapeAttr(page.url)}">${escapeHtml(page.title)}</a><span class="feat-cat">${escapeHtml(categoryLabel(page.category))}</span>${desc}</li>`;
+    })
+    .join("");
+
+  return `<section class="home-featured" aria-labelledby="feat-heading">
+  <h2 id="feat-heading">Recently added &amp; edited</h2>
+  <ul class="feat-grid">${cards}</ul>
+</section>
+<section class="home-random">
+  <button type="button" id="random-entry" class="btn btn-primary">Take me to a random entry</button>
+  <noscript><span class="random-note">Enable JavaScript to jump to a random entry.</span></noscript>
+</section>
+${randomScript(entries.map((page) => page.url))}`;
 }
 
 /** Body for the 404 page. */

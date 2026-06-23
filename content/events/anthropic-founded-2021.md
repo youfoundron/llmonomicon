@@ -2,9 +2,9 @@
 title: Anthropic founded
 description: Senior researchers who left OpenAI, led by the Amodei siblings, founded Anthropic as an AI safety company.
 technicality: non-technical
-date: 2021
+date: 2021-01-26
 related: [Anthropic]
-updated: 2026-06-18
+updated: 2026-06-23
 sources:
   - id: anthropic-wiki
     title: "Anthropic (Wikipedia)"
@@ -21,8 +21,7 @@ sources:
 
 # Anthropic founded
 
-In January 2021, a group of senior researchers who had left [[OpenAI]], led by
-siblings [[Dario Amodei]] and [[Daniela Amodei]], founded [[Anthropic]] as an AI
-safety company.[^anthropic-wiki] It
-emerged publicly that May with a $124 million Series A.[^anthropic-2021] The fuller
-story is in [[Anthropic]].
+On **26 January 2021**, a group of senior researchers who had left [[OpenAI]],
+led by siblings [[Dario Amodei]] and [[Daniela Amodei]], founded [[Anthropic]] as
+an AI safety company.[^anthropic-wiki] It emerged publicly that May with a $124
+million Series A.[^anthropic-2021] The fuller story is in [[Anthropic]].

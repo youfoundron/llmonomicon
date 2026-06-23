@@ -37,7 +37,7 @@ Dean **co-founded Google Brain in 2011** and led it for more than a decade.[^wik
 That lab was the institutional home of the [[Transformer]] — the architecture introduced in the
 2017 paper "Attention Is All You Need" by a team of Google researchers led by [[Ashish Vaswani]];
 Dean ran the lab, but was **not** one of the paper's eight authors.[^vaswani2017] Google Brain
-was also where **TensorFlow** was built — the open-source machine-learning framework Dean helped
+was also where **[[TensorFlow]]** was built — the open-source machine-learning framework Dean helped
 design and Google released in 2015 — which became one of the standard tools for training large
 models.[^wiki-jeffdean]
 

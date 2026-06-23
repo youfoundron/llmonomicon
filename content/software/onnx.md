@@ -41,7 +41,7 @@ That December, "Facebook, AWS, and Microsoft" announced that "the first version 
 now production-ready,"[^meta-onnx] and support soon followed from across the hardware and
 software industry — "IBM, Huawei, Intel, AMD, Arm and Qualcomm."[^wiki-onnx] The aim was to
 break models out of single-framework silos at a time when researchers trained in one
-toolkit (PyTorch, Caffe2, TensorFlow) but often wanted to deploy in another.
+toolkit (PyTorch, Caffe2, [[TensorFlow]]) but often wanted to deploy in another.
 
 ## A graph, not just weights
 

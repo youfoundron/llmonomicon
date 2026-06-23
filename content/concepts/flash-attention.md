@@ -79,7 +79,7 @@ core algorithm is exact.)[^dao2022]
 - **FlashAttention-2** (2023) reworked how the computation is divided across a
   GPU's parallel units, roughly doubling throughput over v1 and reaching 50–73%
   of an A100's theoretical maximum.[^dao2023]
-- **FlashAttention-3** (2024) adds kernels tuned for NVIDIA's Hopper (H100) GPUs,
+- **FlashAttention-3** (2024) adds kernels tuned for [[NVIDIA]]'s Hopper (H100) GPUs,
   exploiting hardware asynchrony and FP8 low precision for another 1.5–2× over
   v2.[^shah2024]
 

@@ -78,5 +78,6 @@ information occurs at the beginning or end" of the input and "significantly
 degrad[ing] when models must access relevant information in the middle of long
 contexts."[^liu2023] So the quality and ordering of what you retrieve — explored
 in depth under [[Context window]] — matter more than sheer quantity, which is why
-the retrieval half of the system (embeddings, similarity search, reranking) is
+the retrieval half of the system (embeddings, lexical
+[[BM25 & hybrid search|BM25]], similarity search, reranking) is
 where most of the engineering goes.

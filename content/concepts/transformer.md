@@ -74,4 +74,5 @@ Later work specialized the architecture:
 The Transformer's parallelism and scalability are why training on enormous
 [[Tokenization|tokenized]] corpora became feasible. Its debut paper,
 [[Attention Is All You Need]], is among the most-cited works in modern machine
-learning.[^vaswani2017]
+learning.[^vaswani2017] (For a 1990s precursor that a 2021 result showed equivalent
+to a linearized form of its attention, see [[Fast weight programmers]].)

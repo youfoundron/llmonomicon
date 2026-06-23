@@ -76,4 +76,5 @@ Attention replaced the sequential bottleneck of [[Long Short-Term Memory|recurre
 operation that is fully parallelizable across positions. That change, formalized
 in [[Attention Is All You Need]], is what made training on internet-scale text
 practical. See also [[Mixture of Experts]] for a related idea about routing
-computation.
+computation, and [[Fast weight programmers]] for an early-1990s mechanism that a
+2021 result showed equivalent to a linearized form of attention.

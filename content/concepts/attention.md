@@ -72,7 +72,7 @@ Transformer*.[^illustrated-transformer]
 
 ## Why it mattered
 
-Attention replaced the sequential bottleneck of recurrent networks with an
+Attention replaced the sequential bottleneck of [[Long Short-Term Memory|recurrent networks]] with an
 operation that is fully parallelizable across positions. That change, formalized
 in [[Attention Is All You Need]], is what made training on internet-scale text
 practical. See also [[Mixture of Experts]] for a related idea about routing

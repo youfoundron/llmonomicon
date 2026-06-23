@@ -78,7 +78,7 @@ well as safe.
 
 ## Audited, then adopted
 
-In May 2023, Hugging Face — together with EleutherAI and Stability AI —
+In May 2023, Hugging Face — together with EleutherAI and [[Stability AI]] —
 commissioned an external security audit from **Trail of Bits**. It found no flaw
 that could lead to arbitrary code execution, tightened the specification, and
 fixed a "polyglot file" weakness (a single file that is valid as two formats at

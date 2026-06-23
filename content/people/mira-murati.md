@@ -28,7 +28,7 @@ crisis. She has since founded her own AI company.
 
 Murati served as OpenAI's chief technology officer from 2022 to 2024, the stretch that
 produced the company's defining products. In Wikipedia's summary, she "led OpenAI's
-work on ChatGPT, [[DALL·E|Dall-E]], Codex and Sora, while overseeing its research, product and
+work on ChatGPT, [[DALL·E|Dall-E]], Codex and Sora, its [[Video generation|text-to-video]] model, while overseeing its research, product and
 safety teams."[^murati-wiki] That put her at the technical and product helm of the
 [[ChatGPT launch]] and the GPT-4 generation; the products themselves are covered under
 [[OpenAI]].

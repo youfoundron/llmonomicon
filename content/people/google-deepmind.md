@@ -42,6 +42,12 @@ sources:
     author: Mikolov, Chen, Corrado & Dean
     publisher: arXiv
     year: 2013
+  - id: deepmind-jax
+    title: "Using JAX to accelerate our research"
+    url: https://deepmind.google/blog/using-jax-to-accelerate-our-research/
+    author: Google DeepMind
+    publisher: Google DeepMind
+    year: 2020
 ---
 
 # Google DeepMind
@@ -80,4 +86,5 @@ through this wiki: the **word2vec** word-embedding method (2013),[^g-word2vec] t
 
 Google DeepMind's stated mission is to "build AI responsibly to benefit
 humanity."[^gdm-about] It develops the [[Gemini]] family of models, the
-open-weights [[Gemma]] family, and the [[Imagen]] text-to-image line.[^gdm-wiki]
+open-weights [[Gemma]] family, and the [[Imagen]] text-to-image line.[^gdm-wiki] Much of its
+research is built on the [[JAX]] framework.[^deepmind-jax]

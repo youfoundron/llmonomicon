@@ -101,3 +101,7 @@ repeating tokens, and [[Constrained decoding]] to force output into a required
 format. Note that [[Speculative decoding]], despite the name, is *not* a decoding
 strategy: it is an inference *speedup* that makes generation faster without
 changing which text is produced.
+
+The left-to-right loop itself is a design choice, not a requirement:
+[[Diffusion language models]] are a non-autoregressive alternative that generate
+text by denoising many tokens in parallel rather than one at a time.

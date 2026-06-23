@@ -68,7 +68,8 @@ At launch HumanEval sharply separated code-trained models from general ones:
 OpenAI's Codex — a [[GPT-3|GPT]] model fine-tuned on public GitHub code, and the
 basis of GitHub Copilot — solved 28.8% of the problems with a single sample and
 70.2% given a hundred, while plain GPT-3 solved 0%.[^chen2021] That contrast made
-HumanEval the default code-generation benchmark for years.
+HumanEval the default code-generation benchmark for years. (This 2021 model shares its
+name with — but is distinct from — OpenAI's later [[Codex|2025 coding agent]].)
 
 Its weaknesses are just as instructive, and drove its successors: the 164
 problems are all short, self-contained, hand-written Python, nothing like a real

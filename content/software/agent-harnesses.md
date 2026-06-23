@@ -45,6 +45,11 @@ sources:
     url: https://github.com/anomalyco/opencode
     publisher: GitHub
     year: 2026
+  - id: codex
+    title: "openai/codex (GitHub repository)"
+    url: https://github.com/openai/codex
+    publisher: GitHub
+    year: 2026
   - id: sweagent
     title: "SWE-agent (GitHub repository)"
     url: https://github.com/SWE-agent/SWE-agent
@@ -91,6 +96,8 @@ Harnesses differ mainly in *what* they target and *how open* they are.
 - [[Claude Code]] — Anthropic's "agentic coding tool that reads your codebase,
   edits files, runs commands," available in the terminal, an IDE, and
   elsewhere.[^claudecode]
+- [[Codex]] — OpenAI's agentic coding tool: an open-source Rust CLI plus
+  proprietary cloud, desktop, and IDE surfaces.[^codex]
 - [[Cursor]] — Anysphere's AI code editor, built as a fork of VS Code.[^cursor]
 - [[Aider]] — "AI pair programming in your terminal."[^aider]
 - [[OpenCode]] — an open-source, model-agnostic terminal coding agent that works
@@ -117,6 +124,7 @@ of 2026:
 | [[SWE-agent]] | coding agent | open (MIT)[^sweagent] |
 | [[AutoGPT]] | autonomous | mixed[^autogpt] |
 | [[Claude Code]] | coding CLI / IDE | proprietary[^claudecode] |
+| [[Codex]] | coding CLI / cloud | mixed (CLI Apache-2.0)[^codex] |
 | [[Cursor]] | IDE | proprietary[^cursor] |
 
 Open harnesses offer auditability, self-hosting, and freedom from lock-in, and

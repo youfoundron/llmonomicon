@@ -62,7 +62,8 @@ needed for large-scale model training while preserving the mission.[^openai-lp]
 OpenAI built and released the [[GPT-3|GPT]] series of decoder-only [[Transformer]]
 models, and its November 2022 [[ChatGPT launch]] brought large language models into the
 mainstream.[^openai-chatgpt] It followed with **GPT-4**, a large multimodal model, in
-March 2023.[^gpt4] Its products and research recur throughout the grimoire as reference
+March 2023,[^gpt4] and has since expanded into agentic developer tools such as the
+[[Codex]] coding agent. Its products and research recur throughout the grimoire as reference
 points for capability, scale, and alignment techniques such as reinforcement learning
 from human feedback.
 

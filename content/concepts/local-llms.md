@@ -53,7 +53,7 @@ world ever since.
 In March 2023, [[Georgi Gerganov]] released [[llama.cpp]], and within days [[Simon
 Willison]] was running Meta's [[LLaMA]] models on his own laptop — "the one that
 Facebook claim is competitive with GPT-3" — and calling it the moment large
-language models were "having their Stable Diffusion moment," a nod to how
+language models were "having their [[Stable Diffusion]] moment," a nod to how
 downloadable image models had just put generative AI in everyone's
 hands.[^willison-sdmoment][^llamacpp]
 

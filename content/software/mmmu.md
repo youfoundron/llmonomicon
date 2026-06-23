@@ -22,7 +22,7 @@ sources:
 
 # MMMU
 
-**MMMU** — Massive Multi-discipline Multimodal Understanding — is the multimodal counterpart to
+**MMMU** — Massive Multi-discipline Multimodal Understanding — is the [[Multimodal models|multimodal]] counterpart to
 [[MMLU]]: a [[Benchmark (LLM evaluation)|benchmark]] of college-level exam questions, except the questions come with **pictures**.
 To answer one, a model has to read a diagram, chart, or chemical structure and reason about it
 with expert knowledge — which makes MMMU the standard yardstick for **vision-language

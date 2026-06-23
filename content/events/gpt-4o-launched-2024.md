@@ -23,7 +23,7 @@ sources:
 # GPT-4o launched
 
 On **13 May 2024**, [[OpenAI]] unveiled [[GPT-4o]] ("o" for *omni*) — its first
-natively multimodal flagship, handling text, audio, and images in a single model and
+natively [[Multimodal models|multimodal]] flagship, handling text, audio, and images in a single model and
 holding near-real-time spoken conversations, responding to audio in about 320
 milliseconds on average, close to human reaction time.[^openai-gpt4o][^wiki-gpt4o] OpenAI
 made it available to **free-tier** ChatGPT users — the first time its best model reached

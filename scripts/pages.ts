@@ -232,6 +232,36 @@ const TIMELINE_SCRIPT = `<script>
 })();
 </script>`;
 
+const MONTH_NAMES = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+// Render an event's `date` for display. Dates are normalized to `YYYY`,
+// `YYYY-MM`, or `YYYY-MM-DD` strings (frontmatter.ts), so show "June 2017" when
+// a month is present and fall back to the bare year otherwise. Day precision is
+// intentionally dropped — month + year is the right granularity for a timeline.
+// Returns "—" when the date is missing or unparseable.
+function formatEventDate(date: string): string {
+  const year = date.slice(0, 4);
+  if (!/^\d{4}$/.test(year)) return "—";
+  const month = Number.parseInt(date.slice(5, 7), 10);
+  if (date.length >= 7 && month >= 1 && month <= 12) {
+    return `${MONTH_NAMES[month - 1]} ${year}`;
+  }
+  return year;
+}
+
 /**
  * Render events as a chronological, filterable timeline. Each event carries the
  * categories of the entries it maps to (via `related`) plus its year, so the
@@ -261,6 +291,7 @@ export function timelineHtml(
     .map((event) => {
       const date = event.data.date ?? "";
       const year = date.slice(0, 4) || "—";
+      const display = formatEventDate(date);
       const entries = event.related
         .map(resolve)
         .filter((entry): entry is RegistryEntry => Boolean(entry));
@@ -270,7 +301,7 @@ export function timelineHtml(
             .map((entry) => `<a href="${escapeAttr(entry.url)}">${escapeHtml(entry.title)}</a>`)
             .join(", ")}</span>`
         : "";
-      return `<li class="timeline-item" data-year="${escapeAttr(year)}" data-categories="${escapeAttr(cats)}"><time datetime="${escapeAttr(date)}" class="timeline-date">${escapeHtml(year)}</time><div class="timeline-body"><a class="timeline-title" href="${escapeAttr(event.url)}">${escapeHtml(event.title)}</a>${related}</div></li>`;
+      return `<li class="timeline-item" data-year="${escapeAttr(year)}" data-categories="${escapeAttr(cats)}"><time datetime="${escapeAttr(date)}" class="timeline-date">${escapeHtml(display)}</time><div class="timeline-body"><a class="timeline-title" href="${escapeAttr(event.url)}">${escapeHtml(event.title)}</a>${related}</div></li>`;
     })
     .join("");
 

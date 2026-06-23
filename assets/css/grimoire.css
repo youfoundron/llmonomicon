@@ -478,7 +478,7 @@ h4:hover .anchor {
 }
 
 .timeline-date {
-  flex: 0 0 3rem;
+  flex: 0 0 7rem;
   font-family: var(--font-display);
   font-weight: 700;
   color: var(--accent);

@@ -47,7 +47,7 @@ the formats it replaced, while still loading quickly.[^st-docs]
 ## The problem it solves
 
 Before safetensors, models in [[PyTorch]] were usually saved with Python's **pickle**
-(via `torch.save` / `torch.load`). Pickle is a general-purpose
+(via `torch.save` / `torch.load`). [[Pickle]] is a general-purpose
 [[Model serialization|serialization]] mechanism, and loading a pickled file can
 execute arbitrary code — so a malicious weights file can "give full control of a
 user's computer to an attacker without the user's knowledge."[^st-audit] Because

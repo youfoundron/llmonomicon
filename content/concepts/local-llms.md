@@ -41,7 +41,7 @@ sources:
 
 # Local LLMs
 
-**Local LLMs** are large language models run on your own hardware — a laptop,
+**Local LLMs** are large language models run on your own [[Hardware for LLMs|hardware]] — a laptop,
 desktop, or even a phone — rather than called over the internet from a provider's
 API. For years this was simply impossible: capable models were far too large to
 fit on consumer machines, let alone run at usable speed. That changed in early

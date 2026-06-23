@@ -38,7 +38,7 @@ sources:
 The **KV cache** is the store of intermediate values a [[Transformer]] keeps in
 memory while it generates text, so that it does not have to recompute work it has
 already done. It is one of the foundational optimizations of LLM inference — and,
-as models take longer inputs, one of the biggest consumers of GPU memory.
+as models take longer inputs, one of the biggest consumers of [[Hardware for LLMs|GPU memory]].
 
 A model produces text one token at a time, and at each step [[Attention]] has the
 new token look back over every token before it. The **key** (K) and **value** (V)

@@ -23,7 +23,7 @@ sources:
 
 # Continuous batching
 
-**Continuous batching** is a scheduling technique that keeps a GPU busy while it serves
+**Continuous batching** is a scheduling technique that keeps a [[Hardware for LLMs|GPU]] busy while it serves
 many LLM requests at once. Together with [[PagedAttention]] — which handles memory — it
 is one of the two pillars of modern high-throughput serving. The two are complementary:
 PagedAttention is about *where* the [[KV cache]] lives; continuous batching is about

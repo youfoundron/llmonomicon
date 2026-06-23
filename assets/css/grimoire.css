@@ -405,46 +405,6 @@ h4:hover .anchor {
   width: 5rem;
 }
 
-/* ---- Concepts technicality slider --------------------------------------- */
-.tech-filter {
-  margin: 0 0 1.75rem;
-  padding: 0.75rem 1rem;
-  background: var(--background-alt);
-  border: var(--rule);
-  border-left: 3px solid var(--accent);
-  border-radius: 4px;
-}
-
-.tech-filter fieldset {
-  border: none;
-  margin: 0;
-  padding: 0;
-}
-
-.tech-filter legend {
-  font-variant: small-caps;
-  letter-spacing: 0.05em;
-  color: var(--text-muted);
-  padding: 0;
-  margin-bottom: 0.4rem;
-}
-
-.tech-filter label {
-  margin-right: 0.6rem;
-}
-
-.tech-filter input[type="range"] {
-  width: min(18rem, 60%);
-  vertical-align: middle;
-  accent-color: var(--accent);
-}
-
-.tech-filter output {
-  margin-left: 0.6rem;
-  font-weight: 600;
-  color: var(--accent);
-}
-
 .timeline {
   list-style: none;
   padding-left: 0;

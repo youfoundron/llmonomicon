@@ -21,6 +21,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+        with:
+          # Full history so the home page can rank entries by last-commit date
+          # (scripts/gitdates.ts); a shallow clone would flatten every file to
+          # the tip commit.
+          fetch-depth: 0
       - uses: actions/setup-node@v6
         with:
           node-version-file: .nvmrc

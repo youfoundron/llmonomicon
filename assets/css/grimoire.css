@@ -478,7 +478,7 @@ h4:hover .anchor {
 }
 
 .timeline-date {
-  flex: 0 0 7rem;
+  flex: 0 0 4.5rem;
   font-family: var(--font-display);
   font-weight: 700;
   color: var(--accent);
@@ -541,6 +541,70 @@ h4:hover .anchor {
   background: var(--accent-strong);
   border-color: var(--accent-strong);
   color: #fff;
+}
+
+/* ---- Home: featured recents + random entry ------------------------------ */
+.home-featured {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: double 4px var(--border);
+}
+
+.home-featured h2 {
+  margin-top: 0;
+}
+
+.feat-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* Single column on narrow viewports. */
+@media (max-width: 38rem) {
+  .feat-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feat-card {
+  border: var(--rule);
+  border-radius: 6px;
+  background: var(--background-alt);
+  padding: 0.8rem 0.9rem;
+}
+
+.feat-link {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.feat-cat {
+  display: block;
+  margin-top: 0.15rem;
+  font-variant: small-caps;
+  letter-spacing: 0.03em;
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+
+.feat-desc {
+  margin: 0.45rem 0 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.home-random {
+  margin-top: 1.5rem;
+}
+
+.random-note {
+  color: var(--text-muted);
+  font-size: 0.9rem;
 }
 
 .updated {

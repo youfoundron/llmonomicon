@@ -13,8 +13,15 @@ import { sep } from "node:path";
 import { buildCitationContext, citationErrors, renderReferences } from "./citations.ts";
 import { parseFrontMatter } from "./frontmatter.ts";
 import { copyDir, readText, writeIfChanged } from "./fsutil.ts";
+import { lastCommitDates } from "./gitdates.ts";
 import { buildToc, extractFirstH1, renderMarkdown } from "./markdown.ts";
-import { allPagesIndexHtml, categoryIndexHtml, notFoundHtml, timelineHtml } from "./pages.ts";
+import {
+  allPagesIndexHtml,
+  categoryIndexHtml,
+  homeExtrasHtml,
+  notFoundHtml,
+  timelineHtml,
+} from "./pages.ts";
 import { createRegistry, type Registry } from "./registry.ts";
 import { config } from "./site.config.ts";
 import { createSlugger, humanize } from "./slug.ts";
@@ -223,6 +230,7 @@ function render(
   pages: Page[],
   registry: Registry,
   dev: boolean,
+  recency: Map<string, number>,
 ): { writes: Write[]; errors: string[]; warnings: string[] } {
   const writes: Write[] = [];
   const errors: string[] = [];
@@ -243,7 +251,9 @@ function render(
     );
 
     let content = html;
-    if (page.isCategoryIndex) {
+    if (page.isHome) {
+      content += homeExtrasHtml(pages, recency);
+    } else if (page.isCategoryIndex) {
       content +=
         page.category === "events"
           ? timelineHtml(events, resolveEntry)
@@ -352,7 +362,8 @@ export async function buildSite(options: { dev?: boolean; dry?: boolean } = {}):
 
   const template = await readText(TEMPLATE_PATH);
   const { pages, registry } = await discover(dev);
-  const { writes, errors, warnings } = render(template, pages, registry, dev);
+  const recency = lastCommitDates();
+  const { writes, errors, warnings } = render(template, pages, registry, dev, recency);
 
   if (errors.length > 0) {
     console.error(`\n✗ Build gate failed — ${errors.length} problem(s):`);

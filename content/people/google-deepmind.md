@@ -73,7 +73,7 @@ AlphaFold.[^gdm-wiki]
 
 **Google Brain** was Google's deep-learning research team, and its work is woven
 through this wiki: the **word2vec** word-embedding method (2013),[^g-word2vec] the
-**TensorFlow** machine-learning framework (open-sourced 2015),[^g-tensorflow] the
+**[[TensorFlow]]** machine-learning framework (open-sourced 2015),[^g-tensorflow] the
 [[Transformer]] architecture (2017), and **[[BERT]]** (2018).[^g-bert]
 
 ## Today

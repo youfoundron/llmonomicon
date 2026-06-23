@@ -24,7 +24,7 @@ sources:
 
 **Gemini** is [[Google DeepMind]]'s flagship family of large language models, and
 Google's principal competitor to [[OpenAI]]'s [[GPT-3|GPT]] line and [[Claude]].
-Announced on December 6, 2023, it was designed to be **natively multimodal** —
+Announced on December 6, 2023, it was designed to be **natively [[Multimodal models|multimodal]]** —
 "built from the ground up" to "understand, operate across and combine different
 types of information including text, code, audio, image and video," rather than
 bolting those abilities onto a text-only model after the fact.[^gemini-intro]

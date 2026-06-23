@@ -24,7 +24,7 @@ sources:
 
 On **5 April 2025**, [[Meta AI]] released **Llama 4 Scout** (17B active / 109B total
 parameters, 16 experts) and **Llama 4 Maverick** (17B active / 400B total, 128 experts) —
-which Meta described as "the first open-weight natively multimodal models" and its first
+which Meta described as "the first open-weight natively [[Multimodal models|multimodal]] models" and its first
 built on a **[[Mixture of Experts|mixture-of-experts]]** architecture — while previewing a
 still-training **Behemoth**.[^meta-llama4] The launch also drew scrutiny: Meta's strong
 **LMArena** result came from "Llama-4-Maverick-03-26-Experimental," a chat-tuned model

@@ -37,7 +37,7 @@ sources:
 
 **GPT-2** is the language model [[OpenAI]] released in 2019 — the successor to the
 original GPT and the direct predecessor of [[GPT-3]]. Technically it was a
-1.5-billion-parameter decoder-only [[Transformer]] trained on a large web corpus,
+1.5-billion-parameter decoder-only [[Transformer]] [[Pretraining|pretrained]] on a large web corpus,
 described in the paper *Language Models are Unsupervised Multitask Learners*; its
 headline result was strong **zero-shot** performance, handling tasks it had never
 been explicitly trained for.[^radford2019] But GPT-2 is remembered less for what it

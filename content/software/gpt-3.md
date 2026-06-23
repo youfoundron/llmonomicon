@@ -33,7 +33,7 @@ was an order of magnitude larger than its predecessors, such as
 
 GPT-3's headline finding was **[[In-context learning|in-context, few-shot learning]]**: without any
 gradient updates, the model could perform a new task simply from a few examples
-provided in its prompt. Scaling the model and its training data produced
+provided in its prompt. Scaling the model and its [[Pretraining|training]] data produced
 qualitatively new capabilities, lending weight to the idea that scale alone could
 unlock generality.[^brown2020]
 

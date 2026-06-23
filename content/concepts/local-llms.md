@@ -68,7 +68,7 @@ entry, so here is only how they combine:
   lets a multi-billion-parameter model fit in consumer RAM with modest quality
   loss.[^llamacpp]
 - **Efficient runtimes** — engines like [[llama.cpp]] run models in portable
-  C/C++ across CPU, Apple Silicon, and GPUs from a single codebase,[^llamacpp]
+  C/C++ across CPU, [[Apple Silicon]], and GPUs from a single codebase,[^llamacpp]
   while [[Ollama]] wraps that into a one-command experience.[^ollama]
 - **Portable formats** — [[GGUF]] packages a model and its metadata into a single
   file, now the de facto way local models are shared.[^gguf]

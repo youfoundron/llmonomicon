@@ -22,7 +22,7 @@ sources:
 
 # TensorRT-LLM
 
-**TensorRT-LLM** is NVIDIA's open-source library for running large language models as fast as
+**TensorRT-LLM** is [[NVIDIA]]'s open-source library for running large language models as fast as
 possible on NVIDIA GPUs. It pairs a Python API for defining and serving models with a deep stack of
 GPU-specific optimizations, and is the tool teams typically reach for when wringing maximum
 throughput and minimum latency out of NVIDIA hardware in production.[^trtllm-repo]

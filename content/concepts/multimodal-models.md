@@ -45,8 +45,8 @@ A **multimodal model** works with more than one kind of data — text, images,
 audio, video — inside a single model, rather than handling text alone. The most
 common form is the **vision-language model (VLM)**, which understands images
 alongside text: you can show it a photo and ask questions about it. More capable
-systems also *generate* across modalities, producing images or audio as well as
-words. Multimodality is what lets an assistant read a chart, describe a screenshot,
+systems also *generate* across modalities, producing images, audio, or even
+[[Video generation|video]] as well as words. Multimodality is what lets an assistant read a chart, describe a screenshot,
 or draw a picture, and it has become a defining feature of frontier models such as
 [[Gemini]].
 

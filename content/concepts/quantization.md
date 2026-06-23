@@ -46,7 +46,7 @@ far.[^hf-quant]
 
 More than any other single technique, this is what made the local and open-weights
 movement possible: it is how a model that would otherwise need a data center's worth
-of memory can run on one consumer GPU, or even a laptop.
+of memory can run on one consumer [[Hardware for LLMs|GPU]], or even a laptop.
 
 ## Precision formats
 

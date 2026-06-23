@@ -76,4 +76,5 @@ pieces of text are. Because no single model is best at everything, they are
 compared on benchmarks like **MTEB**, which spans dozens of tasks and languages
 and found that "no particular text embedding method dominates across all
 tasks."[^mteb] In a retrieval system, embeddings are what get stored in and
-searched from a [[Vector database]].
+searched from a [[Vector database]] — often paired with lexical
+[[BM25 & hybrid search|BM25]] in a hybrid retriever.

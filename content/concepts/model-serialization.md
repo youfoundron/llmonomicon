@@ -42,7 +42,7 @@ because the format the field started with proved dangerous.
 ## The pickle problem
 
 By default, PyTorch's `torch.save` and `torch.load` use Python's **pickle**, writing
-files with extensions like `.pt`, `.pth`, or `.bin`.[^pytorch] Pickle is convenient,
+files with extensions like `.pt`, `.pth`, or `.bin`.[^pytorch] [[Pickle]] is convenient,
 but loading a pickled file can execute arbitrary code embedded in it. PyTorch puts it
 bluntly: loading with `weights_only=False` "can result in arbitrary code execution. Do
 it only if you got the file from a trusted source."[^pytorch] That is a real

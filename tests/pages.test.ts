@@ -65,34 +65,6 @@ test("concepts index orders family sections alphabetically by label", () => {
   assert.ok(arch < safety && safety < tok);
 });
 
-test("concepts index emits the technicality slider and tags rows with their rank", () => {
-  const pages = [
-    page({
-      slug: "attention",
-      title: "Attention",
-      group: "architecture",
-      technicality: "highly-technical",
-    }),
-    page({
-      slug: "local-llms",
-      title: "Local LLMs",
-      group: "inference",
-      technicality: "somewhat-technical",
-    }),
-    page({ slug: "loose", title: "Loose end", group: "architecture", technicality: "" }),
-  ];
-  const html = categoryIndexHtml("concepts", pages);
-
-  // The threshold slider and its scoped container/script are present.
-  assert.match(html, /<input type="range" id="tech-range"/);
-  assert.match(html, /<div data-concepts>/);
-  // Rows carry their technicality rank (index in TECHNICALITY_LEVELS); an unset
-  // level renders an empty rank so the filter always shows it.
-  assert.match(html, /<li data-tech="3"><a[^>]*>Attention</);
-  assert.match(html, /<li data-tech="1"><a[^>]*>Local LLMs</);
-  assert.match(html, /<li data-tech=""><a[^>]*>Loose end</);
-});
-
 test("A–Z index ignores leading punctuation when alphabetizing", () => {
   const pages = [
     page({ category: "events", slug: "aiayn", title: '"Attention Is All You Need" published' }),

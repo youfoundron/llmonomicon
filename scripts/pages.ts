@@ -10,8 +10,6 @@ import {
   conceptGroupLabel,
   type Page,
   type RegistryEntry,
-  TECHNICALITY_LEVELS,
-  technicalityLabel,
 } from "./types.ts";
 import { joinBase } from "./urls.ts";
 
@@ -35,30 +33,6 @@ function listItem(page: Page): string {
 /** A titled section wrapping an alphabetical list of pages. */
 function pageSection(heading: string, items: Page[]): string {
   const list = items.map(listItem).join("");
-  return `<section class="cat-group"><h2>${escapeHtml(heading)}</h2><ul class="page-list">${list}</ul></section>`;
-}
-
-/**
- * A concept's technicality as a numeric rank (its index in TECHNICALITY_LEVELS),
- * or "" when unset/unrecognized — which the slider treats as always-shown so an
- * entry never vanishes for want of metadata.
- */
-function techRank(page: Page): string {
-  const rank = (TECHNICALITY_LEVELS as readonly string[]).indexOf(page.technicality);
-  return rank >= 0 ? String(rank) : "";
-}
-
-/** Like `listItem`, but tags the row with its technicality rank for the slider. */
-function conceptListItem(page: Page): string {
-  const desc = page.description
-    ? ` <span class="page-desc">— ${escapeHtml(page.description)}</span>`
-    : "";
-  return `<li data-tech="${escapeAttr(techRank(page))}"><a href="${escapeAttr(page.url)}">${escapeHtml(page.title)}</a>${desc}</li>`;
-}
-
-/** A concept-group section whose rows carry technicality ranks for filtering. */
-function conceptSection(heading: string, items: Page[]): string {
-  const list = items.map(conceptListItem).join("");
   return `<section class="cat-group"><h2>${escapeHtml(heading)}</h2><ul class="page-list">${list}</ul></section>`;
 }
 
@@ -90,85 +64,20 @@ export function categoryIndexHtml(category: string, pages: Page[]): string {
   // Concepts group into controlled families, each listed alphabetically. The
   // family sections themselves are ordered alphabetically by display label; a
   // concept with no group, or an unrecognized one, falls to a trailing
-  // "Uncategorized" bucket rather than vanishing. A technicality slider filters
-  // the rows client-side (see conceptsIndexHtml).
+  // "Uncategorized" bucket rather than vanishing.
   if (category === "concepts") {
     const sections = [...CONCEPT_GROUPS]
       .sort((a, b) => conceptGroupLabel(a).localeCompare(conceptGroupLabel(b)))
       .map((group) => {
         const items = articles.filter((page) => page.group === group);
-        return items.length ? conceptSection(conceptGroupLabel(group), items) : "";
+        return items.length ? pageSection(conceptGroupLabel(group), items) : "";
       });
     const known = new Set<string>(CONCEPT_GROUPS);
     const ungrouped = articles.filter((page) => !known.has(page.group));
-    if (ungrouped.length) sections.push(conceptSection("Uncategorized", ungrouped));
-    return conceptsIndexHtml(sections.join(""));
+    if (ungrouped.length) sections.push(pageSection("Uncategorized", ungrouped));
+    return sections.join("");
   }
   return `<ul class="page-list">${articles.map(listItem).join("")}</ul>`;
-}
-
-// Vanilla-JS technicality filter for the concepts index. A single threshold
-// slider hides any row more demanding than the chosen level; a group section
-// whose rows are all hidden collapses too. Rows with no rank (unset/unknown
-// technicality) always show. Self-contained — no dependency, no template change.
-const CONCEPTS_SCRIPT = `<script>
-(function () {
-  var root = document.querySelector("[data-concepts]");
-  if (!root) return;
-  var range = document.getElementById("tech-range");
-  var out = document.getElementById("tech-out");
-  var empty = document.getElementById("tech-empty");
-  if (!range) return;
-  var labels = ${JSON.stringify(TECHNICALITY_LEVELS.map((level) => technicalityLabel(level)))};
-  var items = Array.prototype.slice.call(root.querySelectorAll("li[data-tech]"));
-  var sections = Array.prototype.slice.call(root.querySelectorAll(".cat-group"));
-  function apply() {
-    var max = parseInt(range.value, 10);
-    var label = labels[max] || "";
-    if (out) out.textContent = label;
-    range.setAttribute("aria-valuetext", label);
-    var shown = 0;
-    items.forEach(function (li) {
-      var raw = li.getAttribute("data-tech");
-      var rank = raw === "" ? NaN : parseInt(raw, 10);
-      var ok = isNaN(rank) || rank <= max;
-      li.hidden = !ok;
-      if (ok) shown++;
-    });
-    sections.forEach(function (sec) {
-      var rows = Array.prototype.slice.call(sec.querySelectorAll("li[data-tech]"));
-      sec.hidden = !rows.some(function (li) { return !li.hidden; });
-    });
-    if (empty) empty.hidden = shown > 0;
-  }
-  range.addEventListener("input", apply);
-  range.addEventListener("change", apply);
-  apply();
-})();
-</script>`;
-
-/**
- * Wrap the concept-group sections with the technicality threshold slider and the
- * client-side filter script. The slider defaults to the top level (everything
- * shown); sliding it down hides the more demanding entries.
- */
-function conceptsIndexHtml(sections: string): string {
-  const levels = TECHNICALITY_LEVELS.map((level) => technicalityLabel(level));
-  const top = levels.length - 1;
-  const topLabel = levels[top] ?? "";
-  const ticks = levels
-    .map((label, i) => `<option value="${i}" label="${escapeAttr(label)}"></option>`)
-    .join("");
-  const filter = `<form class="tech-filter" aria-label="Filter concepts by technicality">
-  <fieldset>
-    <legend>Filter by technicality</legend>
-    <label for="tech-range">Show concepts up to</label>
-    <input type="range" id="tech-range" min="0" max="${top}" step="1" value="${top}" list="tech-ticks" aria-describedby="tech-out" />
-    <output id="tech-out" for="tech-range">${escapeHtml(topLabel)}</output>
-    <datalist id="tech-ticks">${ticks}</datalist>
-  </fieldset>
-</form>`;
-  return `${filter}<div data-concepts>${sections}</div><p id="tech-empty" class="empty" hidden>No concepts match the current technicality.</p>${CONCEPTS_SCRIPT}`;
 }
 
 /** A–Z index of every encyclopedic article, grouped by first letter. */

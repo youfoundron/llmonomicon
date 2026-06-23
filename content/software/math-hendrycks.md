@@ -35,7 +35,7 @@ gap would be closed — not by scale alone, but by [[Reasoning models|reasoning 
 that spend extra computation working through a problem. As those arrived, MATH (and the
 AMC/AIME competitions it draws from) became a primary yardstick for the leap in
 mathematical reasoning. It now sits near saturation at the frontier, alongside harder
-successors like [[GPQA]].
+successors like [[GPQA]] and the research-level [[FrontierMath]].
 
 The same paper also released **AMPS** (Auxiliary Mathematics Problems and Solutions), a
 large mathematics pretraining corpus drawn from Khan Academy and Mathematica, meant to

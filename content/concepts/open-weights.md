@@ -74,5 +74,6 @@ actual parameters in hand can you run a model on your own machine,
 [[Quantization|quantize]] it to fit in consumer memory, package it as a [[GGUF]]
 file, and serve it with an engine like [[llama.cpp]] — the whole [[Local LLMs]]
 story. Meta's [[LLaMA]] release in 2023 is widely credited with catalyzing the
-open-weights wave, and the legal mechanics of the licenses involved are covered
+open-weights wave — since joined by families such as [[DeepSeek (models)|DeepSeek]] and
+[[GLM]] — and the legal mechanics of the licenses involved are covered
 under [[Model licensing]].

@@ -32,7 +32,7 @@ assistant.[^crfm]
 
 What made Alpaca a landmark was its cost. The Stanford team generated its training data
 by prompting OpenAI's text-davinci-003 (a [[GPT-3|GPT-3.5]] model) in the style of
-**Self-Instruct** — a technique that bootstraps instruction data from a model's own
+[[Self-Instruct]] — a technique that bootstraps instruction data from a model's own
 outputs, generating instruction/input/output samples and "filter[ing] invalid or
 similar ones before using them to finetune the original model."[^selfinstruct] That
 data cost "less than $500," and the fine-tuning run itself "less than $100" — under
@@ -52,4 +52,5 @@ license, OpenAI's terms forbidding the use of its outputs to build competing mod
 and the model's own safety limitations ("not ready to be deployed for general
 use").[^crfm] The public demo was later taken down. The episode also surfaced a
 question that recurs throughout open fine-tuning: whether training on another model's
-outputs is permitted by that model's terms of service.
+outputs — a form of black-box [[Knowledge distillation]] — is permitted by that model's
+terms of service.

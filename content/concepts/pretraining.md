@@ -86,7 +86,8 @@ text corpus, then adapt — its name.[^gpt1] The "P" in GPT is, literally,
 
 ## Why it matters
 
-Pretraining is the regime in which scale pays off. As models and their pretraining
+Pretraining is the regime in which scale pays off, in the predictable way the
+[[Scaling laws]] describe. As models and their pretraining
 corpora grew, broad capabilities began to emerge that were never trained for
 directly — most strikingly [[In-context learning|few-shot learning]], the ability
 to perform a new task from a handful of examples shown in the prompt, demonstrated

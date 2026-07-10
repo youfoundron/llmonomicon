@@ -43,5 +43,5 @@ unlock generality.[^brown2020]
   design for general-purpose LLMs.[^brown2020]
 - A fine-tuned successor, **GPT-3.5**, powered the original
   [[ChatGPT launch]] in 2022.[^openai-chatgpt]
-- It set off an industry-wide race to train ever-larger models, building on the
-  foundation of [[Attention Is All You Need]].
+- It set off an industry-wide race to train ever-larger models, encouraged by the
+  [[Scaling laws]] and building on the foundation of [[Attention Is All You Need]].

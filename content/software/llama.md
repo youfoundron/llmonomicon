@@ -43,7 +43,8 @@ inaccessible datasets."[^llama-paper] Its headline result was that smaller can b
 bigger: "**LLaMA-13B outperforms GPT-3 (175B) on most benchmarks**," and the largest
 model, LLaMA-65B, held its own against the best systems of the day, Chinchilla-70B and
 PaLM-540B.[^llama-paper] A 13-billion-parameter model besting a 175-billion-parameter
-[[GPT-3]] was a strong signal that careful training mattered as much as raw scale — and,
+[[GPT-3]] was a strong signal that careful training mattered as much as raw scale (the
+lesson the [[Scaling laws|Chinchilla scaling]] result had driven home) — and,
 just as importantly, that a capable model could be small enough to run outside a data
 center.
 

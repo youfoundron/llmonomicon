@@ -40,7 +40,7 @@ called scaling **test-time compute** (or inference-time compute).
 ## A new scaling axis
 
 For years the way to make models better was to scale *training* — more parameters,
-more data. Reasoning models added a second lever. Snell and colleagues showed that,
+more data, a process the [[Scaling laws]] made predictable. Reasoning models added a second lever. Snell and colleagues showed that,
 spent well, inference compute can substitute for size: on problems a smaller model
 can already make some headway on, optimally-allocated test-time compute "can be used
 to outperform a 14x larger model."[^snell2024] The catch is that the best way to

@@ -66,7 +66,7 @@ search engine.
 Two events define Z.ai's public profile. On **January 8, 2026**, it listed on the Hong Kong Stock
 Exchange (ticker 2513), raising about **US$558 million** — widely described as China's first major
 large-model company to go public, and the first of the country's so-called "AI Six Tigers" to do so
-(it listed a day ahead of its rival MiniMax).[^caixin-ipo][^cnbc-minimax-zhipu] A year earlier, in
+(it listed a day ahead of its rival [[MiniMax]]).[^caixin-ipo][^cnbc-minimax-zhipu] A year earlier, in
 **January 2025**, the US Commerce Department had added the company (under its registered name, Beijing
 Zhipu Huazhang Technology) to its **Entity List**, citing national-security concerns — the first
 Chinese LLM company so designated; Z.ai said it strongly opposed the decision.[^scmp-entitylist][^fedreg-entitylist]

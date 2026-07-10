@@ -22,6 +22,6 @@ sources:
 
 On **8 January 2026**, [[Z.ai]] (Zhipu AI) listed on the **Hong Kong Stock Exchange** (ticker 2513),
 raising about **US$558 million**.[^caixin-ipo] It was the first of China's "AI Six Tigers" to go public
-— and, listing a day ahead of rival MiniMax, was widely described as the first dedicated large-model
+— and, listing a day ahead of rival [[MiniMax]], was widely described as the first dedicated large-model
 company to hold an IPO, beating US labs such as OpenAI and Anthropic to a public
 listing.[^cnbc-minimax-zhipu]

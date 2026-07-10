@@ -112,7 +112,7 @@ xAI prohibit using their models' outputs to build competing systems. In **Januar
 OpenAI said it had found evidence that [[DeepSeek]] distilled its models by extracting data
 through its API — black-box distillation, the only kind possible against a closed model —
 allegedly violating those terms.[^distill-license] The dispute widened
-through 2026: in **February 2026**, [[Anthropic]] accused DeepSeek and other firms of
-distillation attacks on [[Claude]].[^anthropic-distill] The accusations are contested and,
+through 2026: in **February 2026**, [[Anthropic]] accused DeepSeek, Moonshot AI, and
+[[MiniMax]] of distillation attacks on [[Claude]].[^anthropic-distill] The accusations are contested and,
 as of mid-2026, unresolved — and they tie distillation directly to [[Model licensing]]:
 permissive licenses (MIT, Apache) allow distillation, while proprietary terms forbid it.

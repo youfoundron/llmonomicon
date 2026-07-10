@@ -86,6 +86,8 @@ Sparse activation is not free:
 Mixture of Experts decouples a model's *capacity* from its *cost to run*, which
 is why it underpins many of the largest and most capable frontier models: it
 offers a path to more parameters — and the abilities that come with them —
-without a proportional increase in compute per token.[^fedus2021] It is one of
-the main architectural ideas, alongside [[Attention]], behind scaling
-[[Transformer|Transformers]] efficiently.
+without a proportional increase in compute per token.[^fedus2021] Most of the
+leading open-weight model families — including [[DeepSeek models|DeepSeek]],
+[[GLM]], and the [[MiniMax models|MiniMax]] M-series — are MoE designs for
+exactly this reason. It is one of the main architectural ideas, alongside
+[[Attention]], behind scaling [[Transformer|Transformers]] efficiently.

@@ -78,7 +78,7 @@ generation to the mainstream. In August 2025 it launched the [[GPT-5]] family â€
 unified system that routes between a fast model and a deeper reasoning model â€” and has
 since advanced it through GPT-5.6 in July 2026.[^wiki-gpt5][^wiki-gpt56] Its products and
 research recur throughout the grimoire as reference points for capability, scale, and
-alignment techniques such as reinforcement learning from human feedback.
+alignment techniques such as [[RLHF|reinforcement learning from human feedback]].
 
 ## Microsoft and the compute behind the models
 

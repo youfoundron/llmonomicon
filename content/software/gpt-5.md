@@ -157,7 +157,7 @@ three variants, from cheapest to strongest: **Luna** (fast, low-cost everyday wo
 (a balanced middle tier that OpenAI bills as roughly GPT-5.5-level quality at about half the
 price), and **Sol** (the flagship).[^engadget-public][^openai-gpt56] Per OpenAI's own list
 prices (per million tokens), Sol runs $5 in / $30 out, Terra $2.50 / $15, and Luna $1 /
-$6.[^engadget-public] OpenAI frames Sol as its "most capable model yet for cyber tasks,"
+$6.[^engadget-public] OpenAI frames Sol as its "most capable model yet for cybersecurity,"
 singling out long-horizon security work such as vulnerability research — a capability claim
 that shaped how the model was released.[^openai-sol-preview]
 

@@ -30,6 +30,16 @@ sources:
     author: OpenAI
     publisher: arXiv
     year: 2023
+  - id: wiki-gpt5
+    title: "GPT-5"
+    url: https://en.wikipedia.org/wiki/GPT-5
+    publisher: Wikipedia
+    year: 2025
+  - id: wiki-gpt56
+    title: "GPT-5.6"
+    url: https://en.wikipedia.org/wiki/GPT-5.6
+    publisher: Wikipedia
+    year: 2026
   - id: openai-msft-2023
     title: "OpenAI and Microsoft extend partnership"
     url: https://openai.com/index/openai-and-microsoft-extend-partnership/
@@ -64,9 +74,11 @@ models, and its November 2022 [[ChatGPT launch]] brought large language models i
 mainstream.[^openai-chatgpt] It followed with **GPT-4**, a large multimodal model, in
 March 2023,[^gpt4] and has since expanded into agentic developer tools such as the
 [[Codex]] coding agent, while its [[DALL·E]] line had earlier brought text-to-image
-generation to the mainstream. Its products and research recur throughout the grimoire as reference
-points for capability, scale, and alignment techniques such as reinforcement learning
-from human feedback.
+generation to the mainstream. In August 2025 it launched the [[GPT-5]] family — a
+unified system that routes between a fast model and a deeper reasoning model — and has
+since advanced it through GPT-5.6 in July 2026.[^wiki-gpt5][^wiki-gpt56] Its products and
+research recur throughout the grimoire as reference points for capability, scale, and
+alignment techniques such as reinforcement learning from human feedback.
 
 ## Microsoft and the compute behind the models
 

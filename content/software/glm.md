@@ -88,7 +88,7 @@ snippets (see [[Vibe coding]]).[^glm5tr2026]
 
 ## Performance and positioning
 
-On **Z.ai's own reported benchmarks**, GLM-5.2 edges out OpenAI's GPT-5.5 on several coding and agentic
+On **Z.ai's own reported benchmarks**, GLM-5.2 edges out OpenAI's [[GPT-5|GPT-5.5]] on several coding and agentic
 tests — including [[SWE-bench]] Pro, FrontierSWE, and MCP-Atlas — while **trailing Anthropic's Claude
 Opus 4.8** across the board (and trailing GPT-5.5 on Terminal-Bench).[^glm52blog] As with any
 vendor-published figures these are not independent results, but they reflect GLM's broader

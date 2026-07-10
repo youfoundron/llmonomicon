@@ -168,7 +168,7 @@ is a **109-billion-parameter** model — distinct from the 428-billion-parameter
 M3 — reporting about **28.4× lower** per-token attention compute than GQA at 1M
 tokens.[^msa-arxiv] On benchmarks, the numbers so far are **MiniMax's own launch-time
 figures**: it reports **59.0% on SWE-Bench Pro** (a harder variant of the [[SWE-bench]]
-software-engineering benchmark), which it says beats GPT-5.5 and Gemini 3.1 Pro and
+software-engineering benchmark), which it says beats [[GPT-5|GPT-5.5]] and Gemini 3.1 Pro and
 approaches Claude Opus 4.7.[^m3-blog][^marktechpost-m3] Since this wiki already treats
 **Claude Opus 4.8** as the mid-2026 proprietary frontier, those results are best read as
 claims awaiting independent confirmation.

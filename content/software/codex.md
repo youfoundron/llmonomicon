@@ -36,6 +36,11 @@ sources:
     author: Chen et al.
     publisher: arXiv (OpenAI)
     year: 2021
+  - id: wiki-gpt56
+    title: "GPT-5.6"
+    url: https://en.wikipedia.org/wiki/GPT-5.6
+    publisher: Wikipedia
+    year: 2026
 ---
 
 # Codex
@@ -64,10 +69,11 @@ research preview on **May 16, 2025**,[^codex_intro2025] and the desktop app in
 Codex has run on a sequence of models. It launched on **codex-1**, described by
 OpenAI as "a version of the o3 [[Reasoning models|reasoning model]] optimized for
 software engineering,"[^codex_intro2025] then moved to dedicated **GPT-5-Codex**
-variants, and has since been folded into OpenAI's general **GPT-5.x** line. As of
-June 2026 its recommended model is **GPT-5.5**, with the earlier `-Codex`-suffixed
-models retired as user-selectable options.[^codex_changelog] (This part of the story
-changes quickly.)
+variants, and has since been folded into OpenAI's general [[GPT-5|GPT-5.x]] line. As of
+June 2026 its recommended model was **GPT-5.5**, with the earlier `-Codex`-suffixed
+models retired as user-selectable options;[^codex_changelog] OpenAI's GPT-5.6 generation
+(Sol, Terra, and Luna) reached general availability in July 2026.[^wiki-gpt56] (This part
+of the story changes quickly.)
 
 ## Adoption and context
 

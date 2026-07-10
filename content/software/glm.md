@@ -61,7 +61,7 @@ sources:
 **GLM** (General Language Model) is the family of **open-weight** large language models built by the
 Chinese company **[[Z.ai]]** (formerly Zhipu AI). The line runs from the influential **GLM-130B** open
 model of 2022 to the current flagship, **GLM-5.2** (2026) — and as of mid-2026 it is one of the leading
-open-weight families, named alongside [[DeepSeek (models)|DeepSeek]], [[LLaMA]], and Alibaba's [[Qwen]].
+open-weight families, named alongside [[DeepSeek (models)|DeepSeek]], [[MiniMax models|MiniMax]], [[LLaMA]], and Alibaba's [[Qwen]].
 
 ## The lineage
 

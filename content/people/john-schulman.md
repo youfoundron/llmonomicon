@@ -30,7 +30,7 @@ sources:
 **John Schulman** is a research scientist best known as the person behind the
 reinforcement-learning techniques that made [[ChatGPT launch|ChatGPT]] work. A
 co-founder of [[OpenAI]], he created the **PPO** algorithm and went on to lead the team
-that turned reinforcement learning from human feedback into a usable product.
+that turned [[RLHF|reinforcement learning from human feedback]] into a usable product.
 
 ## From PPO to ChatGPT
 

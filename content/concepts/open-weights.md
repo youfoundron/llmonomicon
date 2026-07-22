@@ -25,6 +25,11 @@ sources:
     author: Google
     publisher: Google
     year: 2024
+  - id: kimi-k3-largest
+    title: "China's 2.8-trillion-parameter Kimi K3 beats Claude Fable 5 in Frontend Code Arena benchmark"
+    url: https://www.tomshardware.com/tech-industry/artificial-intelligence/moonshot-releases-2-8-trillion-parameter-kimi-k3
+    publisher: Tom's Hardware
+    year: 2026
 ---
 
 # Open weights
@@ -74,6 +79,7 @@ actual parameters in hand can you run a model on your own machine,
 [[Quantization|quantize]] it to fit in consumer memory, package it as a [[GGUF]]
 file, and serve it with an engine like [[llama.cpp]] — the whole [[Local LLMs]]
 story. Meta's [[LLaMA]] release in 2023 is widely credited with catalyzing the
-open-weights wave — since joined by families such as [[DeepSeek (models)|DeepSeek]] and
-[[GLM]] — and the legal mechanics of the licenses involved are covered
-under [[Model licensing]].
+open-weights wave — since joined by families such as [[DeepSeek (models)|DeepSeek]],
+[[GLM]], and [[Kimi]], whose 2.8-trillion-parameter Kimi K3, announced in July 2026,
+was billed as the largest open-weight model yet[^kimi-k3-largest] — and the legal
+mechanics of the licenses involved are covered under [[Model licensing]].

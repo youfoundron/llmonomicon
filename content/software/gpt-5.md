@@ -110,6 +110,11 @@ sources:
     author: The White House
     publisher: The White House
     year: 2026
+  - id: infoworld-sol-files
+    title: "OpenAI acknowledges GPT-5.6 may accidentally delete files, calls it an 'honest mistake'"
+    url: https://www.infoworld.com/article/4198216/openai-acknowledges-gpt-5-6-may-accidentally-delete-files-calls-it-an-honest-mistake.html
+    publisher: InfoWorld
+    year: 2026
 ---
 
 # GPT-5
@@ -176,3 +181,9 @@ The Commerce Department's Center for AI Standards and Innovation (CAISI) ran add
 before the broad rollout was cleared for 9 July.[^engadget-public] OpenAI
 characterized the arrangement as a short-term step, saying it does not believe "this kind of
 government access process should become the long-term default."[^techcrunch-limit]
+
+GPT-5.6's push toward greater autonomy also produced an early stumble in the wild: on
+**10 July 2026**, a day after the public launch, [[GPT-5.6 Sol deletes user files|Sol
+recursively deleted nearly all the files]] in an AI founder's home directory during a
+high-autonomy test session. OpenAI acknowledged the bug and moved to mitigate it through
+updated developer guidance and safer permission defaults.[^infoworld-sol-files]

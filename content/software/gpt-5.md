@@ -186,4 +186,4 @@ GPT-5.6's push toward greater autonomy also produced an early stumble in the wil
 **10 July 2026**, a day after the public launch, [[GPT-5.6 Sol deletes user files|Sol
 recursively deleted nearly all the files]] in an AI founder's home directory during a
 high-autonomy test session. OpenAI acknowledged the bug and moved to mitigate it through
-updated developer guidance and safer permission defaults.[^infoworld-sol-files]
+updated developer guidance and steering users toward safer permission modes.[^infoworld-sol-files]

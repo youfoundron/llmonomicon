@@ -24,6 +24,12 @@ sources:
     author: Google (Firebase AI Logic)
     publisher: Google
     year: 2026
+  - id: gemini3
+    title: "Gemini 3: Introducing the latest Gemini AI model from Google"
+    url: https://blog.google/products-and-platforms/products/gemini/gemini-3/
+    author: Google
+    publisher: Google
+    year: 2025
 ---
 
 # Gemini
@@ -63,6 +69,8 @@ with over 30,000 lines of code or over 700,000 words."[^gemini-15]
 
 Like its peers, Gemini is built on the [[Transformer]], combined with the
 [[Mixture of Experts]] approach for efficient scaling.[^gemini-15] The family has
-continued to evolve through later generations. It is the **proprietary** side of
+continued to evolve through later generations, among them **Gemini 3**
+([[Gemini 3 released|November 2025]]), led by Gemini 3 Pro and a higher-effort Deep Think
+reasoning mode.[^gemini3] It is the **proprietary** side of
 Google DeepMind's model lineup; the company's openly released models are the
 separate [[Gemma]] family.

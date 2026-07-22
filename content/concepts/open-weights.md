@@ -30,6 +30,17 @@ sources:
     url: https://www.tomshardware.com/tech-industry/artificial-intelligence/moonshot-releases-2-8-trillion-parameter-kimi-k3
     publisher: Tom's Hardware
     year: 2026
+  - id: grok1-oss
+    title: "xai-org/grok-1 (GitHub repository)"
+    url: https://github.com/xai-org/grok-1
+    author: xAI
+    publisher: GitHub
+    year: 2024
+  - id: inkling-oss
+    title: "Thinking Machines amps up its bet against one-size-fits-all AI with its first open model, Inkling"
+    url: https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/
+    publisher: TechCrunch
+    year: 2026
 ---
 
 # Open weights
@@ -80,6 +91,10 @@ actual parameters in hand can you run a model on your own machine,
 file, and serve it with an engine like [[llama.cpp]] — the whole [[Local LLMs]]
 story. Meta's [[LLaMA]] release in 2023 is widely credited with catalyzing the
 open-weights wave — since joined by families such as [[DeepSeek (models)|DeepSeek]],
-[[GLM]], and [[Kimi]], whose 2.8-trillion-parameter Kimi K3, announced in July 2026,
-was billed as the largest open-weight model yet[^kimi-k3-largest] — and the legal
-mechanics of the licenses involved are covered under [[Model licensing]].
+[[GLM]], [[Alibaba]]'s [[Qwen]], and [[Kimi]], whose 2.8-trillion-parameter Kimi K3,
+announced in July 2026, was billed as the largest open-weight model yet[^kimi-k3-largest]
+— and the legal mechanics of the licenses involved are covered under [[Model licensing]].
+The approach has even reached labs that keep their flagships closed: [[xAI]] released the
+weights of its 314-billion-parameter [[Grok-1]] under Apache 2.0 in 2024,[^grok1-oss] while
+newer entrants such as [[Thinking Machines Lab]]'s [[Inkling]] ship open-weight from the
+start.[^inkling-oss]

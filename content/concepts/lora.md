@@ -28,6 +28,12 @@ sources:
     url: https://huggingface.co/docs/peft/en/quicktour
     publisher: "Hugging Face"
     year: 2024
+  - id: tml-tinker
+    title: "Tinker"
+    url: https://thinkingmachines.ai/tinker/
+    author: Thinking Machines Lab
+    publisher: Thinking Machines Lab
+    year: 2025
 ---
 
 # LoRA
@@ -76,4 +82,7 @@ For a variant that also quantizes the frozen base model to 4-bit, so a large
 fine-tuning run fits on a single GPU, see [[QLoRA]]; the underlying idea of
 shrinking weights to lower precision is [[Quantization]]. LoRA is also ubiquitous
 beyond text: the [[Stable Diffusion]] community uses it heavily to fine-tune
-image models into custom styles and subjects.
+image models into custom styles and subjects. And it underpins hosted fine-tuning
+services: [[Thinking Machines Lab]]'s [[Tinker]] API fine-tunes open-weight models
+exclusively through LoRA, sharing one frozen base across many customers' training
+runs to keep costs down.[^tml-tinker]

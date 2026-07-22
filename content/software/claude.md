@@ -70,6 +70,12 @@ sources:
     url: https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/
     publisher: TechCrunch
     year: 2026
+  - id: anthropic-sonnet5
+    title: "Introducing Claude Sonnet 5"
+    url: https://www.anthropic.com/news/claude-sonnet-5
+    author: Anthropic
+    publisher: Anthropic
+    year: 2026
 ---
 
 # Claude
@@ -102,7 +108,10 @@ Releases since have advanced steadily:
 
 As of 2026 the current generation is **Claude 4.x** — models such as Opus 4.8,
 Sonnet 4.6, and Haiku 4.5 keep the Opus/Sonnet/Haiku tiering — alongside a newer and
-more capable line released as **Claude Fable 5**.[^anthropic-models]
+more capable line released as **Claude Fable 5**.[^anthropic-models] On
+[[Claude Sonnet 5 released|30 June 2026]], Anthropic advanced the Sonnet tier to **Claude
+Sonnet 5**, billed as its most agentic Sonnet yet and narrowing the gap with Opus-class
+models at a lower price.[^anthropic-sonnet5]
 
 The 2026 generation also introduced Anthropic's most capable — and most tightly held — model,
 **Mythos**. Unveiled as a preview in April 2026, Mythos was "initially limited to a handful of

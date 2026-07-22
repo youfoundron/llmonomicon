@@ -21,7 +21,7 @@ sources:
 
 # Elon Musk
 
-**Elon Musk** — the entrepreneur behind Tesla, SpaceX, and xAI — appears in the llmonomicon
+**Elon Musk** — the entrepreneur behind Tesla, SpaceX, and [[xAI]] — appears in the llmonomicon
 for one reason: his part in the founding, and later unravelling, of [[OpenAI]]. (His other
 ventures are out of scope here.)
 

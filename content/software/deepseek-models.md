@@ -73,7 +73,7 @@ over time.
   inference, alongside a high-compute **"Speciale"** edition reported to reach
   gold-medal-level performance at the 2025 mathematics (IMO) and informatics (IOI)
   olympiads.[^deepseek-v32]
-- **DeepSeek-V4** (April 2026) is the current generation, released in two MIT-licensed
+- **DeepSeek-V4** ([[DeepSeek V4 released|April 2026]]) is the current generation, released in two MIT-licensed
   sizes — **V4-Pro** (1.6 trillion total parameters, ~49 billion active) and the smaller
   **V4-Flash** (284 billion total, ~13 billion active) — both with a **1-million-token
   context window** and selectable "thinking" modes for harder reasoning.[^deepseek-v4]

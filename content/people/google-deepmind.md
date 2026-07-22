@@ -48,6 +48,18 @@ sources:
     author: Google DeepMind
     publisher: Google DeepMind
     year: 2020
+  - id: gdm-gopher
+    title: "Scaling Language Models: Methods, Analysis & Insights from Training Gopher"
+    url: https://arxiv.org/abs/2112.11446
+    author: Rae, Borgeaud, Cai, et al.
+    publisher: arXiv (DeepMind)
+    year: 2021
+  - id: gdm-chinchilla
+    title: "Training Compute-Optimal Large Language Models"
+    url: https://arxiv.org/abs/2203.15556
+    author: Hoffmann, Borgeaud, Mensch, et al.
+    publisher: arXiv (DeepMind)
+    year: 2022
 ---
 
 # Google DeepMind
@@ -75,7 +87,10 @@ Brain and DeepMind."[^gdm-about]
 **DeepMind** was founded in London in 2010 by Demis Hassabis, Shane Legg, and
 Mustafa Suleyman, and acquired by Google in 2014.[^gdm-wiki] Before the LLM era it
 was best known for deep-reinforcement-learning landmarks such as AlphaGo and
-AlphaFold.[^gdm-wiki]
+AlphaFold.[^gdm-wiki] As large language models rose it trained its own — the
+280-billion-parameter [[Gopher]] (2021)[^gdm-gopher] and the smaller, compute-optimal
+[[Chinchilla]] (2022), whose finding that models should be trained on far more data
+reshaped how the field scales.[^gdm-chinchilla]
 
 **Google Brain** was Google's deep-learning research team, and its work is woven
 through this wiki: the **word2vec** word-embedding method (2013),[^g-word2vec] the

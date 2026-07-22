@@ -81,7 +81,7 @@ sources:
 
 # MiniMax
 
-**MiniMax** is a Shanghai-based AI company best known for its open-weight **M-series** language models and a run of popular consumer apps — the companion app Talkie, the video generator Hailuo AI, and others. Alongside [[Z.ai]] and [[DeepSeek]], it is one of the leading Chinese labs treating [[Open weights|open-weight]] releases as a competitive strategy, and in January 2026 it became one of the first dedicated LLM developers to go public.
+**MiniMax** is a Shanghai-based AI company best known for its open-weight **M-series** language models and a run of popular consumer apps — the companion app Talkie, the video generator Hailuo AI, and others. Alongside [[Z.ai]], [[DeepSeek]], and [[Moonshot AI]], it is one of the leading Chinese labs treating [[Open weights|open-weight]] releases as a competitive strategy, and in January 2026 it became one of the first dedicated LLM developers to go public.
 
 ## Origins
 

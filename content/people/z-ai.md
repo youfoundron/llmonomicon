@@ -43,7 +43,7 @@ sources:
 
 **Z.ai** — formerly **Zhipu AI** — is a Chinese artificial-intelligence company best known for its
 open-weight **[[GLM]]** family of large language models. A spinout from Tsinghua University, it became
-one of the first dedicated large-model companies to go public, and sits — alongside [[DeepSeek]] —
+one of the first dedicated large-model companies to go public, and sits — alongside [[DeepSeek]] and [[Moonshot AI]] —
 among the leaders of China's open-weight AI scene.
 
 ## Origins
